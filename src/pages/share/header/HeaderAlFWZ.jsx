@@ -242,23 +242,37 @@ const HeaderAlFWZ = () => {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
 
   const leftMenuItems = [
-    { label: "SHOP", to: "/" },
+    { label: "HOME", to: "/" },
     {
-      label: "ABOUT US",
-      to: "/about",
+      label: "CURTAINS",
+      to: "/curtains",
       submenu: [
-        { label: "Company Info", to: "/about/company" },
-        { label: "Team", to: "/about/team" },
+        { label: "BLACKOUT CURTAINS", to: "/curtains/blackout" },
+        { label: "BEDROOM CURTAINS", to: "/curtains/bedroom" },
+        { label: "WINDOWS CURTAINS", to: "/curtains/windows" },
+        { label: "HOTEL CURTAINS", to: "/curtains/hotel" },
+        { label: "WAVE STYLE CURTAINS", to: "/curtains/wave" },
+        { label: "LIVING ROOM CURTAINS", to: "/curtains/livingroom" } ,
+        { label: "OFFICE CURTAINS", to: "/curtains/office" } ,
+        { label: "ROLLER CURTAINS", to: "/curtains/roller" } ,
+        
       ],
     },
     {
-      label: "OUR SERVICES",
-      to: "/service",
+      label: "BLINDS",
+      to: "/blinds",
       submenu: [
-        { label: "Furniture Repair", to: "/service/repair" },
-        { label: "Custom Upholstery", to: "/service/upholstery" },
+        { label: "BLACKOUT BLINDS", to: "/blinds/blackout" },
+        { label: "VENETIAN BLINDS", to: "/blinds/venetian" },
+        { label: "ROLLER BLINDS", to: "/blinds/roller" },
+        { label: "OFFICE BLINDS", to: "/blinds/office" },
+        { label: "VERTICAL BLINDS", to: "/blinds/vertical" },
+        { label: "WINDOW BLINDS", to: "/blinds/window" },
+        
       ],
-    },
+    },  
+    { label: "GALLERY", to: "/gallery" },
+    { label: "ABOUT US", to: "/about" },
     { label: "CONTACT US", to: "/contact" },
   ];
 
@@ -340,7 +354,7 @@ const HeaderAlFWZ = () => {
 
   return (
     <div className="sticky top-0 z-50 bg-[#1a1a1a]">
-      <div className="bg-[#333333] py-2">
+      <div className="bg-[#333333] py-1">
         <h1 className="text-sm md:text-lg text-center font-medium text-[#ffcc00]">
           <Typed
             strings={[
@@ -379,7 +393,7 @@ const HeaderAlFWZ = () => {
           </div>
         </div>
 
-        <div className="container flex flex-wrap justify-between items-center px-4 py-3 mx-auto">
+        <div className="container flex flex-wrap justify-between items-center px-4 py-1 mx-auto">
           <div className="w-1/4">
             <NavLink to="/">
               <img
@@ -409,12 +423,12 @@ const HeaderAlFWZ = () => {
                   {item.label}
                 </NavLink>
                 {item.submenu && activeSubMenu === index && (
-                  <div className="absolute bg-[#333] mt-1 shadow-lg rounded-md py-2 z-50">
+                  <div className="absolute bg-[#333] mt-1 shadow-lg rounded-md py-2 z-50 whitespace-nowrap ">
                     {item.submenu.map((sub, i) => (
                       <NavLink
                         key={i}
                         to={sub.to}
-                        className="block px-4 py-2 text-sm hover:bg-[#444]"
+                        className="block px-8 py-2 text-sm hover:bg-[#444] hover:text-[#ffcc00]"
                       >
                         {sub.label}
                       </NavLink>
