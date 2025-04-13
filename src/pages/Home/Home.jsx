@@ -9,7 +9,7 @@ import WhyChoose from "./WhyChoose";
 const Home = () => {
   return (
     <div>
-    <PageTitle title="Al-FWZ Furniture Trading & Contracting | Home"/>
+    <PageTitle title="Curtains Furniture | Home"/>
       <HeroSlider />
       <RecentServiceCard />
       {/* <MyProjects />
