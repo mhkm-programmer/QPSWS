@@ -235,7 +235,7 @@ import { NavLink } from "react-router-dom";
 import Typed from "react-typed";
 import { useState } from "react";
 
-const HeaderAlFWZ = () => {
+const HeaderCurtainsFurniture = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -244,7 +244,7 @@ const HeaderAlFWZ = () => {
   const leftMenuItems = [
     { label: "HOME", to: "/" },
     {
-      label: "CURTAINS",
+      label: "CURTAINS ▼",
       to: "/curtains",
       submenu: [
         { label: "BLACKOUT CURTAINS", to: "/curtains/blackout" },
@@ -259,7 +259,7 @@ const HeaderAlFWZ = () => {
       ],
     },
     {
-      label: "BLINDS",
+      label: "BLINDS ▼",
       to: "/blinds",
       submenu: [
         { label: "BLACKOUT BLINDS", to: "/blinds/blackout" },
@@ -528,4 +528,4 @@ const HeaderAlFWZ = () => {
   );
 };
 
-export default HeaderAlFWZ;
+export default HeaderCurtainsFurniture;

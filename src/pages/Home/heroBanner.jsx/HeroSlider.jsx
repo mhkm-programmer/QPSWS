@@ -56,10 +56,19 @@ const HeroSlider = () => {
             Let us bring elegance and functionality to your home or office.
           </p>
         </div>
+        
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center space-y-4">
-          {!showOptions && (
+        <div className="mt-6 flex justify-center">
+  <a
+    href="https://wa.me/97470373588"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full text-sm hover:bg-green-700 transition font-semibold shadow-lg"
+  >
+    <FaWhatsapp className="text-lg" /> WhatsApp Us Now
+  </a>
+          {/* {!showOptions && (
             <button
               className={`btn-hero bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition-all duration-300 ${
                 activeTheme === "dark" ? "dark-mode-text" : ""
@@ -72,8 +81,8 @@ const HeroSlider = () => {
 
           {showOptions && (
             <div className="flex flex-col items-center space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
-              {/* Visit Showroom */}
-              <a
+              Visit Showroom */}
+              {/* <a
                 href="https://www.google.com/maps/place/25%C2%B016'10.9%22N+51%C2%B032'24.2%22E/@25.2698486,51.5399093,19.75z/data=!4m4!3m3!8m2!3d25.2696943!4d51.5400557?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,10 +90,10 @@ const HeroSlider = () => {
               >
                 <FaMapMarkerAlt className="mr-2" />
                 Visit Our Showroom
-              </a>
+              </a> */}
 
               {/* Book an Appointment */}
-              <a
+              {/* <a
                 href="https://wa.me/+97455760872"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -94,7 +103,7 @@ const HeroSlider = () => {
                 Book an Appointment
               </a>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
