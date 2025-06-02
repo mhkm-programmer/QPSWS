@@ -5,118 +5,151 @@ import Slider from "react-slick";
 import useThemeSwitcher from "../../../hooks/useThemeSwitcher";
 
 const HeroSlider = () => {
-  const [activeTheme] = useThemeSwitcher();
+  const [, setTheme] = useThemeSwitcher();
   const [showOptions, setShowOptions] = useState(false);
 
-  const handleShowOptions = () => {
-    setShowOptions(true);
-  };
+  const handleShowOptions = () => setShowOptions(true);
 
-  // Carousel settings
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     arrows: false,
     adaptiveHeight: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    pauseOnDotsHover: false,
   };
 
-  const images = [
-    "https://8upload.com/image/679ab81322a48/IMG-20250113-WA0033.jpg",
-    "https://8upload.com/image/679abe281ed2b/office-furniture__1_.jpg",
-    "https://8upload.com/image/679ab8ae708ea/IMG-20250112-WA0458.jpg",
-    "https://8upload.com/image/679abd057b34e/1-d9398590-min-768x512__1_.jpg",
-    "https://8upload.com/image/679abd2e7fd99/61545f46eb42c40020cbb6c2_America__1_.jpg",
+  const slides = [
+    {
+      type: "image",
+      src: "https://8upload.com/image/68337d45aa60e/IMG-20250518-WA0039.jpg",
+    },
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/md5pe4",
+    },
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/cxrr13",
+    },
+    {
+      type: "video",
+      videoType: "streamable",
+      src: "https://streamable.com/e/a82dgf",
+    },
+    {
+      type: "image",
+      src: "https://8upload.com/image/68337cbb8461d/IMG-20250518-WA0006.jpg",
+    },
   ];
+
+  const colors = {
+    background: "#F2EDE6",
+    primaryText: "#2E2E2E",
+    accent: "#8C6239",
+    buttonBase: "#4A342E",
+    buttonHover: "#5A4035",
+    subtitle: "#6B6B6B",
+  };
 
   return (
     <div
-      className={` bg-[#F5F5DC] mx-auto gap-x-10 items-center justify-between overflow-hidden pt-4 md:flex md:px-8 ${
-        activeTheme === "dark" ? "text-white" : ""
-      }`}
+      className="mx-auto overflow-hidden py-16 px-5 md:px-12 lg:flex items-center justify-between gap-12"
+      style={{
+        backgroundColor: colors.background,
+        color: colors.primaryText,
+        fontFamily: "'Inter', sans-serif",
+      }}
     >
-      {/* Left Section */}
-      <div
-        className={`flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl ${
-          activeTheme === "dark" ? "dark:bg-primary-dark" : "bg-[#F5F5DC]"
-        }`}
-      >
-        {/* Hero Text Section */}
-        <div className="text-center space-y-4">
-          <h2 className="text-xl md:text-3xl text-[#6B4226] font-semibold">
-            Transforming Spaces with Style and Comfort
-          </h2>
-          <p className="text-base md:text-lg text-gray-600">
-            At LuxeFurnish, we specialize in crafting custom furniture, offering
-            expert upholstery services, and creating stunning interior designs.
-            Let us bring elegance and functionality to your home or office.
-          </p>
-        </div>
-        
+      {/* Left Content */}
+      <div className="flex-1 max-w-xl space-y-6 text-center lg:text-left">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+          Elegant Curtains & Blinds for Every Space
+        </h1>
+        <p className="text-lg leading-relaxed" style={{ color: colors.subtitle }}>
+          <strong>AZLAAN CONTRACTING W.L.L</strong> offers premium <strong>curtains</strong> and
+          <strong> blinds</strong> that combine elegance and functionality. Whether for your
+          <strong> home</strong> or <strong>office</strong>, our customized solutions enhance every interior.
+        </p>
 
         {/* Action Buttons */}
-        <div className="mt-6 flex justify-center">
-  <a
-    href="https://wa.me/97470373588"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full text-sm hover:bg-green-700 transition font-semibold shadow-lg"
-  >
-    <FaWhatsapp className="text-lg" /> WhatsApp Us Now
-  </a>
-          {/* {!showOptions && (
+        <div className="mt-6">
+          {!showOptions ? (
             <button
-              className={`btn-hero bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition-all duration-300 ${
-                activeTheme === "dark" ? "dark-mode-text" : ""
-              }`}
               onClick={handleShowOptions}
+              className="bg-[#4A342E] hover:bg-[#5A4035] text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300"
             >
-              Shop or Book Appointment Now
+              Get a Free Measurement
             </button>
-          )}
-
-          {showOptions && (
-            <div className="flex flex-col items-center space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
-              Visit Showroom */}
-              {/* <a
-                href="https://www.google.com/maps/place/25%C2%B016'10.9%22N+51%C2%B032'24.2%22E/@25.2698486,51.5399093,19.75z/data=!4m4!3m3!8m2!3d25.2696943!4d51.5400557?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+          ) : (
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.google.com/maps?q=Azlaan+Contracting+Qatar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-hero flex items-center bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition-all duration-300"
+                className="flex items-center gap-2 bg-[#4A342E] hover:bg-[#5A4035] text-white px-5 py-3 rounded-lg font-medium transition duration-300"
               >
-                <FaMapMarkerAlt className="mr-2" />
-                Visit Our Showroom
-              </a> */}
-
-              {/* Book an Appointment */}
-              {/* <a
+                <FaMapMarkerAlt /> Visit Our Showroom
+              </a>
+              <a
                 href="https://wa.me/+97455760872"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-hero flex items-center bg-[#27ae60] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#219653] transition-all duration-300"
+                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-5 py-3 rounded-lg font-medium transition duration-300"
               >
-                <FaWhatsapp className="mr-2" />
-                Book an Appointment
+                <FaWhatsapp /> Chat on WhatsApp
               </a>
             </div>
-          )} */}
+          )}
         </div>
       </div>
 
-      {/* Right Section (Carousel) */}
-      <div className="flex-none justify-center items-center lg:pt-12 mt-14 md:mt-0 md:max-w-xl w-full">
+      {/* Right Slider */}
+      <div className="flex-1 mt-12 lg:mt-0 max-w-xl w-full">
         <Slider {...sliderSettings}>
-          {images.map((src, index) => (
-            <div key={index} className="flex justify-center items-center overflow-hidden">
-              <img
-                src={src}
-                className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
-                alt={`Slide ${index + 1}`}
-              />
+          {slides.map((slide, index) => (
+            <div key={index} className="flex justify-center items-center">
+              {slide.type === "image" && (
+                <img
+                  src={slide.src}
+                  alt={`Slide ${index + 1}`}
+                  className="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
+                />
+              )}
+
+              {slide.type === "video" && slide.videoType === "streamable" && (
+                <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <iframe
+                    src={`${slide.src}?autoplay=1&muted=1`}
+                    allow="fullscreen; autoplay"
+                    allowFullScreen
+                    title={`Streamable Video ${index + 1}`}
+                    className="w-full h-full"
+                    style={{ border: "none" }}
+                  />
+                </div>
+              )}
+
+              {slide.type === "video" && slide.videoType === "youtube" && (
+                <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <iframe
+                    src={slide.src}
+                    title={`YouTube Video ${index + 1}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </Slider>

@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { FaArrowLeft, FaArrowRight, FaWhatsapp } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
 import React from "react";
 import Slider from "react-slick";
 
@@ -71,7 +72,9 @@ const Products_Blackout = () => {
 
   return (
     <div className="relative px-4 sm:px-6 lg:px-8 py-12 max-w-screen-xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">Our Blackout Collection</h2>
+      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+        Our Blackout Collection
+      </h2>
       <Slider {...settings}>
         {products.map((product) => (
           <div key={product.id} className="px-3">
@@ -84,12 +87,12 @@ const Products_Blackout = () => {
               <div className="p-5 flex flex-col h-44 justify-between">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{product.name}</h3>
                 <div className="flex justify-between items-center mt-auto gap-2">
-                  <a
-                    href={product.link}
+                  <Link
+                    to={product.link}
                     className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition font-medium"
                   >
                     View Details
-                  </a>
+                  </Link>
                   <a
                     href="https://wa.me/97470373588"
                     target="_blank"
