@@ -1,5 +1,4 @@
 import "react-alice-carousel/lib/alice-carousel.css";
-
 import AliceCarousel from "react-alice-carousel";
 import React from "react";
 
@@ -27,33 +26,38 @@ const OurClient = () => {
       <img
         src={logo.src}
         alt={logo.alt}
-        className="w-40 h-20 object-contain rounded-md shadow-md hover:scale-105 transition-transform duration-300"
+        className="w-36 h-20 object-contain rounded-md shadow hover:scale-105 transition-transform duration-300"
       />
     </div>
   ));
 
   return (
-    <section className="py-8 bg-[#F5F5DC] dark:bg-gray-800">
-      <div className="container px-6 mx-auto space-y-6 text-center lg:px-8 lg:space-y-8">
-        <h2 className="text-3xl font-bold text-[#6B4226] mb-4">Our Valued Clients</h2>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Trusted by leading companies in the furniture, interior design, and upholstery industries.
+    <section className="py-14 bg-[#FDF9F2] dark:bg-gray-900 text-gray-800 dark:text-white">
+      <div className="container px-6 mx-auto text-center max-w-7xl">
+        {/* Header */}
+        <h2 className="text-4xl font-bold text-[#1E2A3A] dark:text-white mb-4">
+          Our Esteemed Clients
+        </h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+          Trusted by Qatar’s top clients in curtains, custom furniture, and full interior fit-out solutions.
         </p>
 
-        <div className="carousel-container mt-6">
+        {/* Carousel */}
+        <div className="mt-10">
           <AliceCarousel
             autoPlay
-            autoPlayInterval={1500}
+            autoPlayInterval={2000}
             infinite
+            mouseTracking
             disableButtonsControls
             disableDotsControls
             items={items}
-            mouseTracking
             responsive={{
               0: { items: 2 },
               640: { items: 3 },
               768: { items: 4 },
               1024: { items: 5 },
+              1280: { items: 6 },
             }}
           />
         </div>

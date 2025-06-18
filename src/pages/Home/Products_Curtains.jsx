@@ -1,65 +1,117 @@
-// Products_Curtains.jsx
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { FaArrowLeft, FaArrowRight, FaWhatsapp } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaWhatsapp,
+  FaStar,
+  FaStarHalfAlt,
+  FaRegStar,
+  FaSearchPlus,
+} from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import Modal from "react-modal";
 
+// Accessibility requirement for screen readers
+Modal.setAppElement("#root");
+
+// Sample product data
 const products = [
   {
     id: 1,
     name: "Blackout Curtains",
     image: "/images/curtain1.jpg",
+    subtitle: "Perfect for blocking light and enhancing privacy in bedrooms or media rooms.",
     link: "/curtains/blackout",
+    rating: 4.5,
+    discount: "20% OFF",
   },
   {
     id: 2,
     name: "Bedroom Curtains",
     image: "/images/curtain2.jpg",
+    subtitle: "Soft textures and elegant drapes designed to create a cozy bedroom ambiance.",
     link: "/curtains/bedroom",
+    rating: 4,
   },
   {
     id: 3,
     name: "Wave Style Curtains",
     image: "/images/curtain3.jpg",
+    subtitle: "Modern wave pleats that offer a clean, architectural look for any room.",
     link: "/curtains/wave",
+    rating: 5,
+    discount: "15% OFF",
   },
   {
     id: 4,
     name: "Living Room Curtains",
     image: "/images/curtain4.jpg",
+    subtitle: "Stylish and functional, adding sophistication to your living area.",
     link: "/curtains/livingroom",
+    rating: 3.5,
   },
 ];
 
+// Arrow Components
 const NextArrow = ({ onClick }) => (
-  <div
+  <button
     onClick={onClick}
-    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-xl cursor-pointer hover:bg-gray-200 transition"
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
+    aria-label="Next slide"
   >
-    <FaArrowRight size={20} />
-  </div>
+    <FaArrowRight className="text-gray-800" />
+  </button>
 );
 
 const PrevArrow = ({ onClick }) => (
-  <div
+  <button
     onClick={onClick}
-    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-xl cursor-pointer hover:bg-gray-200 transition"
+    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
+    aria-label="Previous slide"
   >
-    <FaArrowLeft size={20} />
-  </div>
+    <FaArrowLeft className="text-gray-800" />
+  </button>
 );
 
+// Rating Stars Renderer
+const renderStars = (rating) => {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5;
+  const empty = 5 - full - (half ? 1 : 0);
+
+  return (
+    <div className="flex text-yellow-400 text-sm">
+      {[...Array(full)].map((_, i) => <FaStar key={`full-${i}`} />)}
+      {half && <FaStarHalfAlt key="half" />}
+      {[...Array(empty)].map((_, i) => <FaRegStar key={`empty-${i}`} />)}
+    </div>
+  );
+};
+
 const Products_Curtains = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const openModal = (image) => {
+    setModalImage(image);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalImage("");
+    setModalIsOpen(false);
+  };
+
   const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -73,43 +125,97 @@ const Products_Curtains = () => {
   };
 
   return (
-    <div className="relative px-4 sm:px-6 lg:px-8 py-12 max-w-screen-xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-        Our Curtain Collection
-      </h2>
-      <Slider {...settings}>
-        {products.map((product) => (
-          <div key={product.id} className="px-3">
-            <div className="bg-white rounded-2xl shadow-2xl hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] overflow-hidden transition duration-300">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
-              />
-              <div className="p-5 flex flex-col h-44 justify-between">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{product.name}</h3>
-                <div className="flex justify-between items-center mt-auto gap-2">
-                  <Link
-                    to={product.link}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition font-medium"
+    <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-gray-50">
+      <div className="max-w-screen-xl mx-auto">
+        {/* Title */}
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+          Explore Our Curtain Collection
+        </h2>
+        <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+          From blackout to bedroom curtains, discover designs tailored to elevate your space with elegance and comfort.
+        </p>
+
+        {/* Product Slider */}
+        <Slider {...settings}>
+          {products.map((product) => (
+            <div key={product.id} className="px-4">
+              <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                {product.discount && (
+                  <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded shadow">
+                    {product.discount}
+                  </span>
+                )}
+
+                <div className="relative group">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <button
+                    onClick={() => openModal(product.image)}
+                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition"
+                    aria-label="Preview image"
                   >
-                    View Details
-                  </Link>
-                  <a
-                    href="https://wa.me/97470373588"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700 transition font-medium"
-                  >
-                    <FaWhatsapp /> WhatsApp
-                  </a>
+                    <FaSearchPlus className="text-white text-2xl" />
+                  </button>
+                </div>
+
+                <div className="p-6 flex flex-col h-56 justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{product.name}</h3>
+                    <p className="text-sm text-gray-600 mt-2">{product.subtitle}</p>
+                    <div className="mt-3">{renderStars(product.rating)}</div>
+                  </div>
+
+                  <div className="flex justify-between items-center gap-2 mt-5">
+                    <Link
+                      to={product.link}
+                      className="px-5 py-2 text-sm font-medium rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                    >
+                      View Details
+                    </Link>
+                    <a
+                      href="https://wa.me/97470373588"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-5 py-2 text-sm font-medium rounded-full bg-green-600 text-white hover:bg-green-700 transition"
+                    >
+                      <FaWhatsapp />
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Modal Viewer */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-50"
+        className="relative bg-white rounded-xl max-w-3xl mx-auto p-4 shadow-2xl flex items-center justify-center mt-10 outline-none"
+      >
+        <div className="relative w-full">
+          <button
+            onClick={closeModal}
+            className="absolute top-2 right-2 text-black bg-white rounded-full w-9 h-9 flex items-center justify-center text-lg font-bold shadow hover:bg-gray-200 transition"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+          <img
+            src={modalImage}
+            alt="Curtain Preview"
+            className="w-full h-auto max-h-[80vh] object-contain rounded"
+          />
+        </div>
+      </Modal>
+    </section>
   );
 };
 
