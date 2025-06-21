@@ -1,14 +1,16 @@
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 
+// Lazy load the component
+const OtherComponent = lazy(() => import('./OtherComponent'));
 
-const MyLazyComponent = lazy(() => import("./OtherComponent"));
-const MyComponent  = () => {
-    <div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <MyLazyComponent />
-    </Suspense>
-  </div>
-    // return <div>This is my lazy loaded component!</div>;
+const MyComponent = () => {
+  return (
+    <div className="p-4">
+      <Suspense fallback={<div className="text-center text-gray-500">Loading component...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
 };
 
-export default MyComponent ;
+export default MyComponent;

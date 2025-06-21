@@ -19,7 +19,7 @@ import CurtainsWave from "../Products/CurtainsWave";
 import CurtainsWindows from "../Products/CurtainsWindows";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import FaqPage from "../pages/FAQ/FaqPage";
-import Furniture from "../Products/Furniture";
+
 import Gallery from "../pages/Gallery";
 import Home from "../pages/Home/Home";
 import Main from "../layouts/Main";
