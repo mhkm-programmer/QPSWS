@@ -9,16 +9,19 @@ const galleryData = [
     sectionTitle: "Living Room Curtains",
     items: [
       {
-        src: "/images/curtains_living_1.jpg",
+        type: "video",
+        src: "https://streamable.com/e/r9p50t",
         alt: "Elegant Living Room Curtains",
         caption: "Elegant Sheer & Heavy Curtain Layers",
       },
       {
+        type: "image",
         src: "/images/curtains_living_2.jpg",
         alt: "Modern Living Room Drapes",
         caption: "Contemporary Textures with Subtle Patterns",
       },
       {
+        type: "image",
         src: "/images/curtains_living_3.jpg",
         alt: "Luxury Living Room Curtains",
         caption: "Luxury Finishes for a Cozy Atmosphere",
@@ -29,16 +32,19 @@ const galleryData = [
     sectionTitle: "Blackout Curtains",
     items: [
       {
+        type: "image",
         src: "/images/blackout_1.jpg",
         alt: "Bedroom Blackout Curtains",
         caption: "Sleep-Friendly Designs for Total Darkness",
       },
       {
-        src: "/images/blackout_2.jpg",
-        alt: "Hotel-Style Blackout Curtains",
-        caption: "Noise-Reducing and Thermal Efficient",
+        type: "video",
+        src: "https://streamable.com/e/r9p50t",
+        alt: "Elegant Living Room Curtains",
+        caption: "Elegant Sheer & Heavy Curtain Layers",
       },
       {
+        type: "image",
         src: "/images/blackout_3.jpg",
         alt: "Office Blackout Curtains",
         caption: "Professional Privacy with Style",
@@ -49,19 +55,22 @@ const galleryData = [
     sectionTitle: "Office Blinds & Window Solutions",
     items: [
       {
+        type: "image",
         src: "/images/office_blinds_1.jpg",
         alt: "Roller Blinds Qatar",
         caption: "Minimal Roller Blinds for Smart Offices",
       },
       {
+        type: "image",
         src: "/images/office_blinds_2.jpg",
         alt: "Venetian Blinds in Office",
         caption: "Adjustable Light with Sleek Appeal",
       },
       {
-        src: "/images/office_curtains_1.jpg",
-        alt: "Curtains for Meeting Rooms",
-        caption: "Professional Ambience for Workspaces",
+        type: "video",
+        src: "https://streamable.com/e/r9p50t",
+        alt: "Elegant Living Room Curtains",
+        caption: "Elegant Sheer & Heavy Curtain Layers",
       },
     ],
   },
@@ -125,20 +134,31 @@ const Gallery = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {items.map(({ src, alt, caption }, idx) => (
+              {items.map(({ src, alt, caption, type = "image" }, idx) => (
                 <motion.figure
                   key={idx}
                   className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300 transform hover:scale-105 cursor-pointer"
                   variants={itemVariants}
-                  onClick={() => setModalImage({ src, alt })}
+                  onClick={() => {
+                    if (type === "image") setModalImage({ src, alt });
+                  }}
                 >
-                  <img
-                    src={src}
-                    alt={alt}
-                    className="w-full h-64 object-cover object-center"
-                    loading="lazy"
-                    draggable={false}
-                  />
+                  {type === "image" ? (
+                    <img
+                      src={src}
+                      alt={alt}
+                      className="w-full h-64 object-cover object-center"
+                      loading="lazy"
+                      draggable={false}
+                    />
+                  ) : (
+                    <iframe
+                      src={src}
+                      title={alt}
+                      allowFullScreen
+                      className="w-full h-64 object-cover"
+                    ></iframe>
+                  )}
                   <figcaption className="p-4 text-center text-gray-700 dark:text-gray-200 font-medium text-lg">
                     {caption}
                   </figcaption>
@@ -148,7 +168,10 @@ const Gallery = () => {
           </div>
         ))}
 
-        {/* Modal Image Preview */}
+      
+
+
+        {/* Modal Preview for Images */}
         <Modal
           isOpen={!!modalImage}
           onRequestClose={() => setModalImage(null)}
@@ -173,11 +196,11 @@ const Gallery = () => {
           </div>
         </Modal>
 
-        {/* Parallax Style Banner */}
+        {/* Parallax Banner */}
         <div
           className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-20"
           style={{
-            backgroundImage: "url('/images/parallax_curtains_bg.jpg')",
+            backgroundImage: "url('https://streamable.com/e/r9p50t')",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -202,7 +225,7 @@ const Gallery = () => {
             Get free consultation and measurement anywhere in Qatar. From design to installation, we handle it all.
           </p>
           <a
-            href="https://wa.me/97470373588"
+            href="https://wa.me/97466280037"
             className="inline-block bg-[#4A342E] text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-[#6b4a3a] transition duration-300"
           >
             Chat with Us on WhatsApp
