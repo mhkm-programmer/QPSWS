@@ -61,24 +61,30 @@ const SubscribeContact = () => {
           <h2 className="text-2xl font-semibold text-[#6B4226] mb-6">Reach Us</h2>
           <div className="space-y-4 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
             <p>
-              <strong>Address:</strong> Zone 26, Street 850, Building 34, Unit 17, Al Mansoura, Doha – Qatar
+              <strong>Company Name:</strong> Curtains Furniture
+            </p>
+            <p>
+              <strong>Location:</strong> Mansoura, Doha
+            </p>
+            <p>
+              <strong>Address:</strong> Mansoura, Doha
             </p>
             <p>
               <strong>Email:</strong>{' '}
               <a
-                href="mailto:qatarwintrading@gmail.com"
+                href="mailto:info.curtainsfurniture@gmail.com"
                 className="text-[#8B5A2B] hover:text-[#6B4226]"
               >
-                qatarwintrading@gmail.com
+                info.curtainsfurniture@gmail.com
               </a>
             </p>
             <p>
               <strong>Phone:</strong>{' '}
               <a
-                href="tel:+97455760872"
+                href="tel:+97466280037"
                 className="text-[#8B5A2B] hover:text-[#6B4226]"
               >
-                +974 55 760 872
+                +974 6628 0037
               </a>
             </p>
             <div>
@@ -93,16 +99,16 @@ const SubscribeContact = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-6 mt-6 text-2xl">
-            <a href="tel:+97455760872" className="text-[#8B5A2B] hover:text-[#6B4226]">
+            <a href="tel:+97466280037" className="text-[#8B5A2B] hover:text-[#6B4226]">
               <FaPhoneAlt />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61573137238181&mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
+            <a href="https://www.facebook.com/profile.php?id=61563249227531&mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
               <FaFacebook />
             </a>
-            <a href="https://www.instagram.com/rokibwin?igsh=anU3ejd4dHFneDhi" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
+            <a href="https://www.instagram.com/saadbinghanimfurniture?igsh=MWFrZGp2b21jeXpldA==" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
               <FaInstagram />
             </a>
-            <a href="https://wa.me/+97455760872" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
+            <a href="https://wa.me/97466280037" target="_blank" rel="noreferrer" className="text-[#8B5A2B] hover:text-[#6B4226]">
               <FaWhatsapp />
             </a>
           </div>
