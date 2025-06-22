@@ -6,12 +6,13 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const officeGallery = [
-  "https://8upload.com/image/67ab0bce5e3e5/office1.jpg",
-  "https://8upload.com/image/67ab0bd2011aa/office2.jpg",
-  "https://8upload.com/image/67ab0bd57aaae/office3.jpg",
-  "https://8upload.com/image/67ab0bdb0ea7e/office4.jpg",
-  "https://8upload.com/image/67ab0be06d35b/office5.jpg",
-  "https://8upload.com/image/67ab0be4cf914/office6.jpg",
+
+  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
+  { type: "video", src: "https://streamable.com/e/r9p50t" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
 ];
 
 Modal.setAppElement('#root');
@@ -21,17 +22,15 @@ const BlindsRoller = () => {
 
   return (
     <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
-      {/* SEO Title */}
       <PageTitle title="Roller Blinds Qatar | Modern Window Solutions | Curtains Furniture" />
 
-      {/* Hero Section */}
       <ParallaxSection
         imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
         title="Roller Blinds for Offices & Commercial Spaces"
         subTitle="Sleek, Functional, and Easy to Operate"
       />
 
-      {/* Introduction */}
+      {/* Intro */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
           High-Quality Roller Blinds for Productive Work Environments
@@ -41,7 +40,7 @@ const BlindsRoller = () => {
         </p>
       </section>
 
-      {/* Features Section */}
+      {/* Features */}
       <section className="bg-[#f5f0e8] dark:bg-gray-800 py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           {[
@@ -61,10 +60,7 @@ const BlindsRoller = () => {
               desc: "Durable mechanisms ensure quiet, effortless rolling for daily convenience.",
             },
           ].map(({ icon, title, desc }, i) => (
-            <div
-              key={i}
-              className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition"
-            >
+            <div key={i} className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition">
               {icon}
               <h3 className="text-xl font-semibold mb-2 text-[#4A342E] dark:text-white">{title}</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">{desc}</p>
@@ -82,20 +78,41 @@ const BlindsRoller = () => {
           See examples of our recent roller blinds installations in offices and commercial buildings throughout Qatar.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {officeGallery.map((src, index) => (
-            <button
-              key={index}
-              onClick={() => setModalMedia(src)}
-              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <img
-                src={src}
-                alt={`Roller blind ${index + 1}`}
-                className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
-              />
-            </button>
-          ))}
+          {officeGallery.map((media, index) => {
+            const isObject = typeof media === "object";
+            const type = isObject ? media.type : "image";
+            const src = isObject ? media.src : media;
+
+            return (
+              <button
+                key={index}
+                onClick={() => setModalMedia({ type, src })}
+                className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                {type === "image" ? (
+                  <img
+                    src={src}
+                    alt={`Media ${index + 1}`}
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-64 overflow-hidden">
+                    <iframe
+                      src={src}
+                      title={`Video ${index + 1}`}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      allowFullScreen
+                    />
+                  </div>
+                )}
+              </button>
+            );
+          })}
         </div>
+
+        {/* Modal */}
         <Modal
           isOpen={!!modalMedia}
           onRequestClose={() => setModalMedia(null)}
@@ -111,16 +128,28 @@ const BlindsRoller = () => {
               ✕
             </button>
             {modalMedia && (
-              <img src={modalMedia} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+              modalMedia.type === "image" ? (
+                <img src={modalMedia.src} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+              ) : (
+                <div className="w-full h-[80vh] overflow-hidden">
+                  <iframe
+                    src={modalMedia.src}
+                    title="Video Preview"
+                    className="w-full h-full rounded-xl"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              )
             )}
           </div>
         </Modal>
       </section>
 
-      {/* Customer Reviews */}
       <CustomerReviews />
 
-      {/* Why Curtains Furniture */}
+      {/* Why Us */}
       <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
@@ -153,7 +182,7 @@ const BlindsRoller = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* CTA */}
       <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Upgrade Your Workspace with Roller Blinds Today
@@ -162,7 +191,7 @@ const BlindsRoller = () => {
           Contact us now for a free consultation, measurement, and custom quote anywhere in Qatar.
         </p>
         <a
-          href="https://wa.me/97470373588"
+          href="https://wa.me/97466280037"
           className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
           Chat on WhatsApp

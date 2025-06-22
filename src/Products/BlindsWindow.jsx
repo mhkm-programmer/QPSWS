@@ -6,14 +6,13 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const officeGallery = [
-  "https://8upload.com/image/67ab0bce5e3e5/office1.jpg",
-  "https://8upload.com/image/67ab0bd2011aa/office2.jpg",
-  "https://8upload.com/image/67ab0bd57aaae/office3.jpg",
-  "https://8upload.com/image/67ab0bdb0ea7e/office4.jpg",
-  "https://8upload.com/image/67ab0be06d35b/office5.jpg",
-  "https://8upload.com/image/67ab0be4cf914/office6.jpg",
+  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
+  { type: "video", src: "https://streamable.com/e/r9p50t" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
 ];
-
 Modal.setAppElement('#root');
 
 const BlindsWindow = () => {
@@ -79,64 +78,84 @@ const BlindsWindow = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section
-        aria-labelledby="gallery-heading"
-        className="max-w-7xl mx-auto px-6 py-20"
-      >
-        <h2 id="gallery-heading" className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
-          Blinds Windows Project Gallery
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-          Browse our portfolio showcasing recent installations of blinds windows in offices and commercial environments throughout Qatar.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {officeGallery.map((src, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => setModalMedia(src)}
-              aria-label={`View image of blinds window installation ${index + 1}`}
-              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#6B4226]"
-            >
-              <img
-                src={src}
-                alt={`Blinds window installation ${index + 1}`}
-                className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
-                loading="lazy"
-              />
-            </button>
-          ))}
-        </div>
-
-        {/* Modal for Image Preview */}
-        <Modal
-          isOpen={!!modalMedia}
-          onRequestClose={() => setModalMedia(null)}
-          contentLabel="Blinds window image preview"
-          className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-75 z-50"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-60"
-        >
-          <div className="relative max-w-3xl max-h-[90vh] overflow-auto rounded-xl bg-white dark:bg-gray-900 p-4 shadow-lg">
-            <button
-              aria-label="Close image preview"
-              className="absolute top-4 right-4 text-black dark:text-white text-3xl hover:text-red-600 transition"
-              onClick={() => setModalMedia(null)}
-              type="button"
-            >
-              &times;
-            </button>
-            {modalMedia && (
-              <img
-                src={modalMedia}
-                alt="Blinds window preview"
-                className="max-w-full max-h-[80vh] rounded-xl mx-auto"
-                loading="lazy"
-              />
-            )}
-          </div>
-        </Modal>
-      </section>
+     
+             {/* Gallery */}
+                      <section className="max-w-7xl mx-auto px-6 py-20">
+                        <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
+                          Roller Blinds Gallery
+                        </h3>
+                        <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                          See examples of our recent roller blinds installations in offices and commercial buildings throughout Qatar.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                          {officeGallery.map((media, index) => {
+                            const isObject = typeof media === "object";
+                            const type = isObject ? media.type : "image";
+                            const src = isObject ? media.src : media;
+                
+                            return (
+                              <button
+                                key={index}
+                                onClick={() => setModalMedia({ type, src })}
+                                className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                              >
+                                {type === "image" ? (
+                                  <img
+                                    src={src}
+                                    alt={`Media ${index + 1}`}
+                                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                                  />
+                                ) : (
+                                  <div className="w-full h-64 overflow-hidden">
+                                    <iframe
+                                      src={src}
+                                      title={`Video ${index + 1}`}
+                                      className="w-full h-full"
+                                      frameBorder="0"
+                                      allow="autoplay; fullscreen"
+                                      allowFullScreen
+                                    />
+                                  </div>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                
+                        {/* Modal */}
+                        <Modal
+                          isOpen={!!modalMedia}
+                          onRequestClose={() => setModalMedia(null)}
+                          contentLabel="Media Preview"
+                          className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-75 z-50"
+                          overlayClassName="fixed inset-0 bg-black bg-opacity-60"
+                        >
+                          <div className="bg-white dark:bg-gray-900 rounded-xl p-4 max-w-3xl max-h-[90vh] overflow-auto relative">
+                            <button
+                              className="absolute top-4 right-4 text-black dark:text-white text-xl"
+                              onClick={() => setModalMedia(null)}
+                            >
+                              ✕
+                            </button>
+                            {modalMedia && (
+                              modalMedia.type === "image" ? (
+                                <img src={modalMedia.src} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+                              ) : (
+                                <div className="w-full h-[80vh] overflow-hidden">
+                                  <iframe
+                                    src={modalMedia.src}
+                                    title="Video Preview"
+                                    className="w-full h-full rounded-xl"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen
+                                  />
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </Modal>
+                      </section>
 
       {/* Customer Reviews */}
       <CustomerReviews />
@@ -198,7 +217,7 @@ const BlindsWindow = () => {
           Contact Curtains Furniture today for expert consultation, personalized solutions, and flawless installation services.
         </p>
         <a
-          href="https://wa.me/97470373588"
+           href="https://wa.me/97466280037"
           className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition focus:outline-none focus:ring-4 focus:ring-white"
           aria-label="Contact Curtains Furniture via WhatsApp"
           target="_blank"

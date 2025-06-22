@@ -3,15 +3,20 @@ import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
 import CustomerReviews from "../pages/Home/CustomerReviews";
 import Modal from "react-modal";
-import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
+import {
+  FaCogs,
+  FaLightbulb,
+  FaRulerCombined,
+  FaCertificate,
+} from "react-icons/fa";
 
-const officeGallery = [
-  "https://8upload.com/image/67ab0bce5e3e5/office1.jpg",
-  "https://8upload.com/image/67ab0bd2011aa/office2.jpg",
-  "https://8upload.com/image/67ab0bd57aaae/office3.jpg",
-  "https://8upload.com/image/67ab0bdb0ea7e/office4.jpg",
-  "https://8upload.com/image/67ab0be06d35b/office5.jpg",
-  "https://8upload.com/image/67ab0be4cf914/office6.jpg",
+const mediaGallery = [
+  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
+  { type: "video", src: "https://streamable.com/e/r9p50t" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
+  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
 ];
 
 Modal.setAppElement('#root');
@@ -21,17 +26,14 @@ const BlindsBlackout = () => {
 
   return (
     <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
-      {/* SEO Title */}
       <PageTitle title="Blackout Blinds Qatar | Curtains & Furniture | Custom Window Coverings" />
 
-      {/* Hero Section */}
       <ParallaxSection
         imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
         title="Premium Blackout Blinds"
         subTitle="Functional, Stylish & Light-Blocking Solutions"
       />
 
-      {/* Introduction */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
           Complete Darkness, Uncompromised Design
@@ -41,7 +43,6 @@ const BlindsBlackout = () => {
         </p>
       </section>
 
-      {/* Features */}
       <section className="bg-[#f5f0e8] dark:bg-gray-800 py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           {[
@@ -73,7 +74,7 @@ const BlindsBlackout = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Media Gallery (Image + Video Support) */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
           Our Blackout Blinds in Action
@@ -81,21 +82,37 @@ const BlindsBlackout = () => {
         <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
           Browse recent installations across homes, offices, and commercial settings in Qatar.
         </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {officeGallery.map((src, index) => (
+          {mediaGallery.map((media, index) => (
             <button
               key={index}
-              onClick={() => setModalMedia(src)}
-              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              onClick={() => setModalMedia(media)}
+              className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img
-                src={src}
-                alt={`Blackout blind ${index + 1}`}
-                className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
-              />
+              {media.type === "image" ? (
+                <img
+                  src={media.src}
+                  alt={`Media ${index + 1}`}
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div className="w-full h-64 overflow-hidden">
+                  <iframe
+                    src={media.src}
+                    title={`Video ${index + 1}`}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </button>
           ))}
         </div>
+
+        {/* Modal Preview */}
         <Modal
           isOpen={!!modalMedia}
           onRequestClose={() => setModalMedia(null)}
@@ -110,17 +127,30 @@ const BlindsBlackout = () => {
             >
               ✕
             </button>
-            {modalMedia && (
-              <img src={modalMedia} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+            {modalMedia && mediaGallery.includes(modalMedia) && (
+              <>
+                {modalMedia.type === "image" ? (
+                  <img src={modalMedia.src} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+                ) : (
+                  <div className="w-full h-[80vh] overflow-hidden">
+                    <iframe
+                      src={modalMedia.src}
+                      title="Video Preview"
+                      className="w-full h-full rounded-xl"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      allowFullScreen
+                    />
+                  </div>
+                )}
+              </>
             )}
           </div>
         </Modal>
       </section>
 
-      {/* Customer Reviews */}
       <CustomerReviews />
 
-      {/* Why Choose Us */}
       <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
@@ -153,7 +183,6 @@ const BlindsBlackout = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Ready for Blackout Blinds That Work as Good as They Look?
@@ -162,7 +191,7 @@ const BlindsBlackout = () => {
           Message us for a free consultation, quotation, or to schedule your site visit today.
         </p>
         <a
-          href="https://wa.me/97470373588"
+          href="https://wa.me/97466280037"
           className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
           Chat on WhatsApp
