@@ -14,7 +14,7 @@ const Footer = () => {
       title: "Quick Links",
       links: [
         { label: "Home", to: "/" },
-        { label: "About Us", to: "/about" },
+        
         { label: "Gallery", to: "/gallery" },
         { label: "Contact Us", to: "/contact" },
       ],
@@ -53,9 +53,9 @@ const Footer = () => {
           <div className="space-y-4">
             <NavLink to="/" className="flex items-center space-x-3">
               <img
-                src="https://8upload.com/image/67979661192f3/AL-FWZ_Tradign_Contracting_Logo.png"
+                src="https://8upload.com/image/6857c8c36af7b/Curtain_Logo.jpeg"
                 alt="Curtains Furniture Logo"
-                className="w-12 bg-white rounded-full p-1"
+                className="w-12 bg-white rounded-md p-1"
               />
               <span className="text-xl font-bold text-white">
                 Curtains Furniture
@@ -64,6 +64,10 @@ const Footer = () => {
             <p className="text-sm text-gray-400">
               Specialized in premium Curtains, Blinds & Upholstery Solutions
               across Qatar. Free Consultation & Installation.
+            </p>
+            <p className="text-xs text-gray-500">
+              📍 Mansoura, Doha | 📞 +974 6628 0037 <br />
+              📧 info.curtainsfurniture@gmail.com
             </p>
           </div>
 
@@ -99,11 +103,11 @@ const Footer = () => {
             . All rights reserved.
           </p>
           <div className="flex space-x-5">
-            <a href="tel:+97455760872" className="hover:text-orange-400">
+            <a href="tel:+97466280037" className="hover:text-orange-400">
               <FaPhoneAlt size={18} />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61573137238181"
+              href="https://www.facebook.com/profile.php?id=61563249227531&mibextid=rS40aB7S9Ucbxw6v"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400"
@@ -111,7 +115,7 @@ const Footer = () => {
               <FaFacebook size={18} />
             </a>
             <a
-              href="https://www.instagram.com/rokibwin"
+              href="https://www.instagram.com/saadbinghanimfurniture?igsh=MWFrZGp2b21jeXpldA=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400"
@@ -119,7 +123,7 @@ const Footer = () => {
               <FaInstagram size={18} />
             </a>
             <a
-              href="https://wa.me/+97455760872"
+              href="https://wa.me/+97466280037"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400"
@@ -127,7 +131,7 @@ const Footer = () => {
               <FaWhatsapp size={18} />
             </a>
             <a
-              href="mailto:qatarwintrading@gmail.com"
+              href="mailto:info.curtainsfurniture@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400"

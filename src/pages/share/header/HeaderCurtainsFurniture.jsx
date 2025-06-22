@@ -1,4 +1,3 @@
-// Enhanced & Responsive Header for Curtains Furniture with Updated Color Palette
 import { NavLink } from "react-router-dom";
 import Typed from "react-typed";
 import { useState, useRef } from "react";
@@ -11,7 +10,7 @@ const HeaderCurtainsFurniture = () => {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const dropdownTimeout = useRef(null);
 
-  const leftMenuItems = [
+  const menuItems = [
     { label: "Home", to: "/" },
     {
       label: "Curtains",
@@ -40,7 +39,6 @@ const HeaderCurtainsFurniture = () => {
       ],
     },
     { label: "Gallery", to: "/gallery" },
-   
     { label: "Contact Us", to: "/contact" },
   ];
 
@@ -48,36 +46,31 @@ const HeaderCurtainsFurniture = () => {
     const query = searchQuery.trim().toLowerCase();
     if (!query) return alert("Please enter a search term.");
 
-    const elements = Array.from(
+    const matches = Array.from(
       document.querySelectorAll("h1, h2, h3, p, a, input[type='number']")
-    );
-
-    const matches = elements.filter((el) =>
-      el.textContent.toLowerCase().includes(query)
-    );
+    ).filter(el => el.textContent.toLowerCase().includes(query));
 
     if (matches.length) {
-      matches.forEach((match, index) => {
-        match.id = `search-result-${index}`;
-        match.style.backgroundColor = "#fffa8b";
-        setTimeout(() => (match.style.backgroundColor = ""), 2000);
+      matches.forEach((el, i) => {
+        el.id = `search-result-${i}`;
+        el.style.backgroundColor = "#fffa8b";
+        setTimeout(() => (el.style.backgroundColor = ""), 2000);
       });
       setSearchResults(
-        matches.map((match, i) => ({
-          text: match.textContent,
+        matches.map((el, i) => ({
+          text: el.textContent,
           elementId: `search-result-${i}`,
         }))
       );
     } else {
       alert("No matches found.");
-      setSearchResults([]);
     }
     setSearchQuery("");
   };
 
   return (
     <header className="sticky top-0 z-50 bg-[#1b1f24] text-white shadow-lg font-sans">
-      {/* Announcement Banner */}
+      {/* Top Banner */}
       <div className="bg-[#ff6a00] py-1 text-center text-sm md:text-base font-semibold">
         <Typed
           strings={[
@@ -91,18 +84,21 @@ const HeaderCurtainsFurniture = () => {
         />
       </div>
 
-      {/* Top Bar */}
-      <div className="flex flex-wrap justify-between items-center px-4 py-2">
-        <NavLink to="/">
+      {/* Top Section */}
+      <div className="flex flex-wrap items-center justify-between px-4 py-2">
+        {/* Logo */}
+        <NavLink to="/" aria-label="Homepage">
           <img
-            src="https://8upload.com/image/67979661192f3/AL-FWZ_Tradign_Contracting_Logo.png"
+            src="https://8upload.com/image/6857c8c36af7b/Curtain_Logo.jpeg"
             alt="Curtains Furniture Logo"
-            className="h-10"
+            className="h-10 rounded -md"
+            loading="lazy"
           />
         </NavLink>
 
+        {/* Search Bar */}
         <div className="flex-1 mx-4">
-          <div className="relative max-w-md w-full mx-auto">
+          <div className="relative max-w-md mx-auto w-full">
             <input
               type="text"
               value={searchQuery}
@@ -110,27 +106,32 @@ const HeaderCurtainsFurniture = () => {
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
               placeholder="Search curtains, blinds..."
               className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-orange-400"
+              aria-label="Search"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
                 className="absolute right-10 top-0 bottom-0 flex items-center px-2 text-gray-500 hover:text-red-600"
+                aria-label="Clear search"
               >
                 <FaTimes />
               </button>
             )}
             <button
               onClick={handleSearch}
-              className="absolute right-0 top-0 bottom-0 px-3 bg-[#ff6a00] rounded-r-md hover:bg-orange-600"
+              className="absolute right-0 top-0 bottom-0 px-3 bg-[#ff6a00] text-white rounded-r-md hover:bg-orange-600"
+              aria-label="Search"
             >
               🔍
             </button>
           </div>
         </div>
 
+        {/* Mobile Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-orange-400 px-3"
+          className="md:hidden text-orange-400 px-3 text-2xl"
+          aria-label="Toggle Menu"
         >
           ☰
         </button>
@@ -138,16 +139,16 @@ const HeaderCurtainsFurniture = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex justify-center gap-6 py-2 text-sm font-medium">
-        {leftMenuItems.map((item, idx) => (
+        {menuItems.map((item, index) => (
           <div
-            key={idx}
+            key={index}
             className="relative group"
             onMouseEnter={() => {
               clearTimeout(dropdownTimeout.current);
-              setActiveSubMenu(idx);
+              setActiveSubMenu(index);
             }}
             onMouseLeave={() => {
-              dropdownTimeout.current = setTimeout(() => setActiveSubMenu(null), 200);
+              dropdownTimeout.current = setTimeout(() => setActiveSubMenu(null), 150);
             }}
           >
             <NavLink
@@ -158,9 +159,11 @@ const HeaderCurtainsFurniture = () => {
             >
               {item.label}
             </NavLink>
-            {item.submenu && activeSubMenu === idx && (
+
+            {/* Submenu */}
+            {item.submenu && activeSubMenu === index && (
               <div
-                className="absolute bg-[#2b2f34] top-full left-0 mt-2 w-52 rounded-md shadow-xl overflow-hidden"
+                className="absolute bg-[#2b2f34] top-full left-0 mt-2 w-56 rounded-md shadow-xl overflow-hidden"
                 onMouseEnter={() => clearTimeout(dropdownTimeout.current)}
                 onMouseLeave={() => setActiveSubMenu(null)}
               >
@@ -181,35 +184,31 @@ const HeaderCurtainsFurniture = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#2b2f34] text-white px-4 py-3">
-          <ul className="space-y-2">
-            {leftMenuItems.map((item, idx) => (
-              <li key={idx}>
-                <details className="group">
-                  <summary className="cursor-pointer py-1 hover:text-orange-400 list-none flex justify-between items-center">
-                    {item.label}
-                    {item.submenu && <span className="text-sm">▾</span>}
-                  </summary>
-                  {item.submenu && (
-                    <ul className="pl-4 space-y-1 mt-1">
-                      {item.submenu.map((sub, subIdx) => (
-                        <li key={subIdx}>
-                          <NavLink
-                            to={sub.to}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block py-1 text-sm hover:text-orange-300"
-                          >
-                            {sub.label}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </details>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <nav className="md:hidden bg-[#2b2f34] text-white px-4 py-3 space-y-2">
+          {menuItems.map((item, idx) => (
+            <details key={idx} className="group">
+              <summary className="cursor-pointer py-1 flex justify-between items-center hover:text-orange-400">
+                {item.label}
+                {item.submenu && <span>▾</span>}
+              </summary>
+              {item.submenu && (
+                <ul className="pl-4 space-y-1 mt-1">
+                  {item.submenu.map((sub, subIdx) => (
+                    <li key={subIdx}>
+                      <NavLink
+                        to={sub.to}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-1 text-sm hover:text-orange-300"
+                      >
+                        {sub.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </details>
+          ))}
+        </nav>
       )}
 
       {/* Search Results */}
