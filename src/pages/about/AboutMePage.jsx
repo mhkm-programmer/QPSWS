@@ -7,7 +7,7 @@ import React from "react";
 const AboutMePage = () => {
   return (
     <div>
-     <PageTitle title="AL-FWZ Furniture Trading & Contracting | About Us" />
+     <PageTitle title="Portfolio | Curtains Furniture" />
       <ParallaxSection
         imagePath="https://8upload.com/image/67a7f51fa667f/About_Us-min.jpg"
         title=""

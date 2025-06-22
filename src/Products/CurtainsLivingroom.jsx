@@ -1,130 +1,169 @@
+import { useState } from "react";
 import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
 import CustomerReviews from "../pages/Home/CustomerReviews";
-import { FaRulerCombined, FaSun, FaStar, FaCertificate } from "react-icons/fa";
+import Modal from "react-modal";
+import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
-const galleryImages = [
-  "https://8upload.com/image/67aaf1239939b/blackout1.jpg",
-  "https://8upload.com/image/67aaf1284e738/blackout2.jpg",
-  "https://8upload.com/image/67aaf12c09d43/blackout3.jpg",
-  "https://8upload.com/image/67aaf132b7a6f/blackout4.jpg",
-  "https://8upload.com/image/67aaf13662fcd/blackout5.jpg",
-  "https://8upload.com/image/67aaf13abf5e2/blackout6.jpg",
+const livingroomCurtainsGallery = [
+  "https://8upload.com/image/67ab0bce5e3e5/office1.jpg",
+  "https://8upload.com/image/67ab0bd2011aa/office2.jpg",
+  "https://8upload.com/image/67ab0bd57aaae/office3.jpg",
+  "https://8upload.com/image/67ab0bdb0ea7e/office4.jpg",
+  "https://8upload.com/image/67ab0be06d35b/office5.jpg",
+  "https://8upload.com/image/67ab0be4cf914/office6.jpg",
 ];
 
+Modal.setAppElement('#root');
+
 const CurtainsLivingroom = () => {
+  const [modalMedia, setModalMedia] = useState(null);
+
   return (
     <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
       {/* SEO Title */}
-      <PageTitle title="Blackout Blinds | Curtains Furniture Qatar" />
+      <PageTitle title="Living Room Curtains in Qatar | Stylish & Functional | Curtains Furniture" />
 
       {/* Hero Section */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67aaf1409d9f7/blackout-banner.jpg"
-        title="Blackout Blinds"
-        subTitle="Block Light. Enhance Comfort."
+        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        title="Living Room Curtains"
+        subTitle="Style, Light Control & Privacy for Your Family Space"
       />
 
-      {/* Intro */}
+      {/* Introduction */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] mb-6">
-          Experience Total Light Control
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
+          Curtains That Complete Your Living Room
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-          Premium blackout blinds from Curtains Furniture combine contemporary aesthetics with superior functionality — delivering complete privacy and light exclusion. Ideal for bedrooms, offices, and media rooms across Qatar.
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Elevate your living space with our curated collection of elegant, modern, and functional living room curtains. Whether you prefer light-filtering sheers, blackout panels, or layered options, Curtains Furniture delivers customized solutions across Qatar.
         </p>
       </section>
 
-      {/* Product Features */}
-      <section className="bg-[#f2ede8] dark:bg-gray-800 py-16 px-6">
+      {/* Features */}
+      <section className="bg-[#f5f0e8] dark:bg-gray-800 py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-          {[{
-            icon: <FaRulerCombined size={40} className="mx-auto mb-4 text-[#6B4226]" />, 
-            title: "Precision Fitting",
-            desc: "Custom measured and professionally installed for flawless window coverage."
-          }, {
-            icon: <FaSun size={40} className="mx-auto mb-4 text-[#6B4226]" />, 
-            title: "Light & UV Blocking",
-            desc: "Complete blackout and thermal insulation for restful interiors."
-          }, {
-            icon: <FaStar size={40} className="mx-auto mb-4 text-[#6B4226]" />, 
-            title: "Modern Design",
-            desc: "Stylish, clean-lined options in neutral and bold tones to suit any room."
-          }].map(({ icon, title, desc }, i) => (
-            <div key={i} className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+          {[
+            {
+              icon: <FaRulerCombined size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Tailored to Your Space",
+              desc: "Curtains stitched to fit your living room windows — from standard to floor-to-ceiling.",
+            },
+            {
+              icon: <FaLightbulb size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Light & Privacy Control",
+              desc: "Choose from sheer, blackout, or layered curtains to suit your lighting preferences.",
+            },
+            {
+              icon: <FaCogs size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Decorative & Durable",
+              desc: "Select from trendy fabrics and finishes that enhance aesthetics while lasting for years.",
+            },
+          ].map(({ icon, title, desc }, i) => (
+            <div
+              key={i}
+              className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition"
+            >
               {icon}
               <h3 className="text-xl font-semibold mb-2 text-[#4A342E] dark:text-white">{title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{desc}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Gallery */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-10">
-          Blackout Blinds Showcase
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
+          Living Room Curtain Ideas
         </h3>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
-          Explore installations completed by Curtains Furniture — a testament to our craftsmanship and attention to detail.
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+          See how homeowners across Qatar style their living spaces with our curtains.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryImages.map((src, index) => (
-            <div
+          {livingroomCurtainsGallery.map((src, index) => (
+            <button
               key={index}
+              onClick={() => setModalMedia(src)}
               className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={src}
-                alt={`Blackout blind ${index + 1}`}
+                alt={`Living room curtain ${index + 1}`}
                 className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
               />
-            </div>
+            </button>
           ))}
         </div>
+        <Modal
+          isOpen={!!modalMedia}
+          onRequestClose={() => setModalMedia(null)}
+          contentLabel="Media Preview"
+          className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-75 z-50"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-60"
+        >
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-4 max-w-3xl max-h-[90vh] overflow-auto relative">
+            <button
+              className="absolute top-4 right-4 text-black dark:text-white text-xl"
+              onClick={() => setModalMedia(null)}
+            >
+              ✕
+            </button>
+            {modalMedia && (
+              <img src={modalMedia} alt="Preview" className="max-w-full max-h-[80vh] rounded-xl" />
+            )}
+          </div>
+        </Modal>
       </section>
 
-      {/* Reviews */}
+      {/* Customer Reviews */}
       <CustomerReviews />
 
-      {/* Why Choose Us */}
-      <section className="bg-[#f5f0e8] dark:bg-gray-800 py-20 px-6">
+      {/* Why Curtains Furniture */}
+      <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#4A342E] dark:text-white">Why Choose Curtains Furniture?</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10">
-            From design consultation to final fitting — Curtains Furniture ensures reliable service, certified quality, and unmatched customization.
+          <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
+            Why Choose Curtains Furniture?
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+            Homeowners across Qatar trust us for our quality fabrics, fast delivery, and expert service.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {["Free Site Visit", "Premium Fabric Options", "Rapid Turnaround", "Warranty & Support"].map((item, i) => (
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { title: "Free Home Visit", desc: "We’ll measure your windows, bring fabric samples, and offer design guidance." },
+              { title: "Quick Delivery", desc: "Custom curtains stitched and installed within 2–3 working days." },
+              { title: "Competitive Rates", desc: "Affordable prices for every budget — with premium finish and materials." },
+            ].map(({ title, desc }, i) => (
               <div key={i} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
-                <h3 className="text-lg font-semibold mb-2 text-[#6B4226] dark:text-white">{item}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Professional service with a focus on satisfaction and results.</p>
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white mb-2">{title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
               </div>
             ))}
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow flex items-center gap-3">
+              <FaCertificate className="text-[#6B4226]" size={24} />
+              <div>
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white">Home-Proof Quality</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Easy-to-maintain, fade-resistant fabrics — perfect for family homes and apartments.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badge */}
-      <section className="bg-white dark:bg-gray-900 py-16 px-6 text-center">
-        <FaCertificate className="text-[#6B4226] mx-auto mb-4" size={50} />
-        <h3 className="text-2xl font-bold text-[#4A342E] dark:text-white mb-2">Certified Materials</h3>
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Our blackout blinds are produced using ISO-compliant, flame-retardant, and eco-conscious components.
-        </p>
-      </section>
-
-      {/* CTA Section */}
+      {/* Call to Action */}
       <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready for a Darker, Quieter Space?
+          Let’s Beautify Your Living Room Today
         </h2>
-        <p className="text-lg mb-6">
-          Get in touch for tailored recommendations, product demos, or a site assessment anywhere in Qatar.
+        <p className="text-lg mb-6 max-w-xl mx-auto">
+          Reach out for a free home visit, expert consultation, and quick delivery anywhere in Qatar.
         </p>
         <a
-          href="https://wa.me/97466280037"
-          className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition-all duration-300"
+          href="https://wa.me/97470373588"
+          className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
           Chat on WhatsApp
         </a>

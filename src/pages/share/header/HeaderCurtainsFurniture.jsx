@@ -40,8 +40,8 @@ const HeaderCurtainsFurniture = () => {
       ],
     },
     { label: "Gallery", to: "/gallery" },
-    { label: "About Us", to: "/about" },
-    { label: "Contact", to: "/contact" },
+   
+    { label: "Contact Us", to: "/contact" },
   ];
 
   const handleSearch = () => {

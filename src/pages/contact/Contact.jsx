@@ -1,6 +1,5 @@
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import React, { useState } from 'react';
-
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
@@ -10,22 +9,20 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState(null);
 
-  // Update form data state on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission via EmailJS service
   const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        'service_7b92lcx',       // Your EmailJS Service ID
-        'template_k6p49ij',      // Your EmailJS Template ID
+        'service_7b92lcx',
+        'template_k6p49ij',
         e.target,
-        'wqQwMjjepKRfJ6ah-'     // Your EmailJS Public Key
+        'wqQwMjjepKRfJ6ah-'
       )
       .then(() => {
         setStatus('Your message has been sent successfully.');
@@ -37,103 +34,75 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 px-4">
+    <div className="container mx-auto py-12 px-4 lg:px-8">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center mb-12">
-        <h1 className="text-4xl font-semibold text-[#6B4226] mb-4">Contact Us</h1>
+        <h1 className="text-4xl font-semibold text-[#6B4226] mb-4">Contact Curtains Furniture</h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 lg:px-18">
-          At AL-FWZ Furniture Trading, we specialize in crafting custom furniture, expert upholstery, and interior design solutions. 
-          Let us help you create spaces that perfectly reflect your style and meet your functional needs.
+          At Curtains Furniture, we specialize in made-to-measure curtains, elegant blinds, and interior window solutions. Contact us for design, consultation, or installation anywhere in Qatar.
         </p>
       </motion.div>
 
-      <section className="grid lg:grid-cols-2 gap-8">
-        {/* Left: Map and Shop Images */}
+      <section className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Map Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="lg:h-[800px] h-auto w-full space-y-4 rounded-lg overflow-hidden"
+          className="flex flex-col justify-between space-y-6 h-full"
         >
-          {/* Google Map Link with Image */}
-          <div className="h-[350px] w-full rounded-lg overflow-hidden">
+          <div className="h-[300px] sm:h-[400px] lg:h-[600px] w-full rounded-lg overflow-hidden shadow-md">
             <a
-              href="https://www.google.com/maps/place/25%C2%B016'10.9%22N+51%C2%B032'24.2%22E/@25.2698486,51.5399093,19.75z/data=!4m4!3m3!8m2!3d25.2696943!4d51.5400557?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/25%C2%B016'10.9%22N+51%C2%B032'24.2%22E/@25.2698486,51.5399093,19.75z/data=!4m4!3m3!8m2!3d25.2696943!4d51.5400557?entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View our location on Google Maps"
+              aria-label="Google Map"
             >
               <img
                 src="https://8upload.com/image/67ac615fe0e96/Screenshot_4.png"
-                alt="Google Map Location"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </a>
-          </div>
-
-          {/* Shop Image */}
-          <div className="h-[450px] w-full rounded-lg overflow-hidden">
-            <a
-              href="https://www.google.com/maps/place/25%C2%B016'10.9%22N+51%C2%B032'24.2%22E/@25.2698486,51.5399093,19.75z/data=!4m4!3m3!8m2!3d25.2696943!4d51.5400557?entry=ttu&g_ep=EgoyMDIwNS4xIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View our shop location on Google Maps"
-            >
-              <img
-                src="https://8upload.com/image/67ac615fba98c/WhatsApp_Image_2025-02-09_at_22.11.33_d335a3e9.jpg"
-                alt="Shop Interior"
-                className="w-full h-full object-contain rounded-lg"
+                alt="Curtains Furniture Map"
+                className="w-full h-full object-cover"
               />
             </a>
           </div>
         </motion.div>
 
-        {/* Right: Contact Details and Form */}
+        {/* Contact Form Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-between"
+          className="bg-white p-6 sm:p-8 rounded-xl shadow-lg flex flex-col justify-between lg:min-h-[600px]"
         >
-          {/* Contact Information */}
-          <h2 className="text-2xl font-semibold text-[#6B4226] mb-4">Contact Information</h2>
-          <div className="mb-6 text-gray-700">
-            <p className="mb-2">
-              <strong>Location:</strong> 26 Zone, 850 Al Mansoura Street, Building 34, Unit 17
-            </p>
-            <p className="mb-2">
+          <h2 className="text-2xl font-semibold text-[#6B4226] mb-4">Get in Touch</h2>
+          <div className="mb-6 text-gray-700 space-y-2">
+            <p><strong>Location:</strong> Mansoura, Doha</p>
+            <p>
               <strong>Email:</strong>{' '}
-              <a
-                href="mailto:qatarwintrading@gmail.com"
-                className="text-[#8B5A2B] hover:text-[#6B4226]"
-              >
-                qatarwintrading@gmail.com
+              <a href="mailto:info.curtainsfurniture@gmail.com" className="text-[#8B5A2B] hover:text-[#6B4226]">
+                info.curtainsfurniture@gmail.com
               </a>
             </p>
-            <p className="mb-2">
-              <strong>Phone:</strong>{' '}
-              <a href="tel:+97455760872" className="text-[#8B5A2B] hover:text-[#6B4226]">
-                +974 5576 0872
+            <p>
+              <strong>Phone & WhatsApp:</strong>{' '}
+              <a href="tel:+97466280037" className="text-[#8B5A2B] hover:text-[#6B4226]">
+                +974 6628 0037
               </a>
             </p>
-            <p className="mb-2">
-              <strong>Business Hours:</strong> <br />
-              Saturday - Thursday: 8:00 AM - 1:00 PM & 3:30 PM - 10:00 PM <br />
-              Friday: 3:30 PM - 10:00 PM
+            <p>
+              <strong>Business Hours:</strong><br />
+              Saturday - Thursday: 8:00 AM – 1:00 PM & 3:30 PM – 10:00 PM<br />
+              Friday: 3:30 PM – 10:00 PM
             </p>
-            <p className="mb-4 font-semibold">Available for consultations and project inquiries.</p>
+            <p className="font-semibold">Free consultations available across Qatar.</p>
           </div>
 
           {/* Social Media Icons */}
           <div className="flex gap-6 my-6">
-            <a
-              href="tel:+97455760872"
-              className="text-[#8B5A2B] hover:text-[#6B4226]"
-              aria-label="Call us"
-            >
+            <a href="tel:+97466280037" className="text-[#8B5A2B] hover:text-[#6B4226]" aria-label="Call us">
               <FaPhoneAlt size={32} />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61573137238181&mibextid=ZbWKwL"
+              href="https://www.facebook.com/profile.php?id=61563249227531&mibextid=rS40aB7S9Ucbxw6v"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#8B5A2B] hover:text-[#6B4226]"
@@ -142,7 +111,7 @@ const Contact = () => {
               <FaFacebook size={32} />
             </a>
             <a
-              href="https://www.instagram.com/rokibwin?igsh=anU3ejd4dHFneDhi"
+              href="https://www.instagram.com/saadbinghanimfurniture?igsh=MWFrZGp2b21jeXpldA=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#8B5A2B] hover:text-[#6B4226]"
@@ -151,7 +120,7 @@ const Contact = () => {
               <FaInstagram size={32} />
             </a>
             <a
-              href="https://wa.me/+97455760872"
+              href="https://wa.me/97466280037"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#8B5A2B] hover:text-[#6B4226]"
@@ -161,9 +130,8 @@ const Contact = () => {
             </a>
           </div>
 
-          {/* Contact Form Intro */}
           <p className="text-gray-600 mb-4">
-            Please fill out the form below. Our team will respond promptly to your inquiry.
+            Fill out the form below and we’ll get back to you shortly.
           </p>
 
           {/* Contact Form */}
@@ -180,8 +148,6 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B4226]"
                 required
-                aria-required="true"
-                aria-describedby="nameHelp"
               />
             </div>
 
@@ -197,8 +163,6 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B4226]"
                 required
-                aria-required="true"
-                aria-describedby="emailHelp"
               />
             </div>
 
@@ -214,23 +178,19 @@ const Contact = () => {
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B4226]"
                 rows="4"
                 required
-                aria-required="true"
-                aria-describedby="messageHelp"
               />
             </div>
 
             <button
               type="submit"
-              className={`btn-hero w-full bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition duration-300 ${
+              className={`w-full bg-[#6B4226] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B5A2B] transition duration-300 ${
                 activeTheme === 'dark' ? 'dark-mode-text' : ''
               }`}
-              aria-label="Send message"
             >
               Send Message
             </button>
           </form>
 
-          {/* Status Message */}
           {status && <p className="text-center text-gray-600 mt-4">{status}</p>}
         </motion.div>
       </section>

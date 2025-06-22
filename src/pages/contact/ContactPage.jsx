@@ -6,7 +6,7 @@ import React from 'react';
 const ContactPage = () => {
     return (
         <div>
-         <PageTitle title="Al-FWZ Furniture Trading & Contracting | Contact Us" />
+         <PageTitle title="Contact Us | Curtains Furniture" />
              <ParallaxSection
         imagePath="https://8upload.com/image/67a7ffa390ec8/Contact-min.jpg"
         title=""

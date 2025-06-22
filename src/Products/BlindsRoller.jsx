@@ -22,22 +22,22 @@ const BlindsRoller = () => {
   return (
     <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
       {/* SEO Title */}
-      <PageTitle title="Office Blinds | Curtains Furniture Qatar | Professional Window Solutions" />
+      <PageTitle title="Roller Blinds Qatar | Modern Window Solutions | Curtains Furniture" />
 
       {/* Hero Section */}
       <ParallaxSection
         imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
-        title="Office Blinds Solutions"
-        subTitle="Professional. Minimal. Productive."
+        title="Roller Blinds for Offices & Commercial Spaces"
+        subTitle="Sleek, Functional, and Easy to Operate"
       />
 
       {/* Introduction */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
-          Smart Blinds for Smarter Workspaces
+          High-Quality Roller Blinds for Productive Work Environments
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Elevate office performance and visual appeal with premium blinds from Curtains Furniture. Designed for boardrooms, coworking spaces, and commercial offices across Qatar.
+          Enhance your office or commercial space with our premium roller blinds, designed for optimal light control, privacy, and aesthetics. Trusted by businesses across Qatar for durability and style.
         </p>
       </section>
 
@@ -47,18 +47,18 @@ const BlindsRoller = () => {
           {[
             {
               icon: <FaRulerCombined size={36} className="mx-auto mb-4 text-[#6B4226]" />,
-              title: "Precision Fit",
-              desc: "Accurate on-site measurement for flawless, professional installation.",
+              title: "Custom-Fit Precision",
+              desc: "Tailored measurements and professional installation for a perfect fit on every window.",
             },
             {
               icon: <FaLightbulb size={36} className="mx-auto mb-4 text-[#6B4226]" />,
-              title: "Light & Glare Control",
-              desc: "Boost productivity with blinds that filter sunlight and reduce screen glare.",
+              title: "Effective Light Management",
+              desc: "Choose from sheer to blackout fabrics to create the ideal ambiance and reduce glare.",
             },
             {
               icon: <FaCogs size={36} className="mx-auto mb-4 text-[#6B4226]" />,
-              title: "Corporate Look",
-              desc: "Functional designs that complement modern work environments.",
+              title: "Smooth & Reliable Operation",
+              desc: "Durable mechanisms ensure quiet, effortless rolling for daily convenience.",
             },
           ].map(({ icon, title, desc }, i) => (
             <div
@@ -76,10 +76,10 @@ const BlindsRoller = () => {
       {/* Gallery */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
-          Office Blinds Gallery
+          Roller Blinds Gallery
         </h3>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-          Explore recent installations completed by our expert team for offices across Qatar.
+          See examples of our recent roller blinds installations in offices and commercial buildings throughout Qatar.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {officeGallery.map((src, index) => (
@@ -90,7 +90,7 @@ const BlindsRoller = () => {
             >
               <img
                 src={src}
-                alt={`Office blind ${index + 1}`}
+                alt={`Roller blind ${index + 1}`}
                 className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
               />
             </button>
@@ -124,16 +124,16 @@ const BlindsRoller = () => {
       <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
-            Why Curtains Furniture?
+            Why Choose Curtains Furniture for Roller Blinds?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-            Recognized across Qatar for our commercial-grade solutions and hassle-free project execution.
+            We offer personalized consultations, expert installation, and premium materials to bring your office blinds vision to life with unmatched quality.
           </p>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { title: "On-Site Assessment", desc: "Expert evaluation and guidance tailored to your workspace." },
-              { title: "Fast Delivery & Setup", desc: "Quick production and installation within 48 hours." },
-              { title: "Corporate Packages", desc: "Specialized pricing for businesses, offices, and large orders." },
+              { title: "On-Site Measurement", desc: "Precise measurements by our trained professionals ensure a perfect fit." },
+              { title: "Fast & Professional Installation", desc: "Efficient setup minimizing disruption to your workspace." },
+              { title: "Corporate & Bulk Discounts", desc: "Attractive pricing for large projects and repeat clients." },
             ].map(({ title, desc }, i) => (
               <div key={i} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
                 <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white mb-2">{title}</h3>
@@ -145,7 +145,7 @@ const BlindsRoller = () => {
               <div>
                 <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white">Certified Quality</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  International-grade fabrics and safety-compliant mechanisms.
+                  Only premium fabrics and components meeting international standards and safety compliance.
                 </p>
               </div>
             </div>
@@ -153,19 +153,19 @@ const BlindsRoller = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Call to Action */}
       <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to Elevate Your Workspace?
+          Upgrade Your Workspace with Roller Blinds Today
         </h2>
         <p className="text-lg mb-6 max-w-xl mx-auto">
-          Connect with us for a no-obligation quote, expert design advice, or site visit scheduling.
+          Contact us now for a free consultation, measurement, and custom quote anywhere in Qatar.
         </p>
         <a
           href="https://wa.me/97470373588"
           className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
-          Contact via WhatsApp
+          Chat on WhatsApp
         </a>
       </section>
     </div>

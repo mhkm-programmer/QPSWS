@@ -1,17 +1,17 @@
 import React, { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-// Lazy-loaded components
-const HeaderAlFWZ = lazy(() => import("../pages/share/header/HeaderCurtainsFurniture"));
+// Lazy-loaded layout components
+const Header = lazy(() => import("../pages/share/header/HeaderCurtainsFurniture"));
 const Footer = lazy(() => import("../pages/share/footer/Footer"));
 const ContactBubble = lazy(() => import("../pages/share/ContactBubble"));
 
 const Main = () => {
   return (
-    <div className="main-container relative min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-gray-800">
       {/* Header */}
-      <Suspense fallback={<div className="text-center py-8 text-gray-500">Loading header...</div>}>
-        <HeaderAlFWZ />
+      <Suspense fallback={<div className="text-center py-6 text-gray-400">Loading...</div>}>
+        <Header />
       </Suspense>
 
       {/* Main Content */}
@@ -20,11 +20,11 @@ const Main = () => {
       </main>
 
       {/* Footer */}
-      <Suspense fallback={<div className="text-center py-6 text-gray-400">Loading footer...</div>}>
+      <Suspense fallback={<div className="text-center py-6 text-gray-400">Loading...</div>}>
         <Footer />
       </Suspense>
 
-      {/* Contact Bubble */}
+      {/* Floating Contact Shortcut */}
       <Suspense fallback={null}>
         <ContactBubble />
       </Suspense>
