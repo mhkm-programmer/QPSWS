@@ -24,7 +24,7 @@ const products = [
   {
     id: 1,
     name: "Blackout Curtains",
-    image: "/images/curtain1.jpg",
+    image: "https://8upload.com/image/685c8fdbaa00d/WhatsApp_Image_2025-06-24_at_22.51.30_0a3810a5.jpg",
     subtitle: "Perfect for blocking light and enhancing privacy in bedrooms or media rooms.",
     link: "/curtains/blackout",
     rating: 4.5,
@@ -33,7 +33,7 @@ const products = [
   {
     id: 2,
     name: "Bedroom Curtains",
-    image: "/images/curtain2.jpg",
+    image: "https://8upload.com/image/685c95754abe6/IMG-20250625-WA0012.jpg",
     subtitle: "Soft textures and elegant drapes designed to create a cozy bedroom ambiance.",
     link: "/curtains/bedroom",
     rating: 4,
@@ -41,7 +41,7 @@ const products = [
   {
     id: 3,
     name: "Wave Style Curtains",
-    image: "/images/curtain3.jpg",
+    image: "https://8upload.com/image/685c8fda8b268/WhatsApp_Image_2025-06-24_at_22.51.31_ffba6044.jpg",
     subtitle: "Modern wave pleats that offer a clean, architectural look for any room.",
     link: "/curtains/wave",
     rating: 5,
@@ -50,7 +50,7 @@ const products = [
   {
     id: 4,
     name: "Living Room Curtains",
-    image: "/images/curtain4.jpg",
+    image: "https://8upload.com/image/685c95337a7e1/IMG-20250625-WA0017.jpg",
     subtitle: "Stylish and functional, adding sophistication to your living area.",
     link: "/curtains/livingroom",
     rating: 3.5,
