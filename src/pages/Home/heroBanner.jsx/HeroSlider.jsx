@@ -5,25 +5,25 @@ import React from "react";
 const HeroSlider = () => {
   const slides = [
     {
-      image: "https://8upload.com/image/68337d45aa60e/IMG-20250518-WA0039.jpg",
+      image: "https://8upload.com/image/685c8fdacf7fb/IMG-20250625-WA0026.jpg",
       title: "Premium Curtains Collection",
       subtitle: "Custom-made solutions for elegant interiors.",
       buttonText: "View Collection",
       link: "/curtains",
     },
     {
-      image: "https://8upload.com/image/68337cbb8461d/IMG-20250518-WA0006.jpg",
+      image: "https://8upload.com/image/685c8fdac5041/WhatsApp_Image_2025-06-24_at_22.51.32_7b72dace.jpg",
       title: "Blinds & Shutters",
       subtitle: "Modern blinds that offer style and privacy.",
       buttonText: "Explore Blinds",
       link: "/blinds",
     },
     {
-      image: "https://8upload.com/image/68337f6b0d73b/IMG-20250518-WA0010.jpg",
+      image: "https://8upload.com/image/685c91d8ee5a6/IMG-20250625-WA0005.jpg",
       title: "Upholstery & Repair",
       subtitle: "Restore and refresh your furniture with expert care.",
       buttonText: "Get a Quote",
-      link: "/services/upholstery",
+      link: "/curtains",
     },
   ];
 
@@ -67,7 +67,7 @@ const HeroSlider = () => {
       {/* Call to Action Buttons */}
       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10 px-4 text-center">
         <a
-          href="https://www.google.com/maps?q=Azlaan+Contracting+Qatar"
+          href="https://g.co/kgs/s1RK9fh"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-3 bg-neutral-800 text-white rounded-xl hover:bg-neutral-700 transition"
@@ -75,7 +75,7 @@ const HeroSlider = () => {
           <FaMapMarkerAlt /> Visit Our Showroom
         </a>
         <a
-          href="https://wa.me/+97455760872"
+          href="https://wa.me/+97466280037"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-3 bg-[#25D366] text-white rounded-xl hover:bg-[#1ebe5b] transition"
