@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const officeGallery = [
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d19705f43f/IMG-20250625-WA0012.jpg" },
+  { type: "video", src: "https://streamable.com/e/0sbzav" },
+  { type: "image", src: "https://8upload.com/image/685d1970aeea2/IMG-20250625-WA0013.jpg" },
+    { type: "video", src: "https://streamable.com/e/f93t1w" },
+  { type: "image", src: "https://8upload.com/image/685d19700de27/IMG-20250625-WA0010.jpg" },
+    { type: "video", src: "https://streamable.com/e/cyezxn" },
 ];
 Modal.setAppElement('#root');
 
@@ -25,7 +25,7 @@ const BlindsWindow = () => {
 
       {/* Hero Banner */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d1590c5f8c/IMG-20250625-WA0036.jpg"
         title="Blinds Windows"
         subTitle="Elegant, Functional & Durable Window Treatments"
       />

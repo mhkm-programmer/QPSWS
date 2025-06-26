@@ -11,12 +11,12 @@ import {
 } from "react-icons/fa";
 
 const mediaGallery = [
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d046bee8af/WhatsApp_Image_2025-06-24_at_22.51.32_91c98fdf.jpg" },
+  { type: "video", src: "https://streamable.com/e/071fp9" },
+  { type: "image", src: "https://8upload.com/image/685d046c26143/WhatsApp_Image_2025-06-24_at_22.51.32_c3cdc885.jpg" },
+  { type: "video", src: "https://streamable.com/e/xq2vvb" },
+  { type: "image", src: "https://8upload.com/image/685d046c35074/WhatsApp_Image_2025-06-24_at_22.51.32_e8609b51.jpg" },
+  { type: "video", src: "https://streamable.com/e/fbhadv" },
 ];
 
 Modal.setAppElement('#root');
@@ -29,7 +29,7 @@ const BlindsBlackout = () => {
       <PageTitle title="Blackout Blinds Qatar | Curtains & Furniture | Custom Window Coverings" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d046c0b2b4/WhatsApp_Image_2025-06-24_at_22.51.32_120ccc0b.jpg"
         title="Premium Blackout Blinds"
         subTitle="Functional, Stylish & Light-Blocking Solutions"
       />

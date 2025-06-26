@@ -11,12 +11,12 @@ import {
 } from "react-icons/fa";
 
 const officeGallery = [
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d159147033/IMG-20250625-WA0041.jpg" },
+  { type: "video", src: "https://streamable.com/e/knwvze" },
+  { type: "image", src: "https://8upload.com/image/685d1590d881d/IMG-20250625-WA0037.jpg" },
+  { type: "video", src: "https://streamable.com/e/kfb3wt" },
+  { type: "image", src: "https://8upload.com/image/685d159126f3d/IMG-20250625-WA0038.jpg" },
+{ type: "video", src: "https://streamable.com/e/dlb8dh" },
 ];
 
 Modal.setAppElement('#root');
@@ -29,7 +29,7 @@ const BlindsOffice = () => {
       <PageTitle title="Office Blinds | Curtains Furniture Qatar | Professional Window Solutions" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d1590b9720/IMG-20250625-WA0034.jpg"
         title="Office Blinds Solutions"
         subTitle="Professional. Minimal. Productive."
       />

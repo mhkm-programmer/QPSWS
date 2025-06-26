@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const officeGallery = [
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d1590c5f8c/IMG-20250625-WA0036.jpg" },
+  { type: "video", src: "https://streamable.com/e/3kuz0c" },
+  { type: "image", src: "https://8upload.com/image/685d17ee801b8/IMG-20250625-WA0029.jpg" },
+  { type: "video", src: "https://streamable.com/e/477uaw" },
+  { type: "image", src: "https://8upload.com/image/685d17eead8bb/IMG-20250625-WA0030.jpg" },
+ { type: "video", src: "https://streamable.com/e/ctn42t" },
 ];
 Modal.setAppElement('#root');
 
@@ -25,7 +25,7 @@ const BlindsVertical = () => {
 
       {/* Hero Banner */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d046c35074/WhatsApp_Image_2025-06-24_at_22.51.32_e8609b51.jpg"
         title="Vertical Blinds"
         subTitle="Sleek, Functional & Corporate-Ready"
       />

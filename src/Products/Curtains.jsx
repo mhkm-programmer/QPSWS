@@ -8,11 +8,11 @@ const Curtains = () => {
   return (
     <main className="font-sans text-gray-800 bg-white dark:bg-gray-900">
       {/* SEO Meta Title */}
-      <PageTitle title="Curtains & Furniture Qatar | Custom Interiors " />
+      <PageTitle title="Curtains & Furniture Qatar | Custom Interiors" />
 
       {/* Hero Section */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67a7f51fa667f/About_Us-min.jpg"
+        imagePath="https://8upload.com/image/685d004525996/IMG-20250625-WA0023.jpg"
         title="Custom Curtains & Elegant Furniture"
         subTitle="Style Meets Functionality – Tailored to Your Space"
       />
@@ -29,7 +29,7 @@ const Curtains = () => {
           Bespoke Curtains & Stylish Furniture for Every Interior
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          At AZLAAN CONTRACTING W.L.L, we design and deliver high-quality curtains and furniture solutions across Qatar. From blackout and wave curtains to modern sofas and custom seating, we bring together craftsmanship and comfort to transform your space into something extraordinary.
+          At Curtains Furniture, we design and deliver high-quality curtains and furniture solutions across Qatar. From blackout and wave curtains to modern sofas and custom seating, we bring together craftsmanship and comfort to transform your space into something extraordinary.
         </p>
       </section>
 
@@ -75,17 +75,44 @@ const Curtains = () => {
           Ready to Upgrade Your Home or Office?
         </h2>
         <p className="text-lg mb-6 max-w-xl mx-auto leading-relaxed">
-          Contact AZLAAN CONTRACTING W.L.L now for expert guidance, a free consultation, and premium interior solutions tailored to your taste.
+          Contact <strong>Curtains Furniture</strong> now for expert guidance, a free consultation, and premium interior solutions tailored to your taste.
         </p>
         <a
-          href="https://wa.me/97470373588"
+          href="https://wa.me/97466280037"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Contact AZLAAN CONTRACTING via WhatsApp"
+          aria-label="Contact Curtains Furniture via WhatsApp"
           className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-4 focus:ring-white"
         >
           Get in Touch via WhatsApp
         </a>
+        <p className="mt-6 text-sm text-white opacity-70">
+          Or email us at{" "}
+          <a href="mailto:info.curtainsfurniture@gmail.com" className="underline text-white">
+            info.curtainsfurniture@gmail.com
+          </a>
+        </p>
+        <p className="text-sm text-white opacity-70">
+          Visit us in Mansoura, Doha
+        </p>
+        <div className="mt-4 flex justify-center gap-4 text-white">
+          <a
+            href="https://www.facebook.com/profile.php?id=61563249227531&mibextid=rS40aB7S9Ucbxw6v"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-orange-400 transition"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/saadbinghanimfurniture?igsh=MWFrZGp2b21jeXpldA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-orange-400 transition"
+          >
+            Instagram
+          </a>
+        </div>
       </section>
     </main>
   );

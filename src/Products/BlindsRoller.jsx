@@ -7,12 +7,12 @@ import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons
 
 const officeGallery = [
 
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d1247a31d1/IMG-20250625-WA0040.jpg" },
+  { type: "video", src: "https://streamable.com/e/fo0rn5" },
+  { type: "image", src: "https://8upload.com/image/685d1247a9089/IMG-20250625-WA0041.jpg" },
+{ type: "video", src: "https://streamable.com/e/o8imcm" },
+  { type: "image", src: "https://8upload.com/image/685d12480a304/IMG-20250625-WA0045.jpg" },
+{ type: "video", src: "https://streamable.com/e/yeehf7" },
 ];
 
 Modal.setAppElement('#root');
@@ -25,7 +25,7 @@ const BlindsRoller = () => {
       <PageTitle title="Roller Blinds Qatar | Modern Window Solutions | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d124796abe/IMG-20250625-WA0039.jpg"
         title="Roller Blinds for Offices & Commercial Spaces"
         subTitle="Sleek, Functional, and Easy to Operate"
       />

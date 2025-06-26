@@ -7,12 +7,12 @@ import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons
 
 const officeGallery = [
 
-  { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+  { type: "image", src: "https://8upload.com/image/685d046c35074/WhatsApp_Image_2025-06-24_at_22.51.32_e8609b51.jpg" },
+  { type: "video", src: "https://streamable.com/e/fo0rn5" },
+  { type: "image", src: "https://8upload.com/image/685d046bee8af/WhatsApp_Image_2025-06-24_at_22.51.32_91c98fdf.jpg" },
+  { type: "video", src: "https://streamable.com/e/l8hz9f" },
+  { type: "image", src: "https://8upload.com/image/685d046ba4a89/WhatsApp_Image_2025-06-24_at_22.51.31_ffba6044.jpg" },
+    { type: "video", src: "https://streamable.com/e/k7h94z" },
 ];
 
 Modal.setAppElement('#root');
@@ -23,22 +23,22 @@ const BlindsVenetian = () => {
   return (
     <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
       {/* Meta Title */}
-      <PageTitle title="Venetian Blinds | Curtains Furniture Qatar – Commercial Window Solutions" />
+      <PageTitle title="Vietnam Blinds | Curtains Furniture Qatar – Commercial Window Solutions" />
 
       {/* Hero Banner */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
-        title="Venetian Blinds"
+        imagePath="https://8upload.com/image/685d119f6dd7a/IMG-20250625-WA0007.jpg"
+        title="Vietnam Blinds"
         subTitle="Efficient Light Control. Elegant Look."
       />
 
       {/* Intro Section */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
-          Professional Venetian Blinds for Office Spaces
+          Professional Vietnam Blinds for Office Spaces
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Enhance your workspace with adjustable light control, modern aesthetics, and custom-fit aluminum or wood Venetian blinds. Ideal for conference rooms, executive cabins, and collaborative offices across Qatar.
+          Enhance your workspace with adjustable light control, modern aesthetics, and custom-fit aluminum or wood Vietnam blinds. Ideal for conference rooms, executive cabins, and collaborative offices across Qatar.
         </p>
       </section>
 
