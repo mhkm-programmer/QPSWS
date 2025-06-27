@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const livingroomCurtainsGallery = [
- { type: "image", src: "https://8upload.com/image/6848e1a965718/K_Cabinet1.jpg" },
-  { type: "video", src: "https://streamable.com/e/r9p50t" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9affad/K_Cabinet2.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1a9e8e10/K_Cabinet3.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa3011f/K_Cabinet4.jpg" },
-  { type: "image", src: "https://8upload.com/image/6848e1aa6f893/K_Cabinet5.jpg" },
+ { type: "image", src: "https://8upload.com/image/685d94d771c24/IMG-20250625-WA0009.jpg" },
+  { type: "video", src: "https://streamable.com/e/tb5vq0" },
+  { type: "image", src: "https://8upload.com/image/685d94d730398/IMG-20250625-WA0008.jpg" },
+   { type: "video", src: "https://streamable.com/e/ab3idq" },
+  { type: "image", src: "https://8upload.com/image/685d94d6dc6a0/IMG-20250625-WA0007.jpg" },
+  { type: "video", src: "https://streamable.com/e/9ag22m" },
 ];
 
 Modal.setAppElement('#root');
@@ -26,7 +26,7 @@ const CurtainsLivingroom = () => {
 
       {/* Hero Section */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/67ab0ba8e2452/office-banner.jpg"
+        imagePath="https://8upload.com/image/685d94d7bd575/IMG-20250625-WA0012.jpg"
         title="Living Room Curtains"
         subTitle="Style, Light Control & Privacy for Your Family Space"
       />
@@ -113,41 +113,47 @@ const CurtainsLivingroom = () => {
 
   {/* Modal Preview */}
   <Modal
-    isOpen={!!modalMedia}
-    onRequestClose={() => setModalMedia(null)}
-    contentLabel="Media Preview"
-    className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-75 z-50"
-    overlayClassName="fixed inset-0 bg-black bg-opacity-60"
-  >
-    <div className="bg-white dark:bg-gray-900 rounded-xl p-4 max-w-3xl max-h-[90vh] overflow-auto relative">
-      <button
-        className="absolute top-4 right-4 text-black dark:text-white text-xl"
-        onClick={() => setModalMedia(null)}
-      >
-        ✕
-      </button>
-      {modalMedia && (
-        media.type === "image" ? (
-          <img
-            src={media.src}
-            alt="Preview"
-            className="max-w-full max-h-[80vh] rounded-xl"
-          />
-        ) : (
-          <div className="w-full h-[80vh] overflow-hidden">
-            <iframe
-              src={media.src}
-              title="Video Preview"
-              className="w-full h-full rounded-xl"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
+      isOpen={!!modalMedia}
+      onRequestClose={() => setModalMedia(null)}
+      contentLabel="Media Preview"
+      // Ensure modal is above all elements
+      className="fixed inset-0 flex items-center justify-center p-4 z-[9999]"
+      overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-[9998]"
+    >
+      <div className="relative bg-white dark:bg-gray-900 rounded-xl p-4 max-w-4xl max-h-[90vh] w-full overflow-auto">
+        
+        {/* Close Button */}
+        <button
+          onClick={() => setModalMedia(null)}
+          className="absolute top-4 right-4 text-2xl z-[10000] text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white transition"
+          aria-label="Close Modal"
+        >
+          ✕
+        </button>
+    
+        {/* Image or Video Preview */}
+        {modalMedia && (
+          modalMedia.type === "image" ? (
+            <img
+              src={modalMedia.src}
+              alt="Media Preview"
+              className="max-w-full max-h-[80vh] mx-auto rounded"
             />
-          </div>
-        )
-      )}
-    </div>
-  </Modal>
+          ) : (
+            <div className="w-full h-[80vh] overflow-hidden">
+              <iframe
+                src={modalMedia.src}
+                title="Video Preview"
+                className="w-full h-full rounded-xl"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            </div>
+          )
+        )}
+      </div>
+    </Modal>
 </section>
 
 
