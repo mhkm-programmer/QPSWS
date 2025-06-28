@@ -8,7 +8,7 @@ const ContactPage = () => {
         <div>
          <PageTitle title="Contact Us | Curtains Furniture" />
              <ParallaxSection
-        imagePath="https://8upload.com/image/67a7ffa390ec8/Contact-min.jpg"
+        imagePath="https://8upload.com/image/685f34413d745/Cuontact_Us_for_Curtains_Furniture_1.jpg"
         title=""
         subTitle=""
       />

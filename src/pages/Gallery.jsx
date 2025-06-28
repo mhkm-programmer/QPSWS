@@ -10,19 +10,19 @@ const galleryData = [
     items: [
       {
         type: "video",
-        src: "https://streamable.com/e/r9p50t",
+        src: "https://streamable.com/e/vxmk9y",
         alt: "Elegant Living Room Curtains",
         caption: "Elegant Sheer & Heavy Curtain Layers",
       },
       {
-        type: "image",
-        src: "/images/curtains_living_2.jpg",
+        type: "video",
+        src: "https://streamable.com/e/kzz0wm",
         alt: "Modern Living Room Drapes",
         caption: "Contemporary Textures with Subtle Patterns",
       },
       {
-        type: "image",
-        src: "/images/curtains_living_3.jpg",
+        type: "video",
+        src: "https://streamable.com/e/arzc60",
         alt: "Luxury Living Room Curtains",
         caption: "Luxury Finishes for a Cozy Atmosphere",
       },
@@ -32,20 +32,20 @@ const galleryData = [
     sectionTitle: "Blackout Curtains",
     items: [
       {
-        type: "image",
-        src: "/images/blackout_1.jpg",
+        type: "video",
+        src: "https://streamable.com/e/xxdfpy",
         alt: "Bedroom Blackout Curtains",
         caption: "Sleep-Friendly Designs for Total Darkness",
       },
       {
         type: "video",
-        src: "https://streamable.com/e/r9p50t",
+        src: "https://streamable.com/e/t18u31",
         alt: "Elegant Living Room Curtains",
         caption: "Elegant Sheer & Heavy Curtain Layers",
       },
       {
-        type: "image",
-        src: "/images/blackout_3.jpg",
+        type: "video",
+        src: "https://streamable.com/e/9ufdow",
         alt: "Office Blackout Curtains",
         caption: "Professional Privacy with Style",
       },
@@ -55,20 +55,20 @@ const galleryData = [
     sectionTitle: "Office Blinds & Window Solutions",
     items: [
       {
-        type: "image",
-        src: "/images/office_blinds_1.jpg",
+         type: "video",
+        src: "https://streamable.com/e/dtgquo",
         alt: "Roller Blinds Qatar",
         caption: "Minimal Roller Blinds for Smart Offices",
       },
       {
-        type: "image",
-        src: "/images/office_blinds_2.jpg",
+         type: "video",
+        src: "https://streamable.com/e/h5f0lv",
         alt: "Venetian Blinds in Office",
         caption: "Adjustable Light with Sleek Appeal",
       },
       {
         type: "video",
-        src: "https://streamable.com/e/r9p50t",
+        src: "https://streamable.com/e/1n20es",
         alt: "Elegant Living Room Curtains",
         caption: "Elegant Sheer & Heavy Curtain Layers",
       },
@@ -111,7 +111,7 @@ const Gallery = () => {
       <PageTitle title="Curtains & Blinds Gallery | Curtains Furniture Qatar" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/67a7f51fa667f/About_Us-min.jpg"
+        imagePath="https://8upload.com/image/685f3a03586ad/Gallery_Curtains.jpg"
         title="Curtains & Blinds Showcase"
         subTitle="Transforming Homes & Offices Across Qatar"
       />
