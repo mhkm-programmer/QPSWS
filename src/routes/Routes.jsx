@@ -1,6 +1,8 @@
 // router.js
 
 import { createBrowserRouter } from "react-router-dom";
+
+// Layout
 import Main from "../layouts/Main";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 
@@ -15,26 +17,17 @@ import BlogPage from "../pages/blogs/BlogPage";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 import Gallery from "../pages/Gallery";
 
-// Curtains Pages
-import Curtains from "../Products/Curtains";
-import CurtainsBlackout from "../Products/CurtainsBlackout";
-import CurtainsBedroom from "../Products/CurtainsBedroom";
-import CurtainsWindows from "../Products/CurtainsWindows";
-import CurtainsHotel from "../Products/CurtainsHotel";
-import CurtainsWave from "../Products/CurtainsWave";
-import CurtainsLivingroom from "../Products/CurtainsLivingroom";
-import CurtainsRoller from "../Products/CurtainsRoller";
-import CurtainsOffice from "../Products/CurtainsOffice";
+// FLM Services Pages
+import Aluminium from "../flmServices/Aluminium";
+import Glass from "../flmServices/Glass";
+import Furniture from "../flmServices/Furniture";
+import MS from "../flmServices/MS";
+import UPVC from "../flmServices/UPVC";
+import Parking from "../flmServices/Parking";
+import Services from "../flmServices/Services";
+import Gypsum from "../flmServices/Gypsum";
 
-// Blinds Pages
-import Blinds from "../Products/Blinds";
-import BlindsBlackout from "../Products/BlindsBlackout";
-import BlindsVenetian from "../Products/BlindsVenetian";
-import BlindsRoller from "../Products/BlindsRoller";
-import BlindsOffice from "../Products/BlindsOffice";
-import BlindsVertical from "../Products/BlindsVertical";
-import BlindsWindow from "../Products/BlindsWindow";
-
+// Router Configuration
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,44 +38,32 @@ const router = createBrowserRouter([
     ),
     errorElement: <ErrorPage />,
     children: [
-      // Home
+      // Main Pages
       { path: "/", element: <Home /> },
-
-      // Services & Gallery
       { path: "/service", element: <ServicePage /> },
       { path: "/gallery", element: <Gallery /> },
-
-      // Curtains Category
-      { path: "/curtains", element: <Curtains /> },
-      { path: "/curtains/blackout", element: <CurtainsBlackout /> },
-      { path: "/curtains/bedroom", element: <CurtainsBedroom /> },
-      { path: "/curtains/windows", element: <CurtainsWindows /> },
-      { path: "/curtains/hotel", element: <CurtainsHotel /> },
-      { path: "/curtains/wave", element: <CurtainsWave /> },
-      { path: "/curtains/livingroom", element: <CurtainsLivingroom /> },
-      { path: "/curtains/roller", element: <CurtainsRoller /> },
-      { path: "/curtains/office", element: <CurtainsOffice /> },
-
-      // Blinds Category
-      { path: "/blinds", element: <Blinds /> },
-      { path: "/blinds/blackout", element: <BlindsBlackout /> },
-      { path: "/blinds/venetian", element: <BlindsVenetian /> },
-      { path: "/blinds/roller", element: <BlindsRoller /> },
-      { path: "/blinds/office", element: <BlindsOffice /> },
-      { path: "/blinds/vertical", element: <BlindsVertical /> },
-      { path: "/blinds/window", element: <BlindsWindow /> },
-
-      // Pages
       { path: "/portfolio", element: <PortfolioPage /> },
       { path: "/blog", element: <BlogPage /> },
       { path: "/about", element: <AboutMePage /> },
       { path: "/contact", element: <ContactPage /> },
       { path: "/faq", element: <FaqPage /> },
       { path: "/terms", element: <Terms /> },
+
+      // FLM Services Categories
+      { path: "/services", element: <Services /> },
+      { path: "/services/aluminium", element: <Aluminium /> },
+      { path: "/services/glass", element: <Glass /> },
+      { path: "/services/gypsum_printing", element: <Gypsum /> },
+      { path: "/services/parking", element: <Parking /> },
+      { path: "/services/upvc", element: <UPVC /> },
+      { path: "/services/ms_fabrication", element: <MS /> },
+
+      // Furniture (Blinds or Other)
+      { path: "/furniture", element: <Furniture /> },
     ],
   },
 
-  // 404 Error
+  // Catch-all 404 Page
   {
     path: "*",
     element: <ErrorPage />,

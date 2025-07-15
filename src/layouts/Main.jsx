@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 // Lazy-loaded layout components
-const Header = lazy(() => import("../pages/share/header/HeaderCurtainsFurniture"));
+const Header = lazy(() => import("../pages/share/header/HeaderFLM"));
 const Footer = lazy(() => import("../pages/share/footer/Footer"));
 const ContactBubble = lazy(() => import("../pages/share/ContactBubble"));
 

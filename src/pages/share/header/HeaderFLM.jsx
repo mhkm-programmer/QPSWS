@@ -3,7 +3,7 @@ import Typed from "react-typed";
 import { useState, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 
-const HeaderCurtainsFurniture = () => {
+const HeaderFLM = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,30 +13,22 @@ const HeaderCurtainsFurniture = () => {
   const menuItems = [
     { label: "Home", to: "/" },
     {
-      label: "Curtains",
-      to: "/curtains",
+      label: "Services",
+      to: "/services",
       submenu: [
-        { label: "Blackout Curtains", to: "/curtains/blackout" },
-        { label: "Bedroom Curtains", to: "/curtains/bedroom" },
-        { label: "Windows Curtains", to: "/curtains/windows" },
-        { label: "Hotel Curtains", to: "/curtains/hotel" },
-        { label: "Wave Style Curtains", to: "/curtains/wave" },
-        { label: "Living Room Curtains", to: "/curtains/livingroom" },
-        { label: "Office Curtains", to: "/curtains/office" },
-        { label: "Roller Curtains", to: "/curtains/roller" },
+        { label: "Aluminium Works", to: "/services/aluminium" },
+        { label: "Glass Solutions", to: "/services/glass" },
+        { label: "Gypsum & Printing", to: "/services/gypsum_printing" },
+        { label: "Parking Shades", to: "/services/parking" },
+        { label: "UPVC Doors & Windows", to: "/services/upvc" },
+        { label: "MS Fabrication", to: "/services/ms_fabrication" },
+        
       ],
     },
     {
-      label: "Blinds",
-      to: "/blinds",
-      submenu: [
-        { label: "Blackout Blinds", to: "/blinds/blackout" },
-        { label: "Venetian Blinds", to: "/blinds/venetian" },
-        { label: "Roller Blinds", to: "/blinds/roller" },
-        { label: "Office Blinds", to: "/blinds/office" },
-        { label: "Vertical Blinds", to: "/blinds/vertical" },
-        { label: "Window Blinds", to: "/blinds/window" },
-      ],
+      label: "Furniture",
+      to: "/furniture",
+      
     },
     { label: "Gallery", to: "/gallery" },
     { label: "Contact Us", to: "/contact" },
@@ -247,4 +239,4 @@ const HeaderCurtainsFurniture = () => {
   );
 };
 
-export default HeaderCurtainsFurniture;
+export default HeaderFLM;
