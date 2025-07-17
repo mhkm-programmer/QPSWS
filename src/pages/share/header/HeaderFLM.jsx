@@ -10,26 +10,24 @@ const HeaderFLM = () => {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const dropdownTimeout = useRef(null);
 
+  const highlightColor = "#C69425"; // Updated golden color
+
   const menuItems = [
     { label: "Home", to: "/" },
     {
-      label: "Services",
+      label: "Our Services",
       to: "/services",
       submenu: [
-        { label: "Aluminium Works", to: "/services/aluminium" },
-        { label: "Glass Solutions", to: "/services/glass" },
-        { label: "Gypsum & Printing", to: "/services/gypsum_printing" },
-        { label: "Parking Shades", to: "/services/parking" },
+        { label: "Aluminium Fabrication & Installation", to: "/services/aluminium" },
+        { label: "Glass & Mirror Works", to: "/services/glass" },
+        { label: "Gypsum Partitions & False Ceilings", to: "/services/gypsumCeilings" },
+        { label: "Digital Signage & Printing", to: "/services/printing" },
+        { label: "Parking Shade Structures", to: "/services/parking" },
         { label: "UPVC Doors & Windows", to: "/services/upvc" },
-        { label: "MS Fabrication", to: "/services/ms_fabrication" },
-        
+        { label: "MS Welding & Steel Fabrication", to: "/services/ms_fabrication" },
       ],
     },
-    {
-      label: "Furniture",
-      to: "/furniture",
-      
-    },
+    { label: "Furniture & Upholstery", to: "/furniture" },
     { label: "Gallery", to: "/gallery" },
     { label: "Contact Us", to: "/contact" },
   ];
@@ -40,12 +38,12 @@ const HeaderFLM = () => {
 
     const matches = Array.from(
       document.querySelectorAll("h1, h2, h3, p, a, input[type='number']")
-    ).filter(el => el.textContent.toLowerCase().includes(query));
+    ).filter((el) => el.textContent.toLowerCase().includes(query));
 
     if (matches.length) {
       matches.forEach((el, i) => {
         el.id = `search-result-${i}`;
-        el.style.backgroundColor = "#fffa8b";
+        el.style.backgroundColor = "#fef3c7";
         setTimeout(() => (el.style.backgroundColor = ""), 2000);
       });
       setSearchResults(
@@ -55,20 +53,20 @@ const HeaderFLM = () => {
         }))
       );
     } else {
-      alert("No matches found.");
+      alert("No matching content found.");
     }
     setSearchQuery("");
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1b1f24] text-white shadow-lg font-sans">
-      {/* Top Banner */}
-      <div className="bg-[#ff6a00] py-1 text-center text-sm md:text-base font-semibold">
+    <header className="sticky top-0 z-50 bg-[#0C1E3B] text-white shadow-xl font-sans">
+      {/* Banner with Typing */}
+      <div className="bg-[#C69425] py-1 text-center text-sm md:text-base font-semibold tracking-wide text-black">
         <Typed
           strings={[
-            "Welcome to Curtains Furniture Qatar",
-            "Premium Curtains & Upholstery Solutions",
-            "Free Installation & Custom Designs",
+            "F L M SUPER TRADING AND CONTRACTING – Qatar",
+            "Aluminium, Glass, Gypsum, Furniture & More",
+            "Custom Works | Site Visit | Free Installation",
           ]}
           typeSpeed={50}
           backSpeed={30}
@@ -76,19 +74,17 @@ const HeaderFLM = () => {
         />
       </div>
 
-      {/* Top Section */}
+      {/* Top Section: Logo & Search */}
       <div className="flex flex-wrap items-center justify-between px-4 py-2">
-        {/* Logo */}
-        <NavLink to="/" aria-label="Homepage">
+        <NavLink to="/" aria-label="Homepage" onClick={() => setIsMobileMenuOpen(false)}>
           <img
             src="https://8upload.com/image/6857c8c36af7b/Curtain_Logo.jpeg"
-            alt="Curtains Furniture Logo"
-            className="h-10 rounded -md"
+            alt="FLM Curtains Logo"
+            className="h-10 rounded-md"
             loading="lazy"
           />
         </NavLink>
 
-        {/* Search Bar */}
         <div className="flex-1 mx-4">
           <div className="relative max-w-md mx-auto w-full">
             <input
@@ -96,8 +92,8 @@ const HeaderFLM = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              placeholder="Search curtains, blinds..."
-              className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-orange-400"
+              placeholder="Search aluminium, furniture, gypsum..."
+              className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[#C69425]"
               aria-label="Search"
             />
             {searchQuery && (
@@ -111,7 +107,7 @@ const HeaderFLM = () => {
             )}
             <button
               onClick={handleSearch}
-              className="absolute right-0 top-0 bottom-0 px-3 bg-[#ff6a00] text-white rounded-r-md hover:bg-orange-600"
+              className="absolute right-0 top-0 bottom-0 px-3 bg-[#C69425] text-black font-semibold rounded-r-md hover:bg-[#a77c1c]"
               aria-label="Search"
             >
               🔍
@@ -119,17 +115,16 @@ const HeaderFLM = () => {
           </div>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-orange-400 px-3 text-2xl"
+          className="md:hidden text-[#C69425] px-3 text-2xl"
           aria-label="Toggle Menu"
         >
           ☰
         </button>
       </div>
 
-      {/* Desktop Navigation */}
+      {/* Desktop Nav */}
       <nav className="hidden md:flex justify-center gap-6 py-2 text-sm font-medium">
         {menuItems.map((item, index) => (
           <div
@@ -146,16 +141,15 @@ const HeaderFLM = () => {
             <NavLink
               to={item.to}
               className={({ isActive }) =>
-                isActive ? "text-orange-400" : "hover:text-orange-300"
+                isActive ? "text-[#C69425]" : "hover:text-[#C69425]"
               }
             >
               {item.label}
             </NavLink>
 
-            {/* Submenu */}
             {item.submenu && activeSubMenu === index && (
               <div
-                className="absolute bg-[#2b2f34] top-full left-0 mt-2 w-56 rounded-md shadow-xl overflow-hidden"
+                className="absolute bg-[#11213D] top-full left-0 mt-2 w-64 rounded-md shadow-xl overflow-hidden"
                 onMouseEnter={() => clearTimeout(dropdownTimeout.current)}
                 onMouseLeave={() => setActiveSubMenu(null)}
               >
@@ -163,7 +157,7 @@ const HeaderFLM = () => {
                   <NavLink
                     key={subIdx}
                     to={sub.to}
-                    className="block px-4 py-2 text-sm text-white hover:bg-orange-500 transition duration-200"
+                    className="block px-4 py-2 text-sm text-white hover:bg-[#C69425] hover:text-black transition duration-200"
                   >
                     {sub.label}
                   </NavLink>
@@ -174,38 +168,54 @@ const HeaderFLM = () => {
         ))}
       </nav>
 
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden bg-[#2b2f34] text-white px-4 py-3 space-y-2">
-          {menuItems.map((item, idx) => (
-            <details key={idx} className="group">
-              <summary className="cursor-pointer py-1 flex justify-between items-center hover:text-orange-400">
-                {item.label}
-                {item.submenu && <span>▾</span>}
-              </summary>
-              {item.submenu && (
-                <ul className="pl-4 space-y-1 mt-1">
-                  {item.submenu.map((sub, subIdx) => (
-                    <li key={subIdx}>
-                      <NavLink
-                        to={sub.to}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-1 text-sm hover:text-orange-300"
-                      >
-                        {sub.label}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </details>
-          ))}
-        </nav>
-      )}
+    {/* Mobile Nav */}
+{isMobileMenuOpen && (
+  <nav className="md:hidden bg-[#11213D] text-white px-4 py-3 space-y-2">
+    {menuItems.map((item, idx) =>
+      item.submenu ? (
+        <details key={idx} className="group" open={false}>
+          <summary className="cursor-pointer py-1 flex justify-between items-center hover:text-[#C69425] select-none">
+            {item.label}
+            <span className="ml-2">▾</span>
+          </summary>
+          <ul className="pl-4 space-y-1 mt-1">
+            {item.submenu.map((sub, subIdx) => (
+              <li key={subIdx}>
+                <NavLink
+                  to={sub.to}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setSearchResults([]);
+                  }}
+                  className="block py-1 text-sm hover:text-[#C69425]"
+                >
+                  {sub.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : (
+        <NavLink
+          key={idx}
+          to={item.to}
+          onClick={() => {
+            setIsMobileMenuOpen(false);
+            setSearchResults([]);
+          }}
+          className="block py-2 text-sm hover:text-[#C69425]"
+        >
+          {item.label}
+        </NavLink>
+      )
+    )}
+  </nav>
+)}
 
-      {/* Search Results */}
+
+      {/* Search Results Display */}
       {searchResults.length > 0 && (
-        <div className="bg-orange-50 text-black px-4 py-3">
+        <div className="bg-[#FFF8E1] text-black px-4 py-3">
           <h2 className="font-semibold text-md">Search Results:</h2>
           <ul className="list-disc pl-6">
             {searchResults.map((res, i) => (
@@ -219,6 +229,7 @@ const HeaderFLM = () => {
                       block: "center",
                     });
                     setSearchResults([]);
+                    setIsMobileMenuOpen(false); // Close menu on search result click
                   }}
                   className="text-blue-600 hover:underline"
                 >

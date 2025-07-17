@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 // Lazy-loaded layout components
 const Header = lazy(() => import("../pages/share/header/HeaderFLM"));
-const Footer = lazy(() => import("../pages/share/footer/Footer"));
+const  Footer = lazy(() => import("../pages/share/footer/Footer"));
 const ContactBubble = lazy(() => import("../pages/share/ContactBubble"));
 
 const Main = () => {

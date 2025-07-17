@@ -26,6 +26,7 @@ import UPVC from "../flmServices/UPVC";
 import Parking from "../flmServices/Parking";
 import Services from "../flmServices/Services";
 import Gypsum from "../flmServices/Gypsum";
+import Printing from "../flmServices/Printing";
 
 // Router Configuration
 const router = createBrowserRouter([
@@ -53,7 +54,8 @@ const router = createBrowserRouter([
       { path: "/services", element: <Services /> },
       { path: "/services/aluminium", element: <Aluminium /> },
       { path: "/services/glass", element: <Glass /> },
-      { path: "/services/gypsum_printing", element: <Gypsum /> },
+      { path: "/services/gypsumCeilings", element: <Gypsum /> },
+         { path: "/services/printing", element: <Printing /> },
       { path: "/services/parking", element: <Parking /> },
       { path: "/services/upvc", element: <UPVC /> },
       { path: "/services/ms_fabrication", element: <MS /> },
