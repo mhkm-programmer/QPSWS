@@ -1,118 +1,127 @@
-import { FaCouch, FaRulerCombined, FaWarehouse } from "react-icons/fa";
+import {
+  FaCouch,
+  FaTools,
+  FaGem,
+  FaHardHat,
+  FaPrint,
+  FaCar,
+  FaDoorClosed,
+  FaWrench,
+} from "react-icons/fa";
 import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
 import Products_Curtains from "../pages/Home/Products_Curtains";
-
+import React from "react";
 
 const Services = () => {
   return (
-    <main className="font-sans text-gray-800 bg-white dark:bg-gray-900">
+    <main className="font-sans text-gray-800 bg-[#f6f6f4] dark:bg-gray-900">
       {/* SEO Meta Title */}
-      <PageTitle title="Curtains & Furniture Qatar | Custom Interiors" />
+      <PageTitle title="F L M SUPER TRADING AND CONTRACTING | Interior & Fabrication Solutions" />
 
       {/* Hero Section */}
       <ParallaxSection
         imagePath="https://8upload.com/image/685d004525996/IMG-20250625-WA0023.jpg"
-        title="Custom Curtains & Elegant Furniture"
-        subTitle="Style Meets Functionality – Tailored to Your Space"
+        title="Comprehensive Interior & Fabrication Services"
+        subTitle="Quality You Can Trust – اف ال ام سوبر ترادينغ اند كونتراكتينغ"
       />
 
       {/* Introduction */}
       <section
-        aria-labelledby="curtains-intro-title"
+        aria-labelledby="intro-title"
         className="max-w-7xl mx-auto px-6 py-20 text-center"
       >
         <h1
-          id="curtains-intro-title"
-          className="text-4xl md:text-5xl font-bold mb-6 text-[#4A342E] dark:text-white"
+          id="intro-title"
+          className="text-4xl md:text-5xl font-bold mb-6 text-[#1b2e2c] dark:text-white"
         >
-          Bespoke Curtains & Stylish Furniture for Every Interior
+          One Stop Solution for Interiors, Fit-Out & Metal Works
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          At Curtains Furniture, we design and deliver high-quality curtains and furniture solutions across Qatar. From blackout and wave curtains to modern sofas and custom seating, we bring together craftsmanship and comfort to transform your space into something extraordinary.
+          F L M SUPER TRADING AND CONTRACTING (اف ال ام سوبر ترادينغ اند كونتراكتينغ) specializes in aluminium works, gypsum partitions, printing, UPVC doors & windows, welding, and high-quality furniture & upholstery across Qatar.
         </p>
       </section>
 
-      {/* Features & Benefits */}
-      <section
-        aria-label="Curtains and furniture features"
-        className="bg-[#f9f7f4] py-16 px-6"
-      >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-          <article className="bg-white p-8 shadow-lg rounded-xl hover:shadow-xl transition">
-            <FaRulerCombined size={40} className="text-[#4A342E] mx-auto mb-4" aria-hidden="true" />
-            <h2 className="text-xl font-semibold mb-2">Tailor-Made for You</h2>
-            <p className="text-gray-600">
-              Custom-fit curtains and made-to-order furniture designed to match your measurements and style preferences.
-            </p>
-          </article>
-          <article className="bg-white p-8 shadow-lg rounded-xl hover:shadow-xl transition">
-            <FaCouch size={40} className="text-[#4A342E] mx-auto mb-4" aria-hidden="true" />
-            <h2 className="text-xl font-semibold mb-2">Elegant Fabrics & Designs</h2>
-            <p className="text-gray-600">
-              Explore luxurious materials and contemporary designs for curtains, sofas, chairs, and more – all crafted for comfort and aesthetics.
-            </p>
-          </article>
-          <article className="bg-white p-8 shadow-lg rounded-xl hover:shadow-xl transition">
-            <FaWarehouse size={40} className="text-[#4A342E] mx-auto mb-4" aria-hidden="true" />
-            <h2 className="text-xl font-semibold mb-2">Delivery & Installation Across Qatar</h2>
-            <p className="text-gray-600">
-              We provide expert delivery and professional installation anywhere in Qatar – fast, reliable, and stress-free.
-            </p>
-          </article>
+      {/* Services Grid */}
+      <section className="bg-[#e5ece8] dark:bg-gray-800 py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-center">
+          {[
+            {
+              icon: <FaTools size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Aluminium Fabrication",
+              desc: "Custom aluminium windows, doors, cladding, and partitions — durable and expertly crafted.",
+            },
+            {
+              icon: <FaGem size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Glass & Mirror Works",
+              desc: "Installations of high-quality mirrors, tempered and frosted glass for interiors and exteriors.",
+            },
+            {
+              icon: <FaHardHat size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Gypsum Partition & Ceiling",
+              desc: "Professional gypsum works — ceilings, bulkheads, and office partitions with fire-rated systems.",
+            },
+            {
+              icon: <FaPrint size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Digital Printing",
+              desc: "Banners, stickers, roll-ups, wall branding, vehicle wraps and more — sharp, durable prints.",
+            },
+            {
+              icon: <FaCar size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Parking Shades",
+              desc: "UV-resistant car parking shades tailored for residential and commercial needs.",
+            },
+            {
+              icon: <FaDoorClosed size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "UPVC Doors & Windows",
+              desc: "Weatherproof, sound-insulated UPVC systems designed for durability and energy savings.",
+            },
+            {
+              icon: <FaWrench size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "MS Welding & Steel Fabrication",
+              desc: "Steel gates, grills, and frames — expertly welded with corrosion-resistant finishes.",
+            },
+            {
+              icon: <FaCouch size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
+              title: "Furniture & Upholstery",
+              desc: "Bespoke furniture, sofa sets, and reupholstery — crafted with elegance and comfort.",
+            },
+          ].map(({ icon, title, desc }, idx) => (
+            <div
+              key={idx}
+              className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              {icon}
+              <h3 className="text-xl font-semibold mb-2 text-[#1b2e2c] dark:text-white">{title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Product Slider */}
+      {/* Product Highlights */}
       <Products_Curtains />
 
       {/* Call To Action */}
       <section
-        aria-label="Get in touch for custom curtains and furniture"
-        className="py-20 bg-[#4A342E] text-white text-center px-6"
+        aria-label="Get in touch"
+        className="py-20 bg-[#1b2e2c] text-white text-center px-6"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to Upgrade Your Home or Office?
+          Let's Build Something Great Together
         </h2>
         <p className="text-lg mb-6 max-w-xl mx-auto leading-relaxed">
-          Contact <strong>Curtains Furniture</strong> now for expert guidance, a free consultation, and premium interior solutions tailored to your taste.
+          Contact <strong>F L M SUPER TRADING AND CONTRACTING</strong> today for custom interiors, expert fabrication, and reliable service across Qatar.
         </p>
         <a
           href="https://wa.me/97466280037"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Contact Curtains Furniture via WhatsApp"
-          className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-4 focus:ring-white"
+          className="inline-block bg-white text-[#1b2e2c] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
-          Get in Touch via WhatsApp
+          Contact Us on WhatsApp
         </a>
-        <p className="mt-6 text-sm text-white opacity-70">
-          Or email us at{" "}
-          <a href="mailto:info.curtainsfurniture@gmail.com" className="underline text-white">
-            info.curtainsfurniture@gmail.com
-          </a>
-        </p>
-        <p className="text-sm text-white opacity-70">
-          Visit us in Mansoura, Doha
-        </p>
-        <div className="mt-4 flex justify-center gap-4 text-white">
-          <a
-            href="https://www.facebook.com/profile.php?id=61563249227531&mibextid=rS40aB7S9Ucbxw6v"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-orange-400 transition"
-          >
-            Facebook
-          </a>
-          <a
-            href="https://www.instagram.com/saadbinghanimfurniture?igsh=MWFrZGp2b21jeXpldA=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-orange-400 transition"
-          >
-            Instagram
-          </a>
-        </div>
+        
       </section>
     </main>
   );

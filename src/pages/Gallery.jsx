@@ -6,71 +6,140 @@ import Modal from "react-modal";
 
 const galleryData = [
   {
-    sectionTitle: "Living Room Curtains",
+    sectionTitle: "Aluminium Fabrication & Installation",
     items: [
       {
         type: "video",
         src: "https://streamable.com/e/vxmk9y",
-        alt: "Elegant Living Room Curtains",
-        caption: "Elegant Sheer & Heavy Curtain Layers",
+        alt: "Aluminium Window Frame Installation",
+        caption: "Precision-Crafted Aluminium Frames with Sleek Finishes",
       },
       {
         type: "video",
         src: "https://streamable.com/e/kzz0wm",
-        alt: "Modern Living Room Drapes",
-        caption: "Contemporary Textures with Subtle Patterns",
+        alt: "Custom Aluminium Fabrication",
+        caption: "Tailored Aluminium Solutions for Residential & Commercial Use",
       },
       {
         type: "video",
         src: "https://streamable.com/e/arzc60",
-        alt: "Luxury Living Room Curtains",
-        caption: "Luxury Finishes for a Cozy Atmosphere",
+        alt: "Modern Aluminium Structures",
+        caption: "Durable & Stylish Aluminium Structures for Every Need",
       },
     ],
   },
   {
-    sectionTitle: "Blackout Curtains",
+    sectionTitle: "Glass & Mirror Works",
     items: [
       {
         type: "video",
         src: "https://streamable.com/e/xxdfpy",
-        alt: "Bedroom Blackout Curtains",
-        caption: "Sleep-Friendly Designs for Total Darkness",
+        alt: "Glass Partition Installation",
+        caption: "Elegant Glass Partitions & Mirror Installations",
       },
       {
         type: "video",
         src: "https://streamable.com/e/t18u31",
-        alt: "Elegant Living Room Curtains",
-        caption: "Elegant Sheer & Heavy Curtain Layers",
+        alt: "Custom Mirror Design",
+        caption: "High-Quality Mirror Solutions for Homes & Offices",
       },
       {
         type: "video",
         src: "https://streamable.com/e/9ufdow",
-        alt: "Office Blackout Curtains",
-        caption: "Professional Privacy with Style",
+        alt: "Frameless Glass Doors",
+        caption: "Sleek Frameless Glass Doors & Walls",
       },
     ],
   },
   {
-    sectionTitle: "Office Blinds & Window Solutions",
+    sectionTitle: "Gypsum Partition & Ceiling",
     items: [
       {
-         type: "video",
+        type: "video",
         src: "https://streamable.com/e/dtgquo",
-        alt: "Roller Blinds Qatar",
-        caption: "Minimal Roller Blinds for Smart Offices",
+        alt: "Gypsum Ceiling Installation",
+        caption: "Modern False Ceilings with Custom Designs",
       },
       {
-         type: "video",
+        type: "video",
         src: "https://streamable.com/e/h5f0lv",
-        alt: "Venetian Blinds in Office",
-        caption: "Adjustable Light with Sleek Appeal",
+        alt: "Partition Wall Setup",
+        caption: "Efficient & Stylish Gypsum Partitions",
       },
       {
         type: "video",
         src: "https://streamable.com/e/1n20es",
-        alt: "Elegant Living Room Curtains",
-        caption: "Elegant Sheer & Heavy Curtain Layers",
+        alt: "Decorative Gypsum Panels",
+        caption: "Artistic & Functional Ceiling Panels",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Printing Services",
+    items: [
+      {
+        type: "video",
+        src: "https://streamable.com/e/example1", // Replace with real link
+        alt: "High-Quality Printing",
+        caption: "Custom Printing Solutions for Business & Advertising",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/example2", // Replace with real link
+        alt: "Large Format Printing",
+        caption: "Vibrant Large-Scale Prints with Precision",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/example3", // Replace with real link
+        alt: "Promotional Materials",
+        caption: "Tailored Promotional Printing for Maximum Impact",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Parking Shades & UPVC Doors & Windows",
+    items: [
+      {
+        type: "video",
+        src: "https://streamable.com/e/dtgquo",
+        alt: "Parking Shade Installation",
+        caption: "Durable, UV-Resistant Parking Shades",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/h5f0lv",
+        alt: "UPVC Doors & Windows",
+        caption: "Energy Efficient, Noise-Reducing UPVC Installations",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/1n20es",
+        alt: "MS Welding & Steel Fabrication",
+        caption: "Robust Steel Fabrication & Welding Services",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Furniture & Upholstery",
+    items: [
+      {
+        type: "video",
+        src: "https://streamable.com/e/furniture1", // Replace with real link
+        alt: "Custom Upholstered Furniture",
+        caption: "Elegant, Comfortable Furniture Tailored for You",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/furniture2", // Replace with real link
+        alt: "Modern Office Seating",
+        caption: "Stylish & Ergonomic Office Furniture Solutions",
+      },
+      {
+        type: "video",
+        src: "https://streamable.com/e/furniture3", // Replace with real link
+        alt: "Residential Furniture",
+        caption: "High-Quality Home Furniture & Upholstery",
       },
     ],
   },
@@ -108,22 +177,22 @@ const Gallery = () => {
 
   return (
     <>
-      <PageTitle title="Curtains & Blinds Gallery | Curtains Furniture Qatar" />
+      <PageTitle title="Project Showcase | F L M SUPER TRADING AND CONTRACTING" />
 
       <ParallaxSection
         imagePath="https://8upload.com/image/685f3a03586ad/Gallery_Curtains.jpg"
-        title="Curtains & Blinds Showcase"
-        subTitle="Transforming Homes & Offices Across Qatar"
+        title="Craftsmanship in Every Project"
+        subTitle="Expertise Across Aluminium, Glass, Gypsum, Welding & More"
       />
 
-      <section className="max-w-7xl mx-auto px-6 py-20 bg-[#f9f7f4] dark:bg-gray-900 rounded-lg shadow-2xl">
-        <h1 className="text-5xl font-extrabold text-center mb-16 text-[#4A342E] dark:text-white tracking-wide">
-          Gallery: Crafted Elegance, Custom Fit
+      <section className="max-w-7xl mx-auto px-6 py-20 bg-[#e6f1ec] dark:bg-gray-900 rounded-lg shadow-2xl">
+        <h1 className="text-5xl font-extrabold text-center mb-16 text-[#0a3c26] dark:text-white tracking-wide">
+          Gallery: Built to Last, Designed to Impress
         </h1>
 
         {galleryData.map(({ sectionTitle, items }, index) => (
           <div key={index} className="mb-20">
-            <h2 className="text-3xl font-bold mb-10 text-[#4A342E] dark:text-white border-b-4 border-[#4A342E] inline-block pb-2">
+            <h2 className="text-3xl font-bold mb-10 text-[#0a3c26] dark:text-white border-b-4 border-[#0a3c26] inline-block pb-2">
               {sectionTitle}
             </h2>
 
@@ -134,7 +203,7 @@ const Gallery = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {items.map(({ src, alt, caption, type = "image" }, idx) => (
+              {items.map(({ src, alt, caption, type = "video" }, idx) => (
                 <motion.figure
                   key={idx}
                   className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300 transform hover:scale-105 cursor-pointer"
@@ -168,10 +237,7 @@ const Gallery = () => {
           </div>
         ))}
 
-      
-
-
-        {/* Modal Preview for Images */}
+        {/* Modal Preview */}
         <Modal
           isOpen={!!modalImage}
           onRequestClose={() => setModalImage(null)}
@@ -196,7 +262,7 @@ const Gallery = () => {
           </div>
         </Modal>
 
-        {/* Parallax Banner */}
+        {/* Parallax CTA */}
         <div
           className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-20"
           style={{
@@ -206,29 +272,21 @@ const Gallery = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
-              Qatar’s Trusted Curtain & Blind Experts
-            </h2>
-            <p className="mt-4 text-lg md:text-xl text-gray-300 text-center max-w-xl">
-              We blend creativity, quality, and craftsmanship to deliver window solutions that inspire.
-            </p>
-          </div>
+        
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold mb-4 text-[#4A342E] dark:text-white">
-            Need Curtains or Blinds Installed?
+          <h3 className="text-3xl font-bold mb-4 text-[#0a3c26] dark:text-white">
+            Interested in Our Services?
           </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            Get free consultation and measurement anywhere in Qatar. From design to installation, we handle it all.
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6">
+            We specialize in Aluminium Fabrication, Glass & Mirror Works, Gypsum Partition & Ceiling, Printing, Parking Shades, UPVC Doors & Windows, MS Welding & Steel Fabrication, Furniture & Upholstery.
           </p>
           <a
             href="https://wa.me/97466280037"
-            className="inline-block bg-[#4A342E] text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-[#6b4a3a] transition duration-300"
+            className="inline-block bg-[#0a3c26] text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-[#145c44] transition duration-300"
           >
-            Chat with Us on WhatsApp
+            Contact Us on WhatsApp
           </a>
         </div>
       </section>
