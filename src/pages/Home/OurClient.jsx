@@ -39,7 +39,7 @@ const OurClient = () => {
           Our Esteemed Clients
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-          Trusted by Qatar’s top clients in curtains, custom furniture, and full interior fit-out solutions.
+           F L M SUPER TRADING AND CONTRACTING – Delivering expert solutions across Qatar.
         </p>
 
         {/* Carousel */}

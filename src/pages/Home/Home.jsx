@@ -1,87 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Page & Section Components
+// Components
 import PageTitle from "../reusable/PageTitle";
 import HeroSlider from "./heroBanner.jsx/HeroSlider";
-import Products_Curtains from "./Products_Curtains";
-import Products_Blackout from "./Products_Blackout";
 import WhyChoose from "./WhyChoose";
 import OurClient from "./OurClient";
 import CustomerReviews from "./CustomerReviews";
 import SubscreibeContact from "../contact/SubscreibeContact";
+import Products_FLM from "./Products_FLM";
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const fadeUpVariant = {
+const sectionFadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-const ServicesSection = () => {
-  const services = [
-    "Expert Aluminium Fabrication & Precision Installation",
-    "Innovative Glass Solutions & Custom Mirror Works",
-    "Quality Gypsum Partitions & Professional Printing Services",
-    "Durable Parking Shade Structures for Long-Term Protection",
-    "Energy-Saving UPVC Doors & Windows with Superior Finish",
-    "Robust MS Welding & Steel Fabrication Tailored to Your Needs",
-  ];
-
-  return (
-    <section className="services-section my-16 max-w-7xl mx-auto px-4">
-      <motion.h2
-        className="text-3xl font-semibold text-center mb-8 text-[#C69425]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
-        variants={{
-          hidden: { opacity: 0, y: 30 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-        }}
-      >
-        Our Specialized Services
-      </motion.h2>
-
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
-      >
-        {services.map((service, idx) => (
-          <motion.div
-            key={idx}
-            className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300 cursor-default"
-            variants={fadeUpVariant}
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(198, 148, 37, 0.5)" }}
-          >
-            <h3 className="text-xl font-medium text-gray-800">{service}</h3>
-          </motion.div>
-        ))}
-      </motion.div>
-    </section>
-  );
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 const Home = () => {
-  const sectionFadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
-
   return (
-    <div className="home-page">
-      {/* SEO Title */}
-      <PageTitle title="F L M Super Trading and Contracting | Premium Trading & Contracting Solutions" />
+    <div className="home-page px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-gray-800">
+      {/* Meta */}
+      <PageTitle title="F L M Super Trading and Contracting | Aluminium, Gypsum, Upholstery, and More" />
 
       {/* Hero Section */}
       <motion.section
@@ -94,91 +32,71 @@ const Home = () => {
         <HeroSlider />
       </motion.section>
 
-      {/* Curtains Collection */}
+      {/* Services Section (using Products_FLM) */}
       <motion.section
-        className="products-curtains my-16"
+        className="services-section my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
         variants={sectionFadeUp}
       >
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#6B4226]">
-          Exquisite Curtains Collection
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700">
+          Our Core Services
         </h2>
-        <p className="text-center max-w-3xl mx-auto text-gray-700 mb-8">
-          Explore our elegant range of curtains crafted with premium materials and designed to elevate any living or working space with timeless style.
+        <p className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-2 sm:px-0">
+          At F L M Super Trading and Contracting, we provide a wide range of expert services including aluminium fabrication, glass & mirror works, gypsum partitions, UPVC doors, parking shades, and much more.
         </p>
-        <Products_Curtains />
+        <Products_FLM />
       </motion.section>
-
-      {/* Blackout Curtains Showcase */}
-      <motion.section
-        className="products-blackout my-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
-        variants={sectionFadeUp}
-      >
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#6B4226]">
-          Advanced Blackout Curtains
-        </h2>
-        <p className="text-center max-w-3xl mx-auto text-gray-700 mb-8">
-          Experience total privacy and light control with our premium blackout curtains, expertly tailored for homes, offices, and hospitality environments.
-        </p>
-        <Products_Blackout />
-      </motion.section>
-
-      {/* Our Services Section */}
-      <ServicesSection />
 
       {/* Why Choose Us */}
       <motion.section
-        className="why-choose-us my-16"
+        className="why-choose-us my-16 sm:my-20 px-2 sm:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
         variants={sectionFadeUp}
       >
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#6B4226]">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700">
           Why Choose F L M Super Trading and Contracting?
         </h2>
-        <p className="text-center max-w-3xl mx-auto text-gray-700 mb-8">
-          With proven expertise and a commitment to excellence, we deliver durable, high-quality trading and contracting services that exceed expectations and drive success.
+        <p className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-4 sm:px-0">
+          Backed by skilled professionals, cutting-edge tools, and years of industry experience — we deliver tailor-made interior and exterior solutions with unmatched precision and quality.
         </p>
         <WhyChoose />
       </motion.section>
 
       {/* Our Clients */}
       <motion.section
-        className="our-clients my-16"
+        className="our-clients my-16 sm:my-20 px-2 sm:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
         variants={sectionFadeUp}
       >
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#6B4226]">
-          Trusted by Industry Leaders
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700">
+          Clients Who Trust Us
         </h2>
         <OurClient />
       </motion.section>
 
-      {/* Customer Reviews */}
+      {/* Customer Testimonials */}
       <motion.section
-        className="customer-reviews my-16"
+        className="customer-reviews my-16 sm:my-20 px-2 sm:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
         variants={sectionFadeUp}
       >
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#6B4226]">
-          Hear from Our Valued Customers
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700">
+          What Our Clients Say
         </h2>
         <CustomerReviews />
       </motion.section>
 
-      {/* Subscription / Contact Section */}
+      {/* Contact & Newsletter */}
       <motion.section
-        className="subscribe-contact my-16"
+        className="subscribe-contact my-16 sm:my-20 px-2 sm:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}

@@ -5,24 +5,39 @@ import "slick-carousel/slick/slick-theme.css";
 
 const features = [
   {
-    title: "Luxury Curtains",
-    description: "Elegant, custom-tailored curtains made with premium fabrics to match Qatari tastes and interiors.",
-    image: "https://8upload.com/image/67a9e061c372b/Luxury_Curtains.jpg",
+    title: "Aluminium Fabrication",
+    description: "Precision aluminium structures and installations, combining strength with sleek design for residential and commercial projects.",
+    image: "https://8upload.com/image/67a01bfb11db8/Aluminium_Fabrication.jpg",
   },
   {
-    title: "Modern Furniture",
-    description: "Stylish and functional furniture designed to complement contemporary homes and offices in Qatar.",
-    image: "https://8upload.com/image/67a000235804f/Premium_Furniture.jpg",
+    title: "Glass & Mirror Works",
+    description: "Stylish glass panels and custom mirrors to elevate interiors with clarity, modern appeal, and lasting durability.",
+    image: "https://8upload.com/image/67a01bfb31b96/Glass_Mirror_Works.jpg",
   },
   {
-    title: "Custom Interior Solutions",
-    description: "From design to installation, we transform spaces with bespoke curtain and furniture arrangements.",
-    image: "https://8upload.com/image/67a0002314733/Modern_Interior_Design.jpg",
+    title: "Gypsum Partition & Ceiling",
+    description: "Innovative false ceilings and space-defining partitions, designed to enhance acoustics, aesthetics, and flexibility.",
+    image: "https://8upload.com/image/67a01bf9f0147/Gypsum_Partitions.jpg",
   },
   {
-    title: "Affordable Elegance",
-    description: "Enjoy top-tier products and services at prices designed to fit your budget without compromise.",
-    image: "https://8upload.com/image/67a00022e0e7f/Affordable_Pricing.jpg",
+    title: "Printing Services",
+    description: "From business signage to promotional materials, our custom printing delivers bold, high-quality results.",
+    image: "https://8upload.com/image/67a01bfa23d2f/Printing_Services.jpg",
+  },
+  {
+    title: "Parking Shade Structures",
+    description: "UV-protected, heat-resistant shade solutions engineered for residential, commercial, and industrial parking zones.",
+    image: "https://8upload.com/image/67a01bfa7b310/Parking_Shade.jpg",
+  },
+  {
+    title: "UPVC Doors & Windows",
+    description: "Energy-efficient, weatherproof, and stylish UPVC systems designed to enhance comfort and modern living.",
+    image: "https://8upload.com/image/67a01bfaaf76f/UPVC_Doors_Windows.jpg",
+  },
+  {
+    title: "MS Welding & Furniture Upholstery",
+    description: "From strong steel fabrication to plush furniture finishes—F L M delivers craftsmanship across industries.",
+    image: "https://8upload.com/image/67a01bfae57cd/MS_Welding_Upholstery.jpg",
   },
 ];
 
@@ -43,23 +58,23 @@ const sliderSettings = {
 
 const WhyChoose = () => {
   return (
-    <section className="px-6 py-12 lg:py-20 bg-[#FDF9F2] dark:bg-gray-900 text-gray-800 dark:text-white font-sans">
+    <section className="px-6 py-12 lg:py-20 bg-[#F3FDF8] dark:bg-gray-900 text-gray-800 dark:text-white font-sans">
       {/* Logo */}
       <div className="flex justify-center mb-10">
         <img
           src="https://8upload.com/image/67a01c3b4ad22/Al-FWZ.jpg"
-          alt="Curtains Furniture Qatar Logo"
-          className="h-24 w-24 rounded-full shadow-xl border-4 border-[#B88A44]"
+          alt="F L M Logo"
+          className="h-24 w-24 rounded-full shadow-xl border-4 border-emerald-600"
         />
       </div>
 
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-4xl font-bold mb-4 text-[#1E2A3A] dark:text-white">
-          Why Choose <span className="text-[#B88A44]">Our Curtains & Furniture</span> in Qatar?
+        <h2 className="text-4xl font-bold mb-4 text-emerald-800 dark:text-white">
+          Why Choose <span className="text-emerald-600">F L M SUPER TRADING AND CONTRACTING</span>?
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          Discover the perfect blend of tradition and modern style. Whether for your home, hotel, or office – we deliver quality, elegance, and comfort in every detail.
+          We provide versatile solutions for aluminium, glass, gypsum, printing, shade, UPVC, welding, and upholstery—combining innovation, quality, and reliability.
         </p>
       </div>
 
@@ -70,7 +85,7 @@ const WhyChoose = () => {
             <div key={index} className="px-4">
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 text-center">
                 <div className="flex justify-center mb-5">
-                  <div className="w-24 h-24 rounded-full bg-[#FFF5E0] dark:bg-[#B88A44] flex items-center justify-center shadow-inner">
+                  <div className="w-24 h-24 rounded-full bg-[#E6F7F1] dark:bg-emerald-800 flex items-center justify-center shadow-inner">
                     <img
                       src={feature.image}
                       alt={feature.title}
@@ -78,7 +93,7 @@ const WhyChoose = () => {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#1E2A3A] dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-emerald-800 dark:text-white mb-2">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">

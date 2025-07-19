@@ -10,8 +10,9 @@ import {
 } from "react-icons/fa";
 import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
-import Products_Curtains from "../pages/Home/Products_Curtains";
+
 import React from "react";
+import Products_FLM from "../pages/Home/Products_FLM";
 
 const Services = () => {
   return (
@@ -100,7 +101,7 @@ const Services = () => {
       </section>
 
       {/* Product Highlights */}
-      <Products_Curtains />
+      <Products_FLM />
 
       {/* Call To Action */}
       <section

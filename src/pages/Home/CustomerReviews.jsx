@@ -9,7 +9,7 @@ const StarRating = ({ rating }) => {
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="flex items-center justify-center text-[#FFD700] mt-2">
+    <div className="flex items-center justify-center text-emerald-500 mt-2">
       {[...Array(fullStars)].map((_, i) => (
         <FaStar key={`full-${i}`} />
       ))}
@@ -26,34 +26,66 @@ const CustomerReviews = () => {
     {
       image: "https://8upload.com/image/67a01a1ccc5a5/Ahmed_Al-Ansari.jpg",
       quote:
-        "LuxeFurnish exceeded my expectations with their custom curtains and luxury furniture service.",
+        "The aluminium fabrication was precise and durable. F L M truly delivered on time and to spec.",
       name: "Ahmed Al-Ansari",
-      title: "Business Owner, Doha",
+      title: "Site Supervisor, Doha Build Co.",
       rating: 5,
     },
     {
       image: "https://8upload.com/image/67a01a1ca7613/Noor_Fatima.jpg",
       quote:
-        "Their creative design transformed our interiors into a stylish and warm living space.",
+        "Top-quality mirror installation. Our spa now has a sleek and modern look. Highly recommended!",
       name: "Noor Fatima",
-      title: "HR Manager, Qatar Tech Solutions",
+      title: "Spa Owner, Lusail",
       rating: 4.5,
     },
     {
       image: "https://8upload.com/image/67a01a1c849be/Mohammed_Khalifa.jpg",
       quote:
-        "Excellent craftsmanship and attention to detail. Highly recommended for premium furnishings.",
+        "Gypsum partitioning was handled efficiently. Clean finishes, excellent project coordination.",
       name: "Mohammed Khalifa",
-      title: "CEO, Khalifa Enterprises",
+      title: "Architect, Al Wakrah",
       rating: 5,
     },
     {
       image: "https://8upload.com/image/67a01a1c6130d/Sara_Ibrahim.jpg",
       quote:
-        "From consultation to installation, their service was flawless and elegant.",
+        "We needed urgent printing support for an event—F L M was fast, creative, and reliable!",
       name: "Sara Ibrahim",
-      title: "Entrepreneur, Doha",
+      title: "Marketing Executive, QEvents",
       rating: 4,
+    },
+    {
+      image: "https://8upload.com/image/67a01a1c57f2d/Hassan_Shah.jpg",
+      quote:
+        "The parking shades installed at our factory are sturdy and well-finished. Great value.",
+      name: "Hassan Shah",
+      title: "Operations Manager, Doha Industrial Group",
+      rating: 4.5,
+    },
+    {
+      image: "https://8upload.com/image/67a01a1c3cf90/Fatima_Al-Kuwari.jpg",
+      quote:
+        "The UPVC windows were sealed perfectly and look great. Energy savings noticeable already!",
+      name: "Fatima Al-Kuwari",
+      title: "Homeowner, Al Rayyan",
+      rating: 5,
+    },
+    {
+      image: "https://8upload.com/image/67a01a1c25f5b/Tariq_Abdul.jpg",
+      quote:
+        "F L M's steel fabrication team met our structural specs exactly. Reliable and professional.",
+      name: "Tariq Abdul",
+      title: "Engineer, Falcon Steel",
+      rating: 5,
+    },
+    {
+      image: "https://8upload.com/image/67a01a1c0c90d/Layla_Hassan.jpg",
+      quote:
+        "Our custom sofa was upholstered beautifully. F L M added real luxury to our space.",
+      name: "Layla Hassan",
+      title: "Interior Designer, The Luxe Studio",
+      rating: 4.5,
     },
   ];
 
@@ -65,28 +97,30 @@ const CustomerReviews = () => {
       <img
         src={review.image}
         alt={review.name}
-        className="w-24 h-24 rounded-full object-cover border-4 border-[#B88A44] shadow-lg transition-transform duration-300 hover:scale-110"
+        className="w-24 h-24 rounded-full object-cover border-4 border-emerald-600 shadow-lg transition-transform duration-300 hover:scale-110"
       />
       <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 text-center leading-relaxed">
         “{review.quote}”
       </blockquote>
       <StarRating rating={review.rating} />
       <div className="text-center">
-        <p className="font-semibold text-[#B88A44] dark:text-[#D1A75C] text-lg">{review.name}</p>
+        <p className="font-semibold text-emerald-700 dark:text-emerald-400 text-lg">
+          {review.name}
+        </p>
         <p className="text-sm text-gray-500 dark:text-gray-400">{review.title}</p>
       </div>
     </div>
   ));
 
   return (
-    <section className="py-16 bg-[#FAF7EF] dark:bg-gray-800 text-gray-800 dark:text-white">
+    <section className="py-16 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white">
       <div className="container px-6 mx-auto max-w-7xl">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-[#1E2A3A] dark:text-white mb-4">
-          What Our Customers Say
+        <h2 className="text-4xl font-bold text-center text-emerald-800 dark:text-white mb-4">
+          Customer Testimonials
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto mb-10">
-          See how our premium curtains, furniture, and design services are making homes more beautiful across Qatar.
+          Real feedback from clients who’ve experienced excellence with F L M SUPER TRADING AND CONTRACTING across diverse services.
         </p>
 
         {/* Carousel */}

@@ -16,48 +16,45 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import Modal from "react-modal";
 
-// Accessibility requirement for screen readers
 Modal.setAppElement("#root");
 
-// Sample product data
 const products = [
   {
     id: 1,
-    name: "Blackout Curtains",
+    name: "Aluminium Fabrication",
     image: "https://8upload.com/image/685c8fdbaa00d/WhatsApp_Image_2025-06-24_at_22.51.30_0a3810a5.jpg",
-    subtitle: "Perfect for blocking light and enhancing privacy in bedrooms or media rooms.",
-    link: "/curtains/blackout",
+    subtitle: "Custom aluminium solutions for durable and sleek structures.",
+    link: "/services/aluminium",
     rating: 4.5,
     discount: "20% OFF",
   },
   {
     id: 2,
-    name: "Bedroom Curtains",
+    name: "Gypsum Ceilings",
     image: "https://8upload.com/image/685c95754abe6/IMG-20250625-WA0012.jpg",
-    subtitle: "Soft textures and elegant drapes designed to create a cozy bedroom ambiance.",
-    link: "/curtains/bedroom",
+    subtitle: "Elegant gypsum partitions and ceiling works tailored to your needs.",
+    link: "/services/gypsum",
     rating: 4,
   },
   {
     id: 3,
-    name: "Wave Style Curtains",
+    name: "Glass & Mirror Works",
     image: "https://8upload.com/image/685c8fda8b268/WhatsApp_Image_2025-06-24_at_22.51.31_ffba6044.jpg",
-    subtitle: "Modern wave pleats that offer a clean, architectural look for any room.",
-    link: "/curtains/wave",
+    subtitle: "Reflective glass and mirror installations with high clarity and finish.",
+    link: "/services/glass",
     rating: 5,
     discount: "15% OFF",
   },
   {
     id: 4,
-    name: "Living Room Curtains",
+    name: "Furniture & Upholstery",
     image: "https://8upload.com/image/685c95337a7e1/IMG-20250625-WA0017.jpg",
-    subtitle: "Stylish and functional, adding sophistication to your living area.",
-    link: "/curtains/livingroom",
+    subtitle: "Crafted and restored furniture with premium materials and care.",
+    link: "/services/upholstery",
     rating: 3.5,
   },
 ];
 
-// Arrow Components
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -78,7 +75,6 @@ const PrevArrow = ({ onClick }) => (
   </button>
 );
 
-// Rating Stars Renderer
 const renderStars = (rating) => {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5;
@@ -93,7 +89,7 @@ const renderStars = (rating) => {
   );
 };
 
-const Products_Curtains = () => {
+const Products_FLM = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -125,17 +121,15 @@ const Products_Curtains = () => {
   };
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-gray-50">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-emerald-50">
       <div className="max-w-screen-xl mx-auto">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
-          Explore Our Curtain Collection
+        <h2 className="text-4xl font-bold text-center text-emerald-800 mb-4">
+          F L M SUPER TRADING AND CONTRACTING
         </h2>
-        <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-          From blackout to bedroom curtains, discover designs tailored to elevate your space with elegance and comfort.
+        <p className="text-center text-emerald-700 mb-12 text-lg max-w-2xl mx-auto">
+          اف ال ام سوبر ترادينغ اند كونتراكتينغ – Explore Our Professional Services Collection
         </p>
 
-        {/* Product Slider */}
         <Slider {...settings}>
           {products.map((product) => (
             <div key={product.id} className="px-4">
@@ -172,12 +166,12 @@ const Products_Curtains = () => {
                   <div className="flex justify-between items-center gap-2 mt-5">
                     <Link
                       to={product.link}
-                      className="px-5 py-2 text-sm font-medium rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                      className="px-5 py-2 text-sm font-medium rounded-full bg-emerald-700 text-white hover:bg-emerald-800 transition"
                     >
                       View Details
                     </Link>
                     <a
-                      href="https://wa.me/97470373588"
+                      href="https://wa.me/97431602956"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-5 py-2 text-sm font-medium rounded-full bg-green-600 text-white hover:bg-green-700 transition"
@@ -193,7 +187,6 @@ const Products_Curtains = () => {
         </Slider>
       </div>
 
-      {/* Modal Viewer */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -210,7 +203,7 @@ const Products_Curtains = () => {
           </button>
           <img
             src={modalImage}
-            alt="Curtain Preview"
+            alt="Preview"
             className="w-full h-auto max-h-[80vh] object-contain rounded"
           />
         </div>
@@ -219,4 +212,4 @@ const Products_Curtains = () => {
   );
 };
 
-export default Products_Curtains;
+export default Products_FLM;
