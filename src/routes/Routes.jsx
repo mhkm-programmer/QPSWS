@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       { path: "/services/upvc", element: <UPVC /> },
       { path: "/services/ms_fabrication", element: <MS /> },
 
-      // Furniture (Blinds or Other)
+      
       { path: "/furniture", element: <Furniture /> },
     ],
   },

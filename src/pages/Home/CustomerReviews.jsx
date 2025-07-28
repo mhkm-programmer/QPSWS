@@ -24,15 +24,15 @@ const StarRating = ({ rating }) => {
 const CustomerReviews = () => {
   const reviews = [
     {
-      image: "https://8upload.com/image/67a01a1ccc5a5/Ahmed_Al-Ansari.jpg",
+      image: "https://8upload.com/image/6886c936b5a8b/Customer1.png",
       quote:
         "The aluminium fabrication was precise and durable. F L M truly delivered on time and to spec.",
-      name: "Ahmed Al-Ansari",
+      name: "Ahmed Al-Asma",
       title: "Site Supervisor, Doha Build Co.",
       rating: 5,
     },
     {
-      image: "https://8upload.com/image/67a01a1ca7613/Noor_Fatima.jpg",
+      image: "https://8upload.com/image/6886c9372bc20/Customer2.png",
       quote:
         "Top-quality mirror installation. Our spa now has a sleek and modern look. Highly recommended!",
       name: "Noor Fatima",
@@ -40,7 +40,7 @@ const CustomerReviews = () => {
       rating: 4.5,
     },
     {
-      image: "https://8upload.com/image/67a01a1c849be/Mohammed_Khalifa.jpg",
+      image: "https://8upload.com/image/6886c93780b21/Customer3.png",
       quote:
         "Gypsum partitioning was handled efficiently. Clean finishes, excellent project coordination.",
       name: "Mohammed Khalifa",
@@ -48,7 +48,7 @@ const CustomerReviews = () => {
       rating: 5,
     },
     {
-      image: "https://8upload.com/image/67a01a1c6130d/Sara_Ibrahim.jpg",
+      image: "https://8upload.com/image/6886c937cee01/Customer4.png",
       quote:
         "We needed urgent printing support for an event—F L M was fast, creative, and reliable!",
       name: "Sara Ibrahim",
@@ -56,7 +56,7 @@ const CustomerReviews = () => {
       rating: 4,
     },
     {
-      image: "https://8upload.com/image/67a01a1c57f2d/Hassan_Shah.jpg",
+      image: "https://8upload.com/image/6886c93835b09/Customer5.png",
       quote:
         "The parking shades installed at our factory are sturdy and well-finished. Great value.",
       name: "Hassan Shah",
@@ -64,7 +64,7 @@ const CustomerReviews = () => {
       rating: 4.5,
     },
     {
-      image: "https://8upload.com/image/67a01a1c3cf90/Fatima_Al-Kuwari.jpg",
+      image: "https://8upload.com/image/6886c9388b9d9/Customer6.png",
       quote:
         "The UPVC windows were sealed perfectly and look great. Energy savings noticeable already!",
       name: "Fatima Al-Kuwari",
@@ -72,15 +72,15 @@ const CustomerReviews = () => {
       rating: 5,
     },
     {
-      image: "https://8upload.com/image/67a01a1c25f5b/Tariq_Abdul.jpg",
+      image: "https://8upload.com/image/6886c938d72cb/Customer7.png",
       quote:
         "F L M's steel fabrication team met our structural specs exactly. Reliable and professional.",
-      name: "Tariq Abdul",
+      name: "Tari Abiduhali",
       title: "Engineer, Falcon Steel",
       rating: 5,
     },
     {
-      image: "https://8upload.com/image/67a01a1c0c90d/Layla_Hassan.jpg",
+      image: "https://8upload.com/image/6886c9393c840/Customer8.png",
       quote:
         "Our custom sofa was upholstered beautifully. F L M added real luxury to our space.",
       name: "Layla Hassan",

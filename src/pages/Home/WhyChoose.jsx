@@ -7,37 +7,37 @@ const features = [
   {
     title: "Aluminium Fabrication",
     description: "Precision aluminium structures and installations, combining strength with sleek design for residential and commercial projects.",
-    image: "https://8upload.com/image/67a01bfb11db8/Aluminium_Fabrication.jpg",
+    image: "https://8upload.com/image/6886c100e5eab/IMG-20250630-WA0008.jpg",
   },
   {
     title: "Glass & Mirror Works",
     description: "Stylish glass panels and custom mirrors to elevate interiors with clarity, modern appeal, and lasting durability.",
-    image: "https://8upload.com/image/67a01bfb31b96/Glass_Mirror_Works.jpg",
+    image: "https://8upload.com/image/6886c3b55931a/IMG-20250630-WA0040.jpg",
   },
   {
     title: "Gypsum Partition & Ceiling",
     description: "Innovative false ceilings and space-defining partitions, designed to enhance acoustics, aesthetics, and flexibility.",
-    image: "https://8upload.com/image/67a01bf9f0147/Gypsum_Partitions.jpg",
+    image: "https://8upload.com/image/6886c41c28e59/IMG-20250630-WA0075.jpg",
   },
   {
     title: "Printing Services",
     description: "From business signage to promotional materials, our custom printing delivers bold, high-quality results.",
-    image: "https://8upload.com/image/67a01bfa23d2f/Printing_Services.jpg",
+    image: "https://8upload.com/image/6886c52ae53e6/IMG-20250630-WA0080.jpg",
   },
   {
     title: "Parking Shade Structures",
     description: "UV-protected, heat-resistant shade solutions engineered for residential, commercial, and industrial parking zones.",
-    image: "https://8upload.com/image/67a01bfa7b310/Parking_Shade.jpg",
+    image: "https://8upload.com/image/6886c5b74c017/IMG-20250630-WA0110.jpg",
   },
   {
     title: "UPVC Doors & Windows",
     description: "Energy-efficient, weatherproof, and stylish UPVC systems designed to enhance comfort and modern living.",
-    image: "https://8upload.com/image/67a01bfaaf76f/UPVC_Doors_Windows.jpg",
+    image: "https://8upload.com/image/6886c5ea578f5/IMG-20250630-WA0055.jpg",
   },
   {
     title: "MS Welding & Furniture Upholstery",
     description: "From strong steel fabrication to plush furniture finishes—F L M delivers craftsmanship across industries.",
-    image: "https://8upload.com/image/67a01bfae57cd/MS_Welding_Upholstery.jpg",
+    image: "https://8upload.com/image/6886c6120d9d1/IMG-20250630-WA0073.jpg",
   },
 ];
 
@@ -62,9 +62,9 @@ const WhyChoose = () => {
       {/* Logo */}
       <div className="flex justify-center mb-10">
         <img
-          src="https://8upload.com/image/67a01c3b4ad22/Al-FWZ.jpg"
+          src="https://8upload.com/image/6886bfe4749c0/Screenshot_at_Jul_28_02-58-35.png"
           alt="F L M Logo"
-          className="h-24 w-24 rounded-full shadow-xl border-4 border-emerald-600"
+          className="h-24 w-24 rounded-xl shadow-xl border-4 border-emerald-600"
         />
       </div>
 

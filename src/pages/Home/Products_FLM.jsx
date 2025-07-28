@@ -21,36 +21,69 @@ Modal.setAppElement("#root");
 const products = [
   {
     id: 1,
-    name: "Aluminium Fabrication",
-    image: "https://8upload.com/image/685c8fdbaa00d/WhatsApp_Image_2025-06-24_at_22.51.30_0a3810a5.jpg",
-    subtitle: "Custom aluminium solutions for durable and sleek structures.",
+    name: "Aluminium Fabrication & Installation",
+    image: "https://8upload.com/image/687c3a42a9bca/IMG-20250630-WA0005.jpg",
+    subtitle: "Custom aluminium structures designed for durability and style.",
     link: "/services/aluminium",
     rating: 4.5,
     discount: "20% OFF",
   },
   {
     id: 2,
-    name: "Gypsum Ceilings",
-    image: "https://8upload.com/image/685c95754abe6/IMG-20250625-WA0012.jpg",
-    subtitle: "Elegant gypsum partitions and ceiling works tailored to your needs.",
-    link: "/services/gypsum",
-    rating: 4,
-  },
-  {
-    id: 3,
     name: "Glass & Mirror Works",
-    image: "https://8upload.com/image/685c8fda8b268/WhatsApp_Image_2025-06-24_at_22.51.31_ffba6044.jpg",
-    subtitle: "Reflective glass and mirror installations with high clarity and finish.",
+    image: "https://8upload.com/image/687c3a75463d4/IMG-20250630-WA0051.jpg",
+    subtitle: "Expert glass and mirror installation for both function and beauty.",
     link: "/services/glass",
     rating: 5,
     discount: "15% OFF",
   },
   {
+    id: 3,
+    name: "Gypsum Partition & Ceiling",
+    image: "https://8upload.com/image/687c3aa8a00bd/IMG-20250630-WA0077.jpg",
+    subtitle: "Modern partitions and ceilings crafted with precision.",
+    link: "/services/gypsumCeilings",
+    rating: 4,
+  },
+  {
     id: 4,
+    name: "Professional Printing",
+    image: "https://8upload.com/image/687c3aef5654d/IMG-20250630-WA0080.jpg",
+    subtitle: "Top-tier printing services for corporate and personal needs.",
+    link: "/services/printing",
+    rating: 4.2,
+  },
+  {
+    id: 5,
+    name: "Parking Shade Solutions",
+    image: "https://8upload.com/image/687c3b2a33d64/IMG-20250630-WA0117.jpg",
+    subtitle: "Shaded structures built for protection and style.",
+    link: "/services/parking",
+    rating: 3.8,
+    discount: "10% OFF",
+  },
+  {
+    id: 6,
+    name: "UPVC Doors & Windows",
+    image: "https://8upload.com/image/687c3b6a5dd61/IMG-20250630-WA0060.jpg",
+    subtitle: "Energy-efficient UPVC installations for modern comfort.",
+    link: "/services/upvc",
+    rating: 4.7,
+  },
+  {
+    id: 7,
+    name: "MS Welding & Steel Fabrication",
+    image: "https://8upload.com/image/687c3bbfae6e8/IMG-20250630-WA0085.jpg",
+    subtitle: "Strong and secure metalwork crafted by seasoned welders.",
+    link: "/services/ms_fabrication",
+    rating: 4.3,
+  },
+  {
+    id: 8,
     name: "Furniture & Upholstery",
-    image: "https://8upload.com/image/685c95337a7e1/IMG-20250625-WA0017.jpg",
-    subtitle: "Crafted and restored furniture with premium materials and care.",
-    link: "/services/upholstery",
+    image: "https://8upload.com/image/687c3c0311919/IMG-20250630-WA0094.jpg",
+    subtitle: "Luxury furniture restoration and custom upholstery work.",
+    link: "/furniture",
     rating: 3.5,
   },
 ];
@@ -123,12 +156,7 @@ const Products_FLM = () => {
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-emerald-50">
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-emerald-800 mb-4">
-          F L M SUPER TRADING AND CONTRACTING
-        </h2>
-        <p className="text-center text-emerald-700 mb-12 text-lg max-w-2xl mx-auto">
-          اف ال ام سوبر ترادينغ اند كونتراكتينغ – Explore Our Professional Services Collection
-        </p>
+      
 
         <Slider {...settings}>
           {products.map((product) => (

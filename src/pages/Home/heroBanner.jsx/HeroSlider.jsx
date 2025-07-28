@@ -4,28 +4,64 @@ import React from "react";
 
 const HeroSlider = () => {
   const slides = [
-    {
-      image: "https://8upload.com/image/685c8fdacf7fb/IMG-20250625-WA0026.jpg",
-      title: "Aluminium & Glass Experts",
-      subtitle: "Precision in fabrication and installation for modern spaces.",
-      buttonText: "Explore Services",
-      link: "/services/aluminium",
-    },
-    {
-      image: "https://8upload.com/image/685c8fdac5041/WhatsApp_Image_2025-06-24_at_22.51.32_7b72dace.jpg",
-      title: "Gypsum & Ceiling Solutions",
-      subtitle: "Stylish partitions and ceilings tailored to your space.",
-      buttonText: "View Projects",
-      link: "/services/gypsum",
-    },
-    {
-      image: "https://8upload.com/image/685c91d8ee5a6/IMG-20250625-WA0005.jpg",
-      title: "Furniture & Upholstery",
-      subtitle: "Expert craftsmanship in restoration and custom upholstery.",
-      buttonText: "Get a Quote",
-      link: "/services/furniture",
-    },
-  ];
+  {
+    image: "https://8upload.com/image/687c202484185/IMG-20250630-WA0003.jpg",
+    title: "Aluminium Fabrication & Installation",
+    subtitle: "Durable and precise aluminium solutions tailored for modern architecture.",
+    buttonText: "Explore Services",
+    link: "/services/aluminium",
+  },
+  {
+    image: "https://8upload.com/image/687c202501570/IMG-20250630-WA0038.jpg",
+    title: "Glass & Mirror Works",
+    subtitle: "Custom glass designs, partitions, and mirrors for stylish interiors.",
+    buttonText: "Discover More",
+    link: "/services/glass",
+  },
+  {
+    image: "https://8upload.com/image/687c29968826c/IMG-20250630-WA0075.jpg",
+    title: "Gypsum Partition & Ceiling",
+    subtitle: "Innovative ceiling and partition designs to enhance your space.",
+    buttonText: "View Projects",
+    link: "/services/gypsumCeilings",
+  },
+  {
+    image: "https://8upload.com/image/687c2996d1189/IMG-20250630-WA0080.jpg",
+    title: "Printing Solutions",
+    subtitle: "Professional printing services for all branding and business needs.",
+    buttonText: "See Services",
+    link: "/services/printing",
+  },
+  {
+    image: "https://8upload.com/image/687c20259eac6/IMG-20250630-WA0115.jpg",
+    title: "Parking Shade Solutions",
+    subtitle: "Weather-resistant and stylish shades for all parking areas.",
+    buttonText: "Learn More",
+    link: "/services/parking",
+  },
+  {
+    image: "https://8upload.com/image/687c20252fef3/IMG-20250630-WA0053.jpg",
+    title: "UPVC Doors & Windows",
+    subtitle: "Energy-efficient and secure UPVC doors and windows installations.",
+    buttonText: "Browse Designs",
+    link: "/services/upvc",
+  },
+  {
+    image: "https://8upload.com/image/687c202540a83/IMG-20250630-WA0063.jpg",
+    title: "MS Welding & Steel Fabrication",
+    subtitle: "Heavy-duty metal fabrication solutions for industrial and commercial needs.",
+    buttonText: "Get a Quote",
+    link: "/services/ms_fabrication",
+  },
+  {
+    image: "https://8upload.com/image/687c2aba7a3f9/IMG-20250630-WA0103.jpg",
+    title: "Furniture & Upholstery",
+    subtitle: "Custom furniture, repairs, and premium upholstery craftsmanship.",
+    buttonText: "Contact Now",
+    link: "/furniture",
+  },
+];
+
 
   const sliderSettings = {
     dots: true,
