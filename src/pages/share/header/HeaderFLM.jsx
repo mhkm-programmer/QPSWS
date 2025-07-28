@@ -20,15 +20,16 @@ const HeaderFLM = () => {
       submenu: [
         { label: "Aluminium Fabrication & Installation", to: "/services/aluminium" },
         { label: "Glass & Mirror Works", to: "/services/glass" },
-        { label: "Gypsum Partitions & False Ceilings", to: "/services/gypsumCeilings" },
-        { label: "Digital Signage & Printing", to: "/services/printing" },
-        { label: "Parking Shade Structures", to: "/services/parking" },
+        { label: "Gypsum Partitions", to: "/services/gypsumCeilings" },
+        { label: "Painting", to: "/services/printing" },
+        { label: "Parking Shade ", to: "/services/parking" },
         { label: "UPVC Doors & Windows", to: "/services/upvc" },
         { label: "MS Welding & Steel Fabrication", to: "/services/ms_fabrication" },
+        { label: "Furniture & Upholstery", to: "/furniture" },
       ],
     },
-    { label: "Furniture & Upholstery", to: "/furniture" },
-    { label: "Gallery", to: "/gallery" },
+    
+    // { label: "Gallery", to: "/gallery" },
     { label: "Contact Us", to: "/contact" },
   ];
 
@@ -78,7 +79,7 @@ const HeaderFLM = () => {
       <div className="flex flex-wrap items-center justify-between px-4 py-2">
         <NavLink to="/" aria-label="Homepage" onClick={() => setIsMobileMenuOpen(false)}>
           <img
-            src="https://8upload.com/image/6857c8c36af7b/Curtain_Logo.jpeg"
+            src="https://8upload.com/image/6886d0ece1983/logo.jpeg"
             alt="FLM Curtains Logo"
             className="h-10 rounded-md"
             loading="lazy"

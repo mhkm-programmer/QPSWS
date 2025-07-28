@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-3">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <img src="https://i.ibb.co/RS1DnRV/logo-dark.png" alt="FLM Logo" className="w-32 h-auto" />
+              <img src="https://8upload.com/image/6886d0ece1983/logo.jpeg" alt="FLM Logo" className="w-32 h-auto" />
             </Link>
 
             {/* Desktop Menu */}
