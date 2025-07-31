@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaTools, FaWrench, FaCertificate } from "react-icons/fa";
 
 const msGallery = [
-  { type: "image", src: "https://8upload.com/image/685d94d771c24/IMG-20250625-WA0009.jpg" },
-  { type: "video", src: "https://streamable.com/e/tb5vq0" },
-  { type: "image", src: "https://8upload.com/image/685d94d730398/IMG-20250625-WA0008.jpg" },
-  { type: "video", src: "https://streamable.com/e/ab3idq" },
-  { type: "image", src: "https://8upload.com/image/685d94d6dc6a0/IMG-20250625-WA0007.jpg" },
-  { type: "video", src: "https://streamable.com/e/9ag22m" },
+  { type: "image", src: "https://8upload.com/image/688ac04b0c0de/ms1-min.png" },
+  { type: "video", src: "https://8upload.com/image/688ac04c97be1/IMG-20250630-WA0071.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ac04c97be1/IMG-20250630-WA0071.jpg" },
+  { type: "video", src: "https://8upload.com/image/688ac04b0c0de/ms1-min.png" },
+  { type: "image", src: "https://8upload.com/image/688ac04e412f6/IMG-20250630-WA0064.jpg" },
+  { type: "video", src: "https://8upload.com/image/688ac04d5ca81/IMG-20250630-WA0062.jpg" },
 ];
 
 Modal.setAppElement('#root');
@@ -24,7 +24,7 @@ const MS = () => {
       <PageTitle title="Steel Fabrication & Welding Qatar | MS Welding Experts" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d94d7bd575/IMG-20250625-WA0012.jpg"
+        imagePath="https://8upload.com/image/688ac04d12f5d/IMG-20250630-WA0074.jpg"
         title="MS Welding & Steel Fabrication"
         subTitle="Precision | Strength | Durability — Made in Qatar"
       />

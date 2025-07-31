@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const aluminiumGallery = [
-  { type: "image", src: "https://8upload.com/image/685d8acf5c24e/IMG-20250625-WA0019.jpg" },
-  { type: "video", src: "https://streamable.com/e/f1xvgq" },
-  { type: "image", src: "https://8upload.com/image/685d8acf17931/IMG-20250625-WA0018.jpg" },
-  { type: "video", src: "https://streamable.com/e/58pvqz" },
-  { type: "image", src: "https://8upload.com/image/685d8acecbe70/IMG-20250625-WA0016.jpg" },
-  { type: "video", src: "https://streamable.com/e/gwnjk2" },
+  { type: "image", src: "https://8upload.com/image/688810e831f04/IMG-20250630-WA0036.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e7acd00/IMG-20250630-WA0007.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e765feb/IMG-20250630-WA0005.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e744611/IMG-20250630-WA0004.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e7237ee/IMG-20250630-WA0003.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e814f37/IMG-20250630-WA0010.jpg" },
 ];
 
 Modal.setAppElement('#root');
@@ -24,7 +24,7 @@ const Aluminium = () => {
       <PageTitle title="Aluminium Works Qatar | Stylish & Durable Solutions | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d8acfa5cd1/IMG-20250625-WA0022.jpg"
+        imagePath="https://8upload.com/image/68880f4ac8621/Alumi1-min.png"
         title="Aluminium Works"
         subTitle="Elegant. Strong. Long-Lasting."
       />

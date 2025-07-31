@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const glassMirrorGallery = [
-  { type: "image", src: "https://8upload.com/image/685d7c744c834/IMG-20250625-WA0001.jpg" },
-  { type: "video", src: "https://streamable.com/e/wru2nm" },
-  { type: "image", src: "https://8upload.com/image/685d7c7474836/IMG-20250625-WA0002.jpg" },
-  { type: "video", src: "https://streamable.com/e/4mcx5t" },
-  { type: "image", src: "https://8upload.com/image/685d17eead8bb/IMG-20250625-WA0030.jpg" },
-  { type: "video", src: "https://streamable.com/e/dmrk45" },
+  { type: "image", src: "https://8upload.com/image/68881ebede837/IMG-20250630-WA0038.jpg" },
+  { type: "image", src: "https://8upload.com/image/68881ebef2736/IMG-20250630-WA0039.jpg" },
+  { type: "image", src: "https://8upload.com/image/68881ebede837/IMG-20250630-WA0038.jpg" },
+  { type: "image", src: "https://8upload.com/image/68881ebf2679a/IMG-20250630-WA0041.jpg" },
+  { type: "image", src: "https://8upload.com/image/68881ebfd6e1c/IMG-20250630-WA0052.jpg" },
+  { type: "image", src: "https://8upload.com/image/68881ebfaa093/IMG-20250630-WA0051.jpg" },
 ];
 
 Modal.setAppElement('#root');
@@ -24,7 +24,7 @@ const Glass = () => {
       <PageTitle title="Glass & Mirror Works Qatar | Custom Installations | Interior Elegance" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d7d6003ed2/IMG-20250625-WA0017.jpg"
+        imagePath="https://8upload.com/image/68881e57d5b15/GlassServices-min.png"
         title="Glass & Mirror Installations"
         subTitle="Modern Designs with Precision & Elegance"
       />

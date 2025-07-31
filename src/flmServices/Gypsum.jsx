@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaTools, FaPaintRoller, FaCogs, FaCertificate } from "react-icons/fa";
 
 const gypsumGallery = [
-  { type: "image", src: "https://8upload.com/image/685f24621688c/IMG-20250625-WA0022.jpg" },
-  { type: "video", src: "https://streamable.com/e/t2nkyv" },
-  { type: "image", src: "https://8upload.com/image/685f246287121/IMG-20250625-WA0023.jpg" },
-  { type: "video", src: "https://streamable.com/e/f1xvgq" },
-  { type: "image", src: "https://8upload.com/image/685f2462d6bbb/IMG-20250625-WA0024.jpg" },
-  { type: "video", src: "https://streamable.com/e/3er68t" },
+  { type: "image", src: "https://8upload.com/image/688aa5c8159ab/gyp1-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aa5c89930a/gyp2-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aa5c927f78/gyp3-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aa5c9a91df/gyp4-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aa5ca37a91/gyp5-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aa5cab97c8/gyp6-min.png" },
 ];
 Modal.setAppElement('#root');
 
@@ -23,7 +23,7 @@ const Gypsum = () => {
       <PageTitle title="Gypsum Partition & Ceiling Works in Qatar | Custom Designs | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685f23afa26f2/IMG-20250625-WA0012.jpg"
+        imagePath="https://8upload.com/image/688a9cfb83e3a/gypsum_board-min.png"
         title="Expert Gypsum Works"
         subTitle="Stylish Partitions & Ceilings that Define Your Space"
       />

@@ -1,177 +1,167 @@
-import {
-  FaHome,
-  FaCouch,
-  FaTools,
-  FaRecycle,
-  FaStar,
-  FaCertificate,
-} from "react-icons/fa";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import { useState } from "react";
 import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
-import Products_Blackout from "../pages/Home/Products_Blackout";
 import CustomerReviews from "../pages/Home/CustomerReviews";
+import Modal from "react-modal";
+import { FaCouch, FaPalette, FaTools, FaCertificate } from "react-icons/fa";
+
+const furnitureGallery = [
+  { type: "image", src: "https://8upload.com/image/688819f26d341/IMG-20250630-WA0085.jpg" },
+  { type: "image", src: "https://8upload.com/image/688819f2c6724/IMG-20250630-WA0086.jpg" },
+  { type: "image", src: "https://8upload.com/image/688819f3691b8/IMG-20250630-WA0090.jpg" },
+  { type: "image", src: "https://8upload.com/image/688819f404d4c/IMG-20250630-WA0099.jpg" },
+   { type: "image", src: "https://8upload.com/image/688819f48ad2c/IMG-20250630-WA0102.jpg" },
+  { type: "image", src: "https://8upload.com/image/688819f4a1c04/IMG-20250630-WA0103.jpg" },
+];
+
+Modal.setAppElement('#root');
 
 const Furniture = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-  };
-
-  const upholsteryFeatures = [
-    {
-      icon: <FaCouch size={42} className="text-emerald-600 mb-4" />,
-      title: "Custom Upholstery",
-      desc: "Tailored designs with high-quality fabrics and foam for sofas, chairs, beds, and more.",
-    },
-    {
-      icon: <FaTools size={42} className="text-emerald-600 mb-4" />,
-      title: "Furniture Repair",
-      desc: "Revive broken, loose, or worn furniture with durable, professional restoration.",
-    },
-    {
-      icon: <FaRecycle size={42} className="text-emerald-600 mb-4" />,
-      title: "Refinishing & Polishing",
-      desc: "Give your furniture a refreshed look with surface treatments, stain or lacquer.",
-    },
-    {
-      icon: <FaHome size={42} className="text-emerald-600 mb-4" />,
-      title: "Residential & Commercial",
-      desc: "Interior upholstery for villas, hotels, event halls, and corporate offices.",
-    },
-    {
-      icon: <FaStar size={42} className="text-emerald-600 mb-4" />,
-      title: "Premium Materials",
-      desc: "Choose leather, suede, velvet, or imported designer fabrics from our catalog.",
-    },
-    {
-      icon: <FaCertificate size={42} className="text-emerald-600 mb-4" />,
-      title: "Skilled Artisans",
-      desc: "Experienced Qatari & international craftsmen ensure top-quality outcomes.",
-    },
-  ];
-
-  const uniqueServices = [
-    {
-      title: "Free Site Visit",
-      desc: "Our team visits your location for a no-obligation consultation and fabric selection.",
-    },
-    {
-      title: "3–5 Day Turnaround",
-      desc: "Rapid delivery of finished jobs with quality assurance, even on custom pieces.",
-    },
-    {
-      title: "Fabric Book On-Site",
-      desc: "Browse real fabric swatches during your appointment — no showroom trip needed.",
-    },
-    {
-      title: "Workmanship Warranty",
-      desc: "Each service comes with aftercare and a warranty for your peace of mind.",
-    },
-  ];
+  const [modalMedia, setModalMedia] = useState(null);
 
   return (
-    <div className="font-sans bg-[#f7fdfc] dark:bg-gray-900 dark:text-white text-gray-800">
-      <PageTitle title="Furniture & Upholstery | F L M Super Trading and Contracting" />
+    <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
+      <PageTitle title="Furniture & Upholstery | Bateely Qatar" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685c9a9746ecf/IMG-20250625-WA0038.jpg"
-        title="Expert Furniture & Upholstery"
-        subTitle="Craftsmanship. Comfort. Custom Solutions."
+        imagePath="https://8upload.com/image/68881431e83e0/Furniture1.png"
+        title="Furniture & Upholstery"
+        subTitle="Elegant. Custom. Comfortable."
       />
 
-      {/* Intro */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-emerald-700">
-          Custom Furniture & Reupholstery That Speaks Luxury
+      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
+          Crafting Comfort and Elegance for Every Home & Office
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-          F L M Super Trading and Contracting delivers stunning custom furniture and upholstery services — from restoration to complete transformation.
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Our furniture and upholstery services breathe new life into your interiors. Whether it's a custom sofa, antique restoration, or full office furnishing, our work is detailed, durable, and design-focused.
         </p>
       </section>
 
-      {/* Auto Slider: Upholstery Features */}
-      <section className="bg-white dark:bg-gray-800 py-14 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
-          <Slider {...sliderSettings}>
-            {upholsteryFeatures.map((item, i) => (
-              <div key={i} className="flex flex-col items-center justify-center text-center p-10 min-h-[300px] bg-emerald-50 dark:bg-gray-900 rounded-xl shadow-md">
-                {item.icon}
-                <h3 className="text-xl font-semibold mb-2 text-emerald-800 dark:text-white">{item.title}</h3>
-                <p className="text-base text-gray-600 dark:text-gray-300 max-w-md">{item.desc}</p>
-              </div>
-            ))}
-          </Slider>
+      <section className="bg-[#f5f0e8] dark:bg-gray-800 py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+          {[
+            {
+              icon: <FaCouch size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Furniture Reupholstery",
+              desc: "From torn or worn fabric to stylish new looks — we restore and refresh it all.",
+            },
+            {
+              icon: <FaPalette size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Custom Upholstery",
+              desc: "Choose from rich fabrics, leather, textures and patterns that fit your personality.",
+            },
+            {
+              icon: <FaTools size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Wood & Foam Repair",
+              desc: "Skilled repair of furniture structure, legs, arms and foam – for strength & comfort.",
+            },
+          ].map(({ icon, title, desc }, i) => (
+            <div key={i} className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition">
+              {icon}
+              <h3 className="text-xl font-semibold mb-2 text-[#4A342E] dark:text-white">{title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="py-20 px-4 sm:px-6 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-emerald-700 mb-6">
-            Explore Our Upholstery Projects
-          </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-            From modern lounge sets to vintage restorations, see how F L M transforms furniture with elegance and functionality.
-          </p>
-          <Products_Blackout />
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
+          Gallery Showcase
+        </h3>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+          Explore our recent projects in residential reupholstery and commercial furniture renovation.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {furnitureGallery.map((media, index) => (
+            <button
+              key={index}
+              onClick={() => setModalMedia(media)}
+              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              aria-label={`View media ${index + 1}`}
+            >
+              <img
+                src={media.src}
+                alt={`Furniture work ${index + 1}`}
+                className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
+              />
+            </button>
+          ))}
         </div>
+
+        <Modal
+          isOpen={!!modalMedia}
+          onRequestClose={() => setModalMedia(null)}
+          contentLabel="Media Preview"
+          className="fixed inset-0 flex items-center justify-center p-4 z-[9999]"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-[9998]"
+        >
+          <div className="relative bg-white dark:bg-gray-900 rounded-xl p-4 max-w-4xl max-h-[90vh] w-full overflow-auto">
+            <button
+              onClick={() => setModalMedia(null)}
+              className="absolute top-4 right-4 text-2xl z-[10000] text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white transition"
+              aria-label="Close Modal"
+            >
+              ✕
+            </button>
+            {modalMedia && (
+              <img
+                src={modalMedia.src}
+                alt="Media Preview"
+                className="max-w-full max-h-[80vh] mx-auto rounded"
+              />
+            )}
+          </div>
+        </Modal>
       </section>
 
       <CustomerReviews />
 
-      {/* Unique Services Slider */}
-      <section className="bg-emerald-100 dark:bg-gray-800 py-16 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-emerald-900 dark:text-white">
-            What Makes Our Services Unique
+      <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
+            Why Choose Bateely for Furniture & Upholstery?
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 mt-2 max-w-xl mx-auto">
-            Personalized, fast, and guaranteed — our approach to furniture is designed around your lifestyle and taste.
+          <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+            We combine style, durability, and affordability. From sofas to dining chairs, get the look you want and the comfort you deserve.
           </p>
-        </div>
-
-        <Slider {...sliderSettings}>
-          {uniqueServices.map((service, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-center text-center p-10 min-h-[240px] bg-white dark:bg-gray-900 rounded-xl shadow-md"
-            >
-              <h3 className="text-lg font-semibold mb-2 text-emerald-800 dark:text-white">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 max-w-md">{service.desc}</p>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { title: "Free Measurement", desc: "We measure onsite to ensure perfect fitting and tailoring." },
+              { title: "Color & Fabric Advice", desc: "Experts help you choose colors and textures for any interior theme." },
+              { title: "Budget Options", desc: "Various material options to match both luxury and economical requirements." },
+            ].map(({ title, desc }, i) => (
+              <div key={i} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white mb-2">{title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
+              </div>
+            ))}
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow flex items-center gap-3">
+              <FaCertificate className="text-[#6B4226]" size={24} />
+              <div>
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white">Premium Materials</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  High-quality foam, fabrics and wood with lasting durability and feel.
+                </p>
+              </div>
             </div>
-          ))}
-        </Slider>
+          </div>
+        </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 bg-emerald-900 text-white text-center">
+      <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Book Your Free Upholstery Visit in Qatar
+          Refresh. Restore. Redesign.
         </h2>
-        <p className="text-lg max-w-xl mx-auto mb-6">
-          Let our team visit your space with fabric samples and ideas — completely free. Custom comfort is one call away.
+        <p className="text-lg mb-6 max-w-xl mx-auto">
+          Reach out today to get a free quote or consultation for your upholstery needs in Qatar.
         </p>
         <a
           href="https://wa.me/97466280037"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-emerald-900 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-200 transition"
+          className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
-          Chat With Us on WhatsApp
+          Chat on WhatsApp
         </a>
       </section>
     </div>

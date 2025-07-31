@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaUmbrellaBeach, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const parkingShadeGallery = [
-  { type: "image", src: "https://8upload.com/image/685d92a9cc5e6/IMG-20250625-WA0027.jpg" },
-  { type: "video", src: "https://streamable.com/e/rw7urq" },
-  { type: "image", src: "https://8upload.com/image/685d92aa09581/IMG-20250625-WA0028.jpg" },
-  { type: "video", src: "https://streamable.com/e/w35dgp" },
-  { type: "image", src: "https://8upload.com/image/685d92aa822d0/IMG-20250625-WA0029.jpg" },
-  { type: "video", src: "https://streamable.com/e/gxpb4o" },
+  { type: "image", src: "https://8upload.com/image/688ab65a7257a/IMG-20250630-WA0108.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab65acaa5e/IMG-20250630-WA0109.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab65ae8a5f/IMG-20250630-WA0110.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab65b0f010/IMG-20250630-WA0111.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab65b35ea4/IMG-20250630-WA0114.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab65b45add/IMG-20250630-WA0115.jpg" },
 ];
 Modal.setAppElement('#root');
 
@@ -23,7 +23,7 @@ const Parking = () => {
       <PageTitle title="Parking Shade in Qatar | UV Protection & Stylish Canopies | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d92600dd4c/IMG-20250625-WA0025.jpg"
+        imagePath="https://8upload.com/image/688ab65be0d73/IMG-20250630-WA0117.jpg"
         title="Parking Shade Solutions"
         subTitle="Reliable Coverage. Heat-Resistant Designs."
       />

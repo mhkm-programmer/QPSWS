@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaShieldAlt, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const upvcGallery = [
-  { type: "image", src: "https://8upload.com/image/685f220a9a68b/IMG-20250625-WA0019.jpg" },
-  { type: "video", src: "https://streamable.com/e/lzrkei" },
-  { type: "image", src: "https://8upload.com/image/685f220ae5389/IMG-20250625-WA0021.jpg" },
-  { type: "video", src: "https://streamable.com/e/kh6ojd" },
-  { type: "image", src: "https://8upload.com/image/685f220b3636a/IMG-20250625-WA0022.jpg" },
-  { type: "video", src: "https://streamable.com/e/rl9zye" },
+  { type: "image", src: "https://8upload.com/image/688ab7371ddc5/IMG-20250630-WA0061.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab736d6140/IMG-20250630-WA0060.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab736985fa/IMG-20250630-WA0059.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab73616577/IMG-20250630-WA0057.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab735a86b0/IMG-20250630-WA0055.jpg" },
+  { type: "image", src: "https://8upload.com/image/688ab73598534/IMG-20250630-WA0054.jpg" },
 ];
 Modal.setAppElement('#root');
 
@@ -23,7 +23,7 @@ const UPVC = () => {
       <PageTitle title="UPVC Doors & Windows in Qatar | Premium Quality | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/685c9a9746ecf/IMG-20250625-WA0038.jpg"
+        imagePath="https://8upload.com/image/688aba6d5a6b2/UpVC1-min.png"
         title="UPVC Doors & Windows"
         subTitle="Energy Efficient. Secure. Elegant."
       />

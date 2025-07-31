@@ -6,12 +6,12 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate, FaPaintRoller, FaPalette, FaClock } from "react-icons/fa";
 
 const paintingGallery = [
-  { type: "image", src: "https://8upload.com/image/685d8acf5c24e/IMG-20250625-WA0019.jpg" },
-  { type: "video", src: "https://streamable.com/e/f1xvgq" },
-  { type: "image", src: "https://8upload.com/image/685d8acf17931/IMG-20250625-WA0018.jpg" },
-  { type: "video", src: "https://streamable.com/e/58pvqz" },
-  { type: "image", src: "https://8upload.com/image/685d8acecbe70/IMG-20250625-WA0016.jpg" },
-  { type: "video", src: "https://streamable.com/e/gwnjk2" },
+  { type: "image", src: "https://8upload.com/image/688aaf770bd70/pa2-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aaf779ea8d/pa3-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aaf78b4699/pa5-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aaf793d9bb/pa6-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aaf79cd431/pa7-min.png" },
+  { type: "image", src: "https://8upload.com/image/688aaf7af080e/pa9-min.png" },
 ];
 
 Modal.setAppElement('#root');
@@ -26,7 +26,7 @@ const Printing = () => {
 
       {/* Hero Section */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d8acfa5cd1/IMG-20250625-WA0022.jpg"
+        imagePath="https://8upload.com/image/688aaf7a6758b/pa8-min.png"
         title="Painting Services"
         subTitle="Color Your World with Precision & Passion"
       />

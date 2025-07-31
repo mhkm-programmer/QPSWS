@@ -13,6 +13,7 @@ import ParallaxSection from "../pages/reusable/Parallax";
 
 import React from "react";
 import Products_FLM from "../pages/Home/Products_FLM";
+import CustomerReviews from "../pages/Home/CustomerReviews";
 
 const Services = () => {
   return (
@@ -22,7 +23,7 @@ const Services = () => {
 
       {/* Hero Section */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/685d004525996/IMG-20250625-WA0023.jpg"
+        imagePath="https://8upload.com/image/688809b2405b8/Services-min.png"
         title="Comprehensive Interior & Fabrication Services"
         subTitle="Quality You Can Trust – اف ال ام سوبر ترادينغ اند كونتراكتينغ"
       />
@@ -102,6 +103,8 @@ const Services = () => {
 
       {/* Product Highlights */}
       <Products_FLM />
+
+      <CustomerReviews />
 
       {/* Call To Action */}
       <section
