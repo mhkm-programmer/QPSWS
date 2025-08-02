@@ -79,9 +79,9 @@ const HeaderFLM = () => {
       <div className="flex flex-wrap items-center justify-between px-4 py-2">
         <NavLink to="/" aria-label="Homepage" onClick={() => setIsMobileMenuOpen(false)}>
           <img
-            src="https://8upload.com/image/6886d0ece1983/logo.jpeg"
+            src="https://8upload.com/image/688d560ce1483/FLM_STC_Logo__1_.png"
             alt="FLM Curtains Logo"
-            className="h-10 rounded-md"
+            className="h-10 bg-white rounded-md"
             loading="lazy"
           />
         </NavLink>
