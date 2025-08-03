@@ -19,13 +19,14 @@ const HeaderFLM = () => {
       to: "/services",
       submenu: [
         { label: "Aluminium Fabrication & Installation", to: "/services/aluminium" },
+         { label: "UPVC Doors & Windows", to: "/services/upvc" },
         { label: "Glass & Mirror Works", to: "/services/glass" },
+        { label: "Furniture & Upholstery", to: "/furniture" },
         { label: "Gypsum Partitions", to: "/services/gypsumCeilings" },
         { label: "Painting", to: "/services/printing" },
         { label: "Parking Shade ", to: "/services/parking" },
-        { label: "UPVC Doors & Windows", to: "/services/upvc" },
         { label: "MS Welding & Steel Fabrication", to: "/services/ms_fabrication" },
-        { label: "Furniture & Upholstery", to: "/furniture" },
+        
       ],
     },
     

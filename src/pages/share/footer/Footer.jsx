@@ -51,11 +51,7 @@ const Footer = () => {
                 Our Services
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/furniture" className="hover:text-yellow-400 transition">
-                Furniture & Upholstery
-              </NavLink>
-            </li>
+            
             
             <li>
               <NavLink to="/contact" className="hover:text-yellow-400 transition">
@@ -74,9 +70,19 @@ const Footer = () => {
                 Aluminium Fabrication & Installation
               </NavLink>
             </li>
+             <li>
+              <NavLink to="/services/upvc" className="hover:text-yellow-400 transition">
+                UPVC Doors & Windows
+              </NavLink>
+            </li>
             <li>
               <NavLink to="/services/glass" className="hover:text-yellow-400 transition">
                 Glass & Mirror Works
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/furniture" className="hover:text-yellow-400 transition">
+                Furniture & Upholstery
               </NavLink>
             </li>
             <li>
@@ -94,21 +100,13 @@ const Footer = () => {
                 Parking Shade
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/services/upvc" className="hover:text-yellow-400 transition">
-                UPVC Doors & Windows
-              </NavLink>
-            </li>
+           
             <li>
               <NavLink to="/services/ms_fabrication" className="hover:text-yellow-400 transition">
                 MS Welding & Steel Fabrication
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/furniture" className="hover:text-yellow-400 transition">
-                Furniture & Upholstery
-              </NavLink>
-            </li>
+            
           </ul>
         </div>
       </div>

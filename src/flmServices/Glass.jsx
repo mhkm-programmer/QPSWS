@@ -6,12 +6,16 @@ import Modal from "react-modal";
 import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
 const glassMirrorGallery = [
-  { type: "image", src: "https://8upload.com/image/68881ebede837/IMG-20250630-WA0038.jpg" },
+    { type: "image", src: "https://8upload.com/image/688fe7b0c9aa5/new_Glass3.jpeg" },
+ 
   { type: "image", src: "https://8upload.com/image/68881ebef2736/IMG-20250630-WA0039.jpg" },
   { type: "image", src: "https://8upload.com/image/68881ebede837/IMG-20250630-WA0038.jpg" },
   { type: "image", src: "https://8upload.com/image/68881ebf2679a/IMG-20250630-WA0041.jpg" },
   { type: "image", src: "https://8upload.com/image/68881ebfd6e1c/IMG-20250630-WA0052.jpg" },
   { type: "image", src: "https://8upload.com/image/68881ebfaa093/IMG-20250630-WA0051.jpg" },
+    { type: "image", src: "https://8upload.com/image/688fe7b077bec/new_Glass1.jpeg" },
+  { type: "image", src: "https://8upload.com/image/688fe7b0affc5/new_Glass2.jpeg" },
+
 ];
 
 Modal.setAppElement('#root');
