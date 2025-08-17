@@ -15,19 +15,9 @@ const HeaderFLM = () => {
   const menuItems = [
     { label: "Home", to: "/" },
     {
-      label: "Our Services",
-      to: "/services",
-      submenu: [
-        { label: "Aluminium Fabrication & Installation", to: "/services/aluminium" },
-         { label: "UPVC Doors & Windows", to: "/services/upvc" },
-        { label: "Glass & Mirror Works", to: "/services/glass" },
-        { label: "Furniture & Upholstery", to: "/furniture" },
-        { label: "Gypsum Partitions", to: "/services/gypsumCeilings" },
-        { label: "Painting", to: "/services/printing" },
-        { label: "Parking Shade ", to: "/services/parking" },
-        { label: "MS Welding & Steel Fabrication", to: "/services/ms_fabrication" },
-        
-      ],
+      label: "Plumber",
+      to: "/plumber",
+    
     },
     
     // { label: "Gallery", to: "/gallery" },
@@ -80,9 +70,9 @@ const HeaderFLM = () => {
       <div className="flex flex-wrap items-center justify-between px-4 py-2">
         <NavLink to="/" aria-label="Homepage" onClick={() => setIsMobileMenuOpen(false)}>
           <img
-            src="https://8upload.com/image/688d560ce1483/FLM_STC_Logo__1_.png"
+            src="https://8upload.com/image/68a21a1bd76fb/Doha_Plumber.png"
             alt="FLM Curtains Logo"
-            className="h-10 bg-white rounded-md"
+            className="h-10 bg-white rounded-md p-1"
             loading="lazy"
           />
         </NavLink>

@@ -64,7 +64,7 @@ const Home = () => {
           className="text-3xl sm:text-4xl font-bold text-center mb-4 text-emerald-700"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          Our Core Services
+          Our Services
         </motion.h2>
         <motion.p
           className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-2 sm:px-0"
