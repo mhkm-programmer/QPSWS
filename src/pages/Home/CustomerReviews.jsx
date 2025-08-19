@@ -9,7 +9,7 @@ const StarRating = ({ rating }) => {
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="flex items-center justify-center text-emerald-500 mt-2">
+    <div className="flex items-center justify-center text-blue-500 mt-2">
       {[...Array(fullStars)].map((_, i) => (
         <FaStar key={`full-${i}`} />
       ))}
@@ -26,101 +26,92 @@ const CustomerReviews = () => {
     {
       image: "https://8upload.com/image/6886c936b5a8b/Customer1.png",
       quote:
-        "The aluminium fabrication was precise and durable. F L M truly delivered on time and to spec.",
-      name: "Ahmed Al-Asma",
-      title: "Site Supervisor, Doha Build Co.",
+        "Our villa had a sudden pipe burst — Doha Plumbing responded within an hour and fixed it professionally. Highly reliable!",
+      name: "Mohammed Al-Khalifa",
+      title: "Homeowner, Al Wakrah",
       rating: 5,
     },
     {
       image: "https://8upload.com/image/6886c9372bc20/Customer2.png",
       quote:
-        "Top-quality mirror installation. Our spa now has a sleek and modern look. Highly recommended!",
-      name: "Noor Fatima",
-      title: "Spa Owner, Lusail",
+        "Excellent bathroom fitting service. The team was punctual, polite, and left the place spotless after work.",
+      name: "Aisha Rahman",
+      title: "Apartment Owner, Lusail",
       rating: 4.5,
     },
     {
       image: "https://8upload.com/image/6886c93780b21/Customer3.png",
       quote:
-        "Gypsum partitioning was handled efficiently. Clean finishes, excellent project coordination.",
-      name: "Mohammed Khalifa",
-      title: "Architect, Al Wakrah",
+        "We had drainage issues at our restaurant. Doha Plumbing handled it quickly without disrupting our business.",
+      name: "Omar Hassan",
+      title: "Restaurant Manager, West Bay",
       rating: 5,
     },
     {
       image: "https://8upload.com/image/6886c937cee01/Customer4.png",
       quote:
-        "We needed urgent printing support for an event—F L M was fast, creative, and reliable!",
-      name: "Sara Ibrahim",
-      title: "Marketing Executive, QEvents",
-      rating: 4,
+        "Professional installation of water heaters. Very satisfied with the work quality and fair pricing.",
+      name: "Fatima Al-Thani",
+      title: "Landlord, Al Rayyan",
+      rating: 4.5,
     },
     {
       image: "https://8upload.com/image/6886c93835b09/Customer5.png",
       quote:
-        "The parking shades installed at our factory are sturdy and well-finished. Great value.",
-      name: "Hassan Shah",
-      title: "Operations Manager, Doha Industrial Group",
-      rating: 4.5,
+        "They installed new kitchen pipelines in our office pantry. Clean, efficient, and on schedule.",
+      name: "Khalid Mahmoud",
+      title: "Office Manager, Doha",
+      rating: 4,
     },
     {
       image: "https://8upload.com/image/6886c9388b9d9/Customer6.png",
       quote:
-        "The UPVC windows were sealed perfectly and look great. Energy savings noticeable already!",
-      name: "Fatima Al-Kuwari",
-      title: "Homeowner, Al Rayyan",
+        "I trust Doha Plumbing for all maintenance. Affordable, transparent, and their WhatsApp booking is so convenient.",
+      name: "Sara Ibrahim",
+      title: "Resident, Najma",
       rating: 5,
-    },
-    {
-      image: "https://8upload.com/image/6886c938d72cb/Customer7.png",
-      quote:
-        "F L M's steel fabrication team met our structural specs exactly. Reliable and professional.",
-      name: "Tari Abiduhali",
-      title: "Engineer, Falcon Steel",
-      rating: 5,
-    },
-    {
-      image: "https://8upload.com/image/6886c9393c840/Customer8.png",
-      quote:
-        "Our custom sofa was upholstered beautifully. F L M added real luxury to our space.",
-      name: "Layla Hassan",
-      title: "Interior Designer, The Luxe Studio",
-      rating: 4.5,
     },
   ];
 
   const items = reviews.map((review, index) => (
     <div
       key={index}
-      className="flex flex-col items-center w-full p-6 space-y-4 rounded-2xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.03] dark:bg-gray-900 dark:text-gray-100"
+      className="flex flex-col items-center w-full p-6 space-y-4 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-500 transform hover:scale-[1.03] dark:bg-gray-900 dark:text-gray-100"
     >
       <img
         src={review.image}
         alt={review.name}
-        className="w-24 h-24 rounded-full object-cover border-4 border-emerald-600 shadow-lg transition-transform duration-300 hover:scale-110"
+        className="w-24 h-24 rounded-full object-cover border-4 border-blue-500 shadow-lg transition-transform duration-300 hover:scale-110"
       />
       <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 text-center leading-relaxed">
         “{review.quote}”
       </blockquote>
       <StarRating rating={review.rating} />
       <div className="text-center">
-        <p className="font-semibold text-emerald-700 dark:text-emerald-400 text-lg">
+        <p className="font-semibold text-blue-700 dark:text-blue-400 text-lg">
           {review.name}
         </p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">{review.title}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          {review.title}
+        </p>
       </div>
     </div>
   ));
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white">
+    <section className="py-16 bg-gradient-to-b from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-800 dark:text-white">
       <div className="container px-6 mx-auto max-w-7xl">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-emerald-800 dark:text-white mb-4">
-          Customer Testimonials
+        <h2 className="text-4xl font-bold text-center text-blue-800 dark:text-white mb-4">
+          What Our Customers Say
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto mb-10">
-          Real feedback from clients who’ve experienced excellence with F L M SUPER TRADING AND CONTRACTING across diverse services.
+          Trusted plumbing solutions for Doha residents and businesses. Here’s
+          what our happy clients say about{" "}
+          <span className="font-semibold text-cyan-600">
+            Doha Plumbing Service
+          </span>
+          .
         </p>
 
         {/* Carousel */}
@@ -129,7 +120,7 @@ const CustomerReviews = () => {
             mouseTracking
             items={items}
             autoPlay
-            autoPlayInterval={4000}
+            autoPlayInterval={4500}
             infinite
             animationDuration={1000}
             disableButtonsControls

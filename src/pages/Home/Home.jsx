@@ -1,159 +1,104 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
 
 // Components
 import PageTitle from "../reusable/PageTitle";
 import HeroSlider from "./heroBanner.jsx/HeroSlider";
 import WhyChoose from "./WhyChoose";
-import OurClient from "./OurClient";
+
 import CustomerReviews from "./CustomerReviews";
 import SubscreibeContact from "../contact/SubscreibeContact";
 import Products_FLM from "./Products_FLM";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.18,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (custom = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      delay: custom * 0.1,
-    },
-  }),
-};
-
 const Home = () => {
-  const shouldReduceMotion = useReducedMotion();
-
   return (
-    <div className="home-page px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-gray-800">
-      <PageTitle title="F L M Super Trading and Contracting | Aluminium, Gypsum, Upholstery, and More" />
+    <div className="home-page font-['Roboto'] text-gray-800 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 
-      {/* Hero */}
-      <motion.section
-        aria-label="Hero banner"
-        className="hero-slider"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : fadeUp}
-      >
+      <PageTitle title="Doha Plumbing Service | الدوحة لخدمات السباكة والكهرباء والصيانة" />
+
+      {/* Hero Section */}
+      <section aria-label="Hero Banner" className="mb-16">
         <HeroSlider />
-      </motion.section>
+      </section>
 
-      {/* Core Services */}
-      <motion.section
-        className="services-section my-16 sm:my-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : container}
-        aria-label="Core services offered"
-      >
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4 text-emerald-700"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
+      {/* Services Section */}
+      <section className="services-section my-16 sm:my-20">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-[#00B4D8] mb-4">
           Our Services
-        </motion.h2>
-        <motion.p
-          className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-2 sm:px-0"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
-          F L M Super Trading and Contracting delivers comprehensive contracting solutions across Qatar: aluminium fabrication & installation, glass & mirror works, gypsum partitioning & ceilings, printing, parking shade structures, UPVC doors & windows, MS welding & steel fabrication, and furniture & upholstery. Tailored. Reliable. Professional.
-        </motion.p>
-        <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
+        </h2>
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed px-2 sm:px-0">
+          We provide professional plumbing, electrical, and home maintenance solutions across Qatar. 
+          Our team ensures fast, reliable, and affordable service for residential, commercial, and industrial clients.
+        </p>
+        <div>
           <Products_FLM />
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
-      {/* Why Choose */}
-      <motion.section
-        className="why-choose-us my-16 sm:my-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : container}
-        aria-label="Why choose us"
-      >
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4 text-emerald-700"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
-          Why Choose F L M Super Trading and Contracting?
-        </motion.h2>
-        <motion.p
-          className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-4 sm:px-0"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
-          Backed by experienced professionals, industry-grade materials, and a commitment to timely delivery, we craft solutions that stand the test of time and delight clients across residential, commercial, and industrial sectors.
-        </motion.p>
-        <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
+      {/* Why Choose Us */}
+      <section className="why-choose-us my-16 sm:my-20 bg-[#f5f8fa] py-12 rounded-xl shadow-lg">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-[#0077b6] mb-6">
+          Why Choose Us?
+        </h2>
+        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed px-4 sm:px-0">
+          24/7 availability, certified professionals, transparent pricing, and fast emergency response. 
+          We guarantee quality service and satisfaction for every project, big or small.
+        </p>
+        <div>
           <WhyChoose />
-        </motion.div>
-      </motion.section>
-
-      {/* Clients */}
-      <motion.section
-        className="our-clients my-16 sm:my-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : container}
-        aria-label="Our clients"
-      >
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
-          Trusted by Leading Clients
-        </motion.h2>
-        <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
-          <OurClient />
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
       {/* Testimonials */}
-      <motion.section
-        className="customer-reviews my-16 sm:my-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : container}
-        aria-label="Customer reviews"
-      >
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700"
-          variants={shouldReduceMotion ? {} : fadeUp}
-        >
+      <section className="customer-reviews my-16 sm:my-20 bg-[#f5f8fa] py-12 rounded-xl shadow-lg">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-[#00B4D8] mb-6">
           What Our Clients Say
-        </motion.h2>
-        <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
+        </h2>
+        <div>
           <CustomerReviews />
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
-      {/* Contact / Newsletter */}
-      <motion.section
-        className="subscribe-contact my-16 sm:my-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={shouldReduceMotion ? {} : fadeUp}
-        aria-label="Contact and newsletter"
-      >
-        <SubscreibeContact />
-      </motion.section>
+      {/* Call-To-Action Section */}
+      <section className="cta-section my-20 text-center bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-700 py-16 px-6 rounded-2xl shadow-2xl text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] opacity-10"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            🚰 Need a <span className="text-cyan-300">Plumber</span> Urgently?
+          </h2>
+          <p className="mb-8 text-lg md:text-xl text-gray-200 leading-relaxed">
+            Fast, reliable, and affordable plumbing solutions available <span className="font-semibold">24/7 across Doha</span>.
+            Don’t wait — we’re just a call or message away.
+          </p>
+
+          {/* Contact Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
+            <a
+              href="tel:+97431394550"
+              className="bg-white text-blue-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-cyan-100 hover:scale-105 transition-transform duration-300"
+            >
+              📞 Call Now: 3139 4550
+            </a>
+            <a
+              href="https://wa.me/97431394550"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 transition-transform duration-300"
+            >
+              💬 Chat on WhatsApp
+            </a>
+          </div>
+
+          {/* Embed contact form */}
+          <div className="bg-white text-gray-900 rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 text-blue-900">
+              Send Us a Quick Message
+            </h3>
+            <SubscreibeContact />
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

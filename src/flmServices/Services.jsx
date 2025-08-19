@@ -1,132 +1,136 @@
+import React from "react";
 import {
-  FaCouch,
-  FaTools,
-  FaGem,
-  FaHardHat,
-  FaPrint,
-  FaCar,
-  FaDoorClosed,
-  FaWrench,
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaPinterest,
+  FaWrench
 } from "react-icons/fa";
 import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
-
-import React from "react";
-import Products_FLM from "../pages/Home/Products_FLM";
 import CustomerReviews from "../pages/Home/CustomerReviews";
 
 const Services = () => {
-  return (
-    <main className="font-sans text-gray-800 bg-[#f6f6f4] dark:bg-gray-900">
-      {/* SEO Meta Title */}
-      <PageTitle title="F L M SUPER TRADING AND CONTRACTING | Interior & Fabrication Solutions" />
+  const services = [
+    {
+      icon: <FaWrench size={40} className="text-yellow-400 mx-auto mb-4" />,
+      title: "Emergency Plumbing",
+      desc: "24/7 emergency plumbing services for homes and businesses. Fast response and reliable fixes.",
+    },
+    {
+      icon: <FaWrench size={40} className="text-yellow-400 mx-auto mb-4" />,
+      title: "Installation & Repairs",
+      desc: "Professional installation of pipes, faucets, and fixtures. Full repair services for leaks, clogs, and water systems.",
+    },
+    {
+      icon: <FaWrench size={40} className="text-yellow-400 mx-auto mb-4" />,
+      title: "Maintenance & Inspection",
+      desc: "Preventive maintenance and system inspections to ensure long-lasting plumbing performance.",
+    },
+  ];
 
-      {/* Hero Section */}
+  return (
+    <main className="font-sans text-gray-900 bg-gray-50 dark:bg-gray-900">
+
+      {/* SEO */}
+      <PageTitle title="Doha Plumbing Service | Expert Plumbing Solutions in Doha" />
+
+      {/* Hero Section with Parallax */}
       <ParallaxSection
-        imagePath="https://8upload.com/image/688809b2405b8/Services-min.png"
-        title="Comprehensive Interior & Fabrication Services"
-        subTitle="Quality You Can Trust – اف ال ام سوبر ترادينغ اند كونتراكتينغ"
+        imagePath="https://via.placeholder.com/1600x600.png?text=Doha+Plumbing+Service"
+        title="Professional Plumbing Services"
+        subTitle="Reliable, Fast, & Trusted – خدمات السباكة الموثوقة"
+        overlay="rgba(0,0,0,0.5)"
+        titleClass="text-5xl md:text-6xl font-serif font-bold text-yellow-400"
+        subTitleClass="text-xl md:text-2xl font-sans text-white mt-3"
       />
 
       {/* Introduction */}
-      <section
-        aria-labelledby="intro-title"
-        className="max-w-7xl mx-auto px-6 py-20 text-center"
-      >
-        <h1
-          id="intro-title"
-          className="text-4xl md:text-5xl font-bold mb-6 text-[#1b2e2c] dark:text-white"
-        >
-          One Stop Solution for Interiors, Fit-Out & Metal Works
+      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-gray-900 dark:text-white">
+          Your Trusted Plumber in Doha
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          F L M SUPER TRADING AND CONTRACTING (اف ال ام سوبر ترادينغ اند كونتراكتينغ) specializes in aluminium works, gypsum partitions, printing, UPVC doors & windows, welding, and high-quality furniture & upholstery across Qatar.
+          Doha Plumbing Service provides expert plumbing solutions, from emergency repairs to installations and maintenance. Our skilled team ensures fast, reliable, and professional service for homes and businesses across Qatar.
         </p>
       </section>
 
       {/* Services Grid */}
-      <section className="bg-[#e5ece8] dark:bg-gray-800 py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-center">
-          {[
-            {
-              icon: <FaTools size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Aluminium Fabrication",
-              desc: "Custom aluminium windows, doors, cladding, and partitions — durable and expertly crafted.",
-            },
-            {
-              icon: <FaGem size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Glass & Mirror Works",
-              desc: "Installations of high-quality mirrors, tempered and frosted glass for interiors and exteriors.",
-            },
-            {
-              icon: <FaHardHat size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Gypsum Partition & Ceiling",
-              desc: "Professional gypsum works — ceilings, bulkheads, and office partitions with fire-rated systems.",
-            },
-            {
-              icon: <FaPrint size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Digital Printing",
-              desc: "Banners, stickers, roll-ups, wall branding, vehicle wraps and more — sharp, durable prints.",
-            },
-            {
-              icon: <FaCar size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Parking Shades",
-              desc: "UV-resistant car parking shades tailored for residential and commercial needs.",
-            },
-            {
-              icon: <FaDoorClosed size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "UPVC Doors & Windows",
-              desc: "Weatherproof, sound-insulated UPVC systems designed for durability and energy savings.",
-            },
-            {
-              icon: <FaWrench size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "MS Welding & Steel Fabrication",
-              desc: "Steel gates, grills, and frames — expertly welded with corrosion-resistant finishes.",
-            },
-            {
-              icon: <FaCouch size={36} className="text-[#1b2e2c] mx-auto mb-3" />,
-              title: "Furniture & Upholstery",
-              desc: "Bespoke furniture, sofa sets, and reupholstery — crafted with elegance and comfort.",
-            },
-          ].map(({ icon, title, desc }, idx) => (
+      <section className="bg-white dark:bg-gray-800 py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+          {services.map(({ icon, title, desc }, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow hover:shadow-lg transition"
+              className="bg-gray-50 dark:bg-gray-900 p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 dark:border-gray-700"
             >
               {icon}
-              <h3 className="text-xl font-semibold mb-2 text-[#1b2e2c] dark:text-white">{title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{desc}</p>
+              <h3 className="text-2xl font-serif font-semibold mb-3 text-gray-900 dark:text-white">{title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Product Highlights */}
-      <Products_FLM />
-
-      <CustomerReviews />
-
-      {/* Call To Action */}
-      <section
-        aria-label="Get in touch"
-        className="py-20 bg-[#1b2e2c] text-white text-center px-6"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let's Build Something Great Together
+      {/* Optional Gallery Placeholder */}
+      <section className="py-20 px-6 text-center max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-10 text-gray-900 dark:text-white">
+          Our Plumbing Projects
         </h2>
-        <p className="text-lg mb-6 max-w-xl mx-auto leading-relaxed">
-          Contact <strong>F L M SUPER TRADING AND CONTRACTING</strong> today for custom interiors, expert fabrication, and reliable service across Qatar.
-        </p>
-        <a
-          href="https://wa.me/97466280037"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-white text-[#1b2e2c] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
-        >
-          Contact Us on WhatsApp
-        </a>
-        
+        <div className="grid md:grid-cols-3 gap-6">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+              <img
+                src={`https://via.placeholder.com/400x300.png?text=Project+${i}`}
+                alt={`Project ${i}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-blue-900 text-white text-center px-6">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+          Contact Doha Plumbing Service Today
+        </h2>
+        <p className="text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+          Schedule a service, request a quote, or get emergency plumbing help. Fast response guaranteed.
+        </p>
+        <div className="flex flex-wrap justify-center gap-6 mb-6 text-lg">
+          <a href="tel:+97431394550" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 rounded-full shadow-lg font-semibold transition flex items-center justify-center">
+            <FaPhoneAlt className="inline mr-2" /> 3139 4550
+          </a>
+          <a href="https://wa.me/97431394550" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full shadow-lg font-semibold transition flex items-center justify-center">
+            <FaWhatsapp className="inline mr-2" /> WhatsApp
+          </a>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center gap-8 text-3xl">
+          <a href="https://www.facebook.com/plumbingelectricdoha" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/plumbing9335/#" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
+            <FaInstagram />
+          </a>
+          <a href="mailto:emergencyplumber39@gmail.com" className="hover:text-yellow-400 transition">
+            <FaEnvelope />
+          </a>
+          <a href="https://www.youtube.com/@MaintenanceServicePlumberDoha" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
+            <FaYoutube />
+          </a>
+          <a href="https://www.pinterest.com/plumbingelectricdoha/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
+            <FaPinterest />
+          </a>
+        </div>
+      </section>
+
+      {/* Customer Reviews */}
+      <CustomerReviews />
     </main>
   );
 };

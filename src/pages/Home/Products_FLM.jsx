@@ -1,90 +1,37 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaWhatsapp,
-  FaStar,
-  FaStarHalfAlt,
-  FaRegStar,
-  FaSearchPlus,
-} from "react-icons/fa";
-
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import Modal from "react-modal";
+import { FaWhatsapp, FaPhoneAlt, FaSearchPlus, FaMapMarkerAlt } from "react-icons/fa";
 
 Modal.setAppElement("#root");
 
-const products = [
+const services = [
   {
     id: 1,
-    name: "Aluminium Fabrication & Installation",
-    image: "https://8upload.com/image/687c3a42a9bca/IMG-20250630-WA0005.jpg",
-    subtitle: "Custom aluminium structures designed for durability and style.",
-    link: "/services/aluminium",
-    rating: 4.5,
-    discount: "20% OFF",
+    name: "Professional Plumbing Service",
+    image: "https://8upload.com/image/687c202484185/IMG-20250630-WA0003.jpg",
+    subtitle: "Fast, certified, and reliable plumbing solutions for homes and businesses across Doha.",
+    link: "tel:+97431394550",
+    whatsapp: "https://wa.me/97431394550",
   },
   {
     id: 2,
-    name: "Glass & Mirror Works",
-    image: "https://8upload.com/image/687c3a75463d4/IMG-20250630-WA0051.jpg",
-    subtitle: "Expert glass and mirror installation for both function and beauty.",
-    link: "/services/glass",
-    rating: 5,
-    discount: "15% OFF",
+    name: "Emergency Plumbing",
+    image: "https://8upload.com/image/687c202501570/IMG-20250630-WA0038.jpg",
+    subtitle: "24/7 emergency plumbing services to handle leaks, burst pipes, and urgent repairs.",
+    link: "tel:+97431394550",
+    whatsapp: "https://wa.me/97431394550",
   },
   {
     id: 3,
-    name: "Gypsum Partition & Ceiling",
-    image: "https://8upload.com/image/687c3aa8a00bd/IMG-20250630-WA0077.jpg",
-    subtitle: "Modern partitions and ceilings crafted with precision.",
-    link: "/services/gypsumCeilings",
-    rating: 4,
-  },
-  {
-    id: 4,
-    name: "Professional Printing",
-    image: "https://8upload.com/image/687c3aef5654d/IMG-20250630-WA0080.jpg",
-    subtitle: "Top-tier printing services for corporate and personal needs.",
-    link: "/services/printing",
-    rating: 4.2,
-  },
-  {
-    id: 5,
-    name: "Parking Shade Solutions",
-    image: "https://8upload.com/image/687c3b2a33d64/IMG-20250630-WA0117.jpg",
-    subtitle: "Shaded structures built for protection and style.",
-    link: "/services/parking",
-    rating: 3.8,
-    discount: "10% OFF",
-  },
-  {
-    id: 6,
-    name: "UPVC Doors & Windows",
-    image: "https://8upload.com/image/687c3b6a5dd61/IMG-20250630-WA0060.jpg",
-    subtitle: "Energy-efficient UPVC installations for modern comfort.",
-    link: "/services/upvc",
-    rating: 4.7,
-  },
-  {
-    id: 7,
-    name: "MS Welding & Steel Fabrication",
-    image: "https://8upload.com/image/687c3bbfae6e8/IMG-20250630-WA0085.jpg",
-    subtitle: "Strong and secure metalwork crafted by seasoned welders.",
-    link: "/services/ms_fabrication",
-    rating: 4.3,
-  },
-  {
-    id: 8,
-    name: "Furniture & Upholstery",
-    image: "https://8upload.com/image/687c3c0311919/IMG-20250630-WA0094.jpg",
-    subtitle: "Luxury furniture restoration and custom upholstery work.",
-    link: "/furniture",
-    rating: 3.5,
+    name: "Maintenance & Repairs",
+    image: "https://8upload.com/image/687c29968826c/IMG-20250630-WA0075.jpg",
+    subtitle: "Routine maintenance, water heater servicing, and drain cleaning for residential and commercial spaces.",
+    link: "tel:+97431394550",
+    whatsapp: "https://wa.me/97431394550",
   },
 ];
 
@@ -94,7 +41,7 @@ const NextArrow = ({ onClick }) => (
     className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
     aria-label="Next slide"
   >
-    <FaArrowRight className="text-gray-800" />
+    &gt;
   </button>
 );
 
@@ -104,23 +51,9 @@ const PrevArrow = ({ onClick }) => (
     className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
     aria-label="Previous slide"
   >
-    <FaArrowLeft className="text-gray-800" />
+    &lt;
   </button>
 );
-
-const renderStars = (rating) => {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0.5;
-  const empty = 5 - full - (half ? 1 : 0);
-
-  return (
-    <div className="flex text-yellow-400 text-sm">
-      {[...Array(full)].map((_, i) => <FaStar key={`full-${i}`} />)}
-      {half && <FaStarHalfAlt key="half" />}
-      {[...Array(empty)].map((_, i) => <FaRegStar key={`empty-${i}`} />)}
-    </div>
-  );
-};
 
 const Products_FLM = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -136,12 +69,12 @@ const Products_FLM = () => {
     setModalIsOpen(false);
   };
 
-  const settings = {
-    dots: false,
+  const sliderSettings = {
+    dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3500,
-    speed: 1000,
+    autoplaySpeed: 3000,
+    speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
@@ -154,66 +87,63 @@ const Products_FLM = () => {
   };
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-emerald-50">
-      <div className="max-w-screen-xl mx-auto">
-      
+    <section className="relative py-16 px-4 sm:px-6 lg:px-12 bg-gray-50">
+      <div className="max-w-screen-xl mx-auto text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#0077b6]">
+          Our Plumbing Services
+        </h2>
+        <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+          Doha Plumbing Service provides professional plumbing solutions for residential and commercial properties. Call or WhatsApp us to book your service today.
+        </p>
+      </div>
 
-        <Slider {...settings}>
-          {products.map((product) => (
-            <div key={product.id} className="px-4">
-              <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                {product.discount && (
-                  <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded shadow">
-                    {product.discount}
-                  </span>
-                )}
+      <Slider {...sliderSettings}>
+        {services.map((service) => (
+          <div key={service.id} className="px-3">
+            <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 duration-300">
+              <div className="relative group">
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  loading="lazy"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <button
+                  onClick={() => openModal(service.image)}
+                  className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition"
+                  aria-label="Preview image"
+                >
+                  <FaSearchPlus className="text-white text-2xl" />
+                </button>
+              </div>
 
-                <div className="relative group">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <button
-                    onClick={() => openModal(product.image)}
-                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition"
-                    aria-label="Preview image"
-                  >
-                    <FaSearchPlus className="text-white text-2xl" />
-                  </button>
+              <div className="p-6 flex flex-col justify-between h-56">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>
+                  <p className="text-gray-600 mt-2 text-sm">{service.subtitle}</p>
                 </div>
 
-                <div className="p-6 flex flex-col h-56 justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{product.name}</h3>
-                    <p className="text-sm text-gray-600 mt-2">{product.subtitle}</p>
-                    <div className="mt-3">{renderStars(product.rating)}</div>
-                  </div>
-
-                  <div className="flex justify-between items-center gap-2 mt-5">
-                    <Link
-                      to={product.link}
-                      className="px-5 py-2 text-sm font-medium rounded-full bg-emerald-700 text-white hover:bg-emerald-800 transition"
-                    >
-                      View Details
-                    </Link>
-                    <a
-                      href="https://wa.me/97431602956"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2 text-sm font-medium rounded-full bg-green-600 text-white hover:bg-green-700 transition"
-                    >
-                      <FaWhatsapp />
-                      WhatsApp
-                    </a>
-                  </div>
+                <div className="flex flex-col sm:flex-row justify-center gap-3 mt-5">
+                  <a
+                    href={service.link}
+                    className="flex-1 px-4 py-2 bg-[#0077b6] text-white rounded-lg font-semibold hover:bg-[#005f8f] transition text-sm flex items-center justify-center gap-2"
+                  >
+                    <FaPhoneAlt /> Call Now
+                  </a>
+                  <a
+                    href={service.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-2 bg-[#25D366] text-white rounded-lg font-semibold hover:bg-[#1ebe5b] transition text-sm flex items-center justify-center gap-2"
+                  >
+                    <FaWhatsapp /> WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
 
       <Modal
         isOpen={modalIsOpen}
