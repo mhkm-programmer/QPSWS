@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 const HeroSlider = () => {
   const slides = [
     {
-      image: "https://8upload.com/image/687c202484185/IMG-20250630-WA0003.jpg",
+      image: "https://8upload.com/image/68a772ab1f371/Plumber_8.jpg",
       title: "Reliable Plumbing & Maintenance",
       subtitle:
         "Expert plumbing solutions for homes and businesses across Doha. Fast, certified, and affordable services.",
@@ -16,7 +16,7 @@ const HeroSlider = () => {
       badge: "Plumber",
     },
     {
-      image: "https://8upload.com/image/687c202501570/IMG-20250630-WA0038.jpg",
+      image: "https://8upload.com/image/68a772ae07d73/Plumber_10.jpg",
       title: "24/7 Emergency Services",
       subtitle:
         "Immediate response to leaks, burst pipes, and urgent plumbing issues anywhere in Doha.",
@@ -25,7 +25,7 @@ const HeroSlider = () => {
       badge: "Emergency",
     },
     {
-      image: "https://8upload.com/image/687c29968826c/IMG-20250630-WA0075.jpg",
+      image: "https://8upload.com/image/68a772adb437a/Plumber_9.jpg",
       title: "Home & Commercial Maintenance",
       subtitle:
         "Comprehensive maintenance solutions including water heaters, drainage systems, and routine inspections.",

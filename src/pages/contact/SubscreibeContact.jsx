@@ -81,7 +81,7 @@ const SubscribeContact = () => {
             <p><strong>Location:</strong> Zone 26, Street 938, Building 12, Doha, Qatar</p>
             <p><strong>Phone:</strong> <a href="tel:+97431394550" className="text-blue-800 hover:underline">+974 3139 4550</a></p>
             <p><strong>WhatsApp:</strong> <a href="https://wa.me/97431394550" target="_blank" rel="noreferrer" className="text-green-600 hover:underline">Chat Now</a></p>
-            <p><strong>Email:</strong> <a href="mailto:emergencyplumber39@gmail.com" className="text-blue-800 hover:underline">emergencyplumber39@gmail.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:emergencyplumber39@gmail.com" className="text-blue-800 hover:underline">info.plumber360@gmail.com</a></p>
           </div>
 
           {/* Social Links */}

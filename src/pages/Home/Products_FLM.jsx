@@ -12,7 +12,7 @@ const services = [
   {
     id: 1,
     name: "Professional Plumbing Service",
-    image: "https://8upload.com/image/687c202484185/IMG-20250630-WA0003.jpg",
+    image: "https://8upload.com/image/68a772a9e65c3/Plumber_4.jpg",
     subtitle: "Fast, certified, and reliable plumbing solutions for homes and businesses across Doha.",
     link: "tel:+97431394550",
     whatsapp: "https://wa.me/97431394550",
@@ -20,7 +20,7 @@ const services = [
   {
     id: 2,
     name: "Emergency Plumbing",
-    image: "https://8upload.com/image/687c202501570/IMG-20250630-WA0038.jpg",
+    image: "https://8upload.com/image/68a772aa350df/Plumber_5.jpg",
     subtitle: "24/7 emergency plumbing services to handle leaks, burst pipes, and urgent repairs.",
     link: "tel:+97431394550",
     whatsapp: "https://wa.me/97431394550",
@@ -28,7 +28,7 @@ const services = [
   {
     id: 3,
     name: "Maintenance & Repairs",
-    image: "https://8upload.com/image/687c29968826c/IMG-20250630-WA0075.jpg",
+    image: "https://8upload.com/image/68a772aac2e24/Plumber_7.jpg",
     subtitle: "Routine maintenance, water heater servicing, and drain cleaning for residential and commercial spaces.",
     link: "tel:+97431394550",
     whatsapp: "https://wa.me/97431394550",

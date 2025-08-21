@@ -6,9 +6,9 @@ import React from 'react';
 const ContactPage = () => {
     return (
         <div>
-         <PageTitle title="Contact Us | Curtains Furniture" />
+         <PageTitle title="Contact Us |  Doha Plumbing Service" />
              <ParallaxSection
-        imagePath="https://8upload.com/image/685f34413d745/Cuontact_Us_for_Curtains_Furniture_1.jpg"
+        imagePath="https://8upload.com/image/68a766cd9bc9a/Plumber_Services__3_.jpg"
         title=""
         subTitle=""
       />

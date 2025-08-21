@@ -70,7 +70,7 @@ const HeaderDohaPlumbing = () => {
             <FaWhatsapp /> WhatsApp
           </a>
           <a
-            href="mailto:emergencyplumber39@gmail.com"
+            href="mailto:info.plumber360@gmail.com"
             className="flex items-center gap-1 hover:text-[#00B4D8]"
           >
             <FaEnvelope /> Email

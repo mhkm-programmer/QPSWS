@@ -17,16 +17,9 @@ import BlogPage from "../pages/blogs/BlogPage";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 import Gallery from "../pages/Gallery";
 
-// FLM Services Pages
-import Aluminium from "../flmServices/Aluminium";
-import Glass from "../flmServices/Glass";
-import Furniture from "../flmServices/Furniture";
-import MS from "../flmServices/MS";
-import UPVC from "../flmServices/UPVC";
-import Parking from "../flmServices/Parking";
+// Services Pages
+
 import Services from "../flmServices/Services";
-import Gypsum from "../flmServices/Gypsum";
-import Printing from "../flmServices/Printing";
 
 // Router Configuration
 const router = createBrowserRouter([
@@ -52,16 +45,7 @@ const router = createBrowserRouter([
 
       // FLM Services Categories
       { path: "/services", element: <Services /> },
-      { path: "/services/aluminium", element: <Aluminium /> },
-      { path: "/services/glass", element: <Glass /> },
-      { path: "/services/gypsumCeilings", element: <Gypsum /> },
-         { path: "/services/printing", element: <Printing /> },
-      { path: "/services/parking", element: <Parking /> },
-      { path: "/services/upvc", element: <UPVC /> },
-      { path: "/services/ms_fabrication", element: <MS /> },
-
-      
-      { path: "/furniture", element: <Furniture /> },
+     
     ],
   },
 

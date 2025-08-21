@@ -22,13 +22,7 @@ const Home = () => {
 
       {/* Services Section */}
       <section className="services-section my-16 sm:my-20">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-[#00B4D8] mb-4">
-          Our Services
-        </h2>
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed px-2 sm:px-0">
-          We provide professional plumbing, electrical, and home maintenance solutions across Qatar. 
-          Our team ensures fast, reliable, and affordable service for residential, commercial, and industrial clients.
-        </p>
+       
         <div>
           <Products_FLM />
         </div>

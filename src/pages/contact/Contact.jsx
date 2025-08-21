@@ -88,27 +88,25 @@ const Contact = () => {
       </motion.div>
 
       <section className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-        {/* Contact Info */}
+        {/* Contact Info & Map */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           className="flex flex-col justify-between space-y-6 h-full"
         >
+          {/* Google Map Embed */}
           <div className="h-[300px] sm:h-[400px] lg:h-[500px] w-full rounded-lg overflow-hidden shadow-lg">
-            <a
-              href="https://www.google.com/maps/place/Zone+26,+Street+938,+Building+12,+Doha,+Qatar"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Location on Google Maps"
-            >
-              <img
-                src="https://via.placeholder.com/800x500.png?text=Doha+Plumbing+Location"
-                alt="Location map for Doha Plumbing Service"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </a>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2162160020295!2d51.53236561500261!3d25.286106483851446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c5c4a6b9a5af%3A0xe4db4c9f6fce3c90!2sZone%2026%2C%20Street%20938%2C%20Building%2012%2C%20Doha%2C%20Qatar!5e0!3m2!1sen!2sqa!4v1690962462604!5m2!1sen!2sqa"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Doha Plumbing Location"
+            ></iframe>
           </div>
 
           <div className="bg-blue-900 text-white rounded-lg p-6 shadow-lg">

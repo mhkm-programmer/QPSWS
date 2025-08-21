@@ -21,9 +21,9 @@ const Footer = () => {
             Doha Plumbing Service
           </h2>
           <p className="text-gray-400 text-sm">
-            الاسم بالعربية: الدوحة لخدمات السباكة والكهرباء والصيانة
+            الدوحة لخدمات السباكة والكهرباء والصيانة
           </p>
-          <p className="text-gray-400 text-sm">CR No: 212381</p>
+         
           <p className="text-gray-400 text-sm">
             Location: Zone 26, Street 938, Building 12, Doha, Qatar
           </p>
@@ -40,7 +40,7 @@ const Footer = () => {
             <p className="flex items-center gap-2 hover:text-[#00B4D8] transition">
               <FaEnvelope className="text-[#00B4D8]" /> 
               <a href="mailto:emergencyplumber39@gmail.com" className="underline">
-                emergencyplumber39@gmail.com
+                info.plumber360@gmail.com
               </a>
             </p>
           </div>
@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2 hover:text-[#00B4D8] transition">
             <FaEnvelope className="text-[#00B4D8]" />
-            <span>emergencyplumber39@gmail.com</span>
+            <span>info.plumber360@gmail.com</span>
           </div>
         </div>
         <div className="flex items-center gap-2 hover:text-[#00B4D8] transition">
