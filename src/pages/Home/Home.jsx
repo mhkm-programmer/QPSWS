@@ -13,7 +13,13 @@ const Home = () => {
   return (
     <div className="home-page font-['Roboto'] text-gray-800 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 
-      <PageTitle title="Doha Plumbing Service | الدوحة لخدمات السباكة والكهرباء والصيانة" />
+      <PageTitle 
+  title="Parking Shade Installation in Doha | Qatar Shade & Welding"
+  description="Expert car parking shade installation in Doha, Qatar. Durable, affordable, and professional services 24/7."
+  keywords="Parking Shade Doha, Car Parking Shades Qatar, Shade Structures"
+  canonical="https://www.qatarshadeweld.com/parking-shade"
+/>
+
 
       {/* Hero Section */}
       <section aria-label="Hero Banner" className="mb-16">
